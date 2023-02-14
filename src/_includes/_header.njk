@@ -1,0 +1,22 @@
+<header class="py-10" id="header">
+  <div class="container">
+    {% image 'profile.jpg', 'Ivana H. Costa', '100vw', 'w-10 rounded-full' %}
+    <h1>
+      <span>Ivana H. Costa</span>
+      <span>@nothingbutivana</span>
+    </h1>
+    <p>Digital designer & developer</p>
+    <p>Portfolio / 2016 — 2022</p>
+  </div>
+  <div class="container">
+    <ul>
+      {% for item in menu %}
+        <li>
+          <a href="{{ item.link}}">
+            <span>{{ item.text}}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>

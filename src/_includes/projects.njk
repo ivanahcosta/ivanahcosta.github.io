@@ -1,0 +1,9 @@
+<section class="py-10" id="projects">
+  <div class="container">
+    {% asyncEach project in collections['projects'] | reverse %}
+    <h2>
+      {{ project.data.title}}
+    </h2>
+    {% endeach %}
+  </div>
+</section>

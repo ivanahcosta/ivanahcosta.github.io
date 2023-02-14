@@ -1,0 +1,17 @@
+<footer class="py-10" id="footer">
+  <div class="container">
+    <p>© All rights reserved.</p>
+    <ul>
+      {% for item in footer %}
+        <li>
+          <a href="{{ item.link}}">
+            <span>{{ item.text}}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="#header">
+      <span>Go back to top</span>
+    </a>
+  </div>
+</footer>
