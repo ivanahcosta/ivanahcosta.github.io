@@ -1,6 +1,6 @@
 module.exports = [
   {
-    text: 'Home',
+    text: 'Selected works',
     link: '/',
   },
   {
