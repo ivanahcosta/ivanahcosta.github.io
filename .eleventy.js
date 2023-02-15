@@ -24,6 +24,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('./src/assets/*/**');
 
   config.addWatchTarget('./src/styles/');
+  config.addWatchTarget('./src/svg/');
 
   return {
     dir: {

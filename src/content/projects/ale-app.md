@@ -9,6 +9,7 @@ services:
 tech:
   - jQuery
   - SASS
+  - Razor
 color: '#0255A5'
 team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }]
 description: "Landing page focused on promoting Ale's application to its customers, with segmented targeting and small interactions based on scrolling the page."

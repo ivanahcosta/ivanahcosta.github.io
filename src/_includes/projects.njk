@@ -2,71 +2,63 @@
   <div class="grid grid-cols-1 divide-y divide-[#2B303B]/40">
     {% asyncEach project in collections['projects'] | reverse %}
     <div class="py-10">
-      <div class="container grid grid-cols-3 gap-10">
-        <div class="grid grid-cols-1 gap-5">
-          <div class="flex gap-5 items-center">
-            <div class="border border-[#e3e5e885] w-10 h-10 rounded-full flex items-center justify-center">
-              {{ project.data.date | dateToFormat('yy') }}
-            </div>
-            <div class="w-10 h-10 rounded-full" style="background-color: {{ project.data.color }}"></div>
-            <button class="bg-[#15181E] text-[#ffffff] p-2 rounded-full inline-flex items-center gap-2 shadow-lg">
-              {% svg 'eye-empty', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2 shadow-lg' %}
-            </button>
-            {% if project.data.available %}
-              <a class="bg-[#15181E] text-[#ffffff] p-2 rounded-full inline-flex items-center gap-2 shadow-lg" href="{{ project.data.link }}" target="_blank">
-                {% svg 'link', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2 shadow-lg' %}
-                <span>{{ project.data.link.replace('https://www.', '') }}</span>
-              </a>
-            {% else %}
-              <span class="bg-[#15181E] text-[#ffffff] p-2 rounded-full inline-flex items-center gap-2">
-                {% svg 'no-link', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2' %}
-                <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
-              </span>
-            {%endif %}
+      <div class="container grid grid-cols-1 gap-10">
+        <div class="flex gap-5 items-center">
+          <div class="w-10 h-10 rounded-full scale-50" style="background-color: {{ project.data.color }}"></div>
+          <div class="border border-[#2B303B] w-10 h-10 rounded-full flex items-center justify-center">
+            {{ project.data.date | dateToFormat('yy') }}
           </div>
-          <h2 class="text-[4em] leading-none text-[#ffffff] ">
-            {{ project.data.title}}
-          </h2>
-          <div class="flex items-center gap-5">
-            {% for item in project.data.tech %}
-              <span class="border border-[#e3e5e885] py-1 p-3 rounded-full">{{ item }}</span>
+          {% for item in project.data.tech %}
+            <span class="border border-[#2B303B] p-2 rounded-full">{{ item }}</span>
+          {% endfor %}
+          <button class="bg-[#15181E] text-[#ffffff] p-2 rounded-full inline-flex items-center gap-2 shadow-lg">
+            {% svg 'eye-empty', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2 shadow-lg' %}
+          </button>
+          {% if project.data.available %}
+            <a class="bg-[#15181E] text-[#ffffff] p-2 rounded-full inline-flex items-center gap-2 shadow-lg" href="{{ project.data.link }}" target="_blank">
+              {% svg 'link', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2 shadow-lg' %}
+              <span>{{ project.data.link.replace('https://www.', '') }}</span>
+            </a>
+          {% else %}
+            <span class="bg-[#15181E] text-[#ffffff] p-2 rounded-full inline-flex items-center gap-2">
+              {% svg 'no-link', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2' %}
+              <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
+            </span>
+          {%endif %}
+        </div>
+        <h2 class="text-[4em] leading-none text-[#ffffff] ">
+          {{ project.data.title}}
+        </h2>
+        <p>
+          {{ project.data.description }}
+        </p>
+        <div class="w-full grid grid-cols-1 divide-y divide-[#2B303B]/40 leading-none">
+          <p class="py-2 flex flex-wrap items-start gap-2">
+            <strong>Type:</strong>
+            <span>{{ project.data.type }}</span>
+          </p>
+          <p class="py-2 flex flex-wrap items-start gap-2">
+            <strong>Client:</strong>
+            <span>{{ project.data.client }}</span>
+          </p>
+          <p class="py-2 flex flex-wrap items-start gap-2">
+            <strong>Agency:</strong>
+            <span>{{ project.data.agency }}</span>
+          </p>
+          <p class="py-2 flex flex-wrap items-start gap-2 gap-y-1">
+            <strong>Services:</strong>
+            {% for item in project.data.services %}
+              <span class="border border-[#2B303B]/40 rounded-md px-2 py-1 text-[54%] uppercase">{{ item }}</span>
             {% endfor %}
-          </div>
-        </div>
-        <div class="flex items-end">
-          <div class="w-full grid grid-cols-1 divide-y divide-[#2B303B]/40 leading-none">
-            <p class="py-2 flex flex-wrap items-start gap-2">
-              <strong>Type:</strong>
-              <span>{{ project.data.type }}</span>
-            </p>
-            <p class="py-2 flex flex-wrap items-start gap-2">
-              <strong>Client:</strong>
-              <span>{{ project.data.client }}</span>
-            </p>
-            <p class="py-2 flex flex-wrap items-start gap-2">
-              <strong>Agency:</strong>
-              <span>{{ project.data.agency }}</span>
-            </p>
-            <p class="py-2 flex flex-wrap items-start gap-2 gap-y-1">
-              <strong>Services:</strong>
-              {% for item in project.data.services %}
-                <span class="border border-[#2B303B]/40 rounded-md px-2 py-1 text-[54%] uppercase">{{ item }}</span>
-              {% endfor %}
-            </p>
-            <p class="py-2 flex flex-wrap items-start gap-2 gap-y-1">
-              <strong>With:</strong>
-              {% for item in project.data.team %}
-                <span class="border border-[#2B303B]/40 rounded-md px-2 py-1 text-[54%] uppercase">
-                  <span>{{ item.name | abbrFirstName }}</span>
-                  <span class="opacity-60">({{ item.position }})</span>
-                </span>
-              {% endfor %}
-            </p>
-          </div>
-        </div>
-        <div class="flex items-end">
-          <p>
-            {{ project.data.description }}
+          </p>
+          <p class="py-2 flex flex-wrap items-start gap-2 gap-y-1">
+            <strong>With:</strong>
+            {% for item in project.data.team %}
+              <span class="border border-[#2B303B]/40 rounded-md px-2 py-1 text-[54%] uppercase">
+                <span>{{ item.name | abbrFirstName }}</span>
+                <span class="opacity-60">({{ item.position }})</span>
+              </span>
+            {% endfor %}
           </p>
         </div>
       </div>

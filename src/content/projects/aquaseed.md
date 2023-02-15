@@ -9,6 +9,8 @@ services:
 tech:
   - jQuery
   - ajax
+  - Razor
+  - SASS
 color: '#00A1CD'
 team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }]
 description: "System that sought to promote care for the seeds of typically Brazilian trees that the client had sent to its employees. The site was designed to be a social network for the seed, where it was possible to post photos and update the seed's growth status. In addition to internal integrations, there was integration with the instagram API so that it was possible to share photos of the plant on the social network and vice versa, using hashtags."
