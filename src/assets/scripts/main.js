@@ -1,7 +1,11 @@
+import './components/loader.js';
+
 console.log('Hello world!');
 
 $(document).ready(function () {
   const lenis = new Lenis({
+    wrapper: $('[data-content-overflow]')[0], // element which has overflow
+    content: $('[data-content]')[0], // usually wrapper's direct child
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     direction: 'vertical',

@@ -12,14 +12,6 @@ module.exports = [
     link: '/',
   },
   {
-    text: 'Codepen',
-    link: '/',
-  },
-  {
-    text: 'Dribbble',
-    link: '/',
-  },
-  {
     text: 'Discord',
     link: '/',
   },
