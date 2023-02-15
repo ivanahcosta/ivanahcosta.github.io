@@ -1,8 +1,14 @@
+const svgSprite = require('eleventy-plugin-svg-sprite');
+
 const filters = require('./utils/filters.js');
 const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
 
 module.exports = function (config) {
+  config.addPlugin(svgSprite, {
+    path: './src/assets/svg',
+  });
+
   Object.keys(filters).forEach((filterName) => {
     config.addFilter(filterName, filters[filterName]);
   });

@@ -1,10 +1,17 @@
 const { DateTime } = require('luxon');
 
 module.exports = {
-  dateToISO: function (date) {
-    return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
-      includeOffset: false,
-      suppressMilliseconds: true,
-    });
+  dateToFormat: function (date, format) {
+    return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(String(format));
+  },
+
+  abbrFirstName: function (fullName) {
+    var splitName = fullName.split(' ');
+    if (splitName.length >= 2) {
+      for (i = 0; i < splitName.length - 1; i++) {
+        splitName[i] = splitName[i].charAt(0) + '.';
+      }
+    }
+    return splitName.join(' ');
   },
 };

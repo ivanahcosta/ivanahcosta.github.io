@@ -1,17 +1,26 @@
-<footer class="py-10" id="footer">
+<footer class="py-10 grid grid-cols-1 gap-10" id="footer">
   <div class="container">
-    <p>© All rights reserved.</p>
-    <ul>
-      {% for item in footer %}
-        <li>
-          <a href="{{ item.link}}">
-            <span>{{ item.text}}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-    <a href="#header">
-      <span>Go back to top</span>
-    </a>
+    <hr class="border-[#2B303B]/40">
   </div>
-</footer>
+  <div class="container flex fap-10 justify-between">
+    <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.</p>
+    <div class="flex gap-10">
+      <ul class="flex gap-2">
+        {% for item in footer %}
+          <li>
+            <button>
+              <span>{{ item.text }}</span>
+            </button>
+          </li>
+          {% if not loop.last %}
+            <li>●</li>
+            {% endif%}
+          {% endfor %}
+        </ul>
+        <a class="flex gap-2 items-center" href="#header">
+          {% svg 'arrow-up', 'w-[1em] aspect-square' %}
+          <span>Go back to top</span>
+        </a>
+      </div>
+    </div>
+  </footer>

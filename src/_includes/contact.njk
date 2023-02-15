@@ -1,0 +1,30 @@
+<section class="py-10 bg-[#111318] flex items-end justify-center" id="contact">
+  <div class="w-full relative">
+    <ul class="grid grid-cols-1 divide-y divide-[#0D0E12]">
+      {% for item in social %}
+        <li>
+          <a class="py-5 container flex items-center justify-between gap-10" href="{{ item.link}}" target="_blank">
+            <span>{{ item.text }}</span>
+            {% if item.text === 'Discord' %}
+              <span class="grid grid-cols-1 text-right">
+                <span class="text-[0.7em]">Listening to</span>
+                <span>SUPERMODEL — Måneskin</span>
+              </span>
+              {% else%}
+              <span>@ivanahcosta</span>
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+      <li>
+        <button class="py-5 container flex items-center justify-between gap-10">
+          <span>Go back to exploring</span>
+          <span class="flex gap-2 items-center">
+            {% svg 'arrow-down', 'w-[1em] aspect-square' %}
+          </span>
+        </button>
+        {#  #}
+      </li>
+    </ul>
+  </div>
+</section>

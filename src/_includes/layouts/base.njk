@@ -9,17 +9,25 @@
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url | safe }}"/>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url | safe }}"/>
   </head>
-  <body>
-    {% include '_header.njk' %}
-    <main>
-      {{ content | safe }}
-    </main>
-    {% include '_footer.njk' %}
+  <body class="bg-[#111318] text-[#e3e5e885]" data-barba="wrapper">
+    {% svgsprite %}
+
+    {% include 'hero.njk' %}
+    {% include 'contact.njk' %}
+
+    <div class="border-[20px] bg-[#0D0E12] border-[#111318] rounded-[50px]" data-barba="container" data-barba-namespace="home">
+      {% include '_header.njk' %}
+      <main>
+        {{ content | safe }}
+      </main>
+      {% include '_footer.njk' %}
+      {% include '_menu.njk' %}
+    </div>
 
     <script src="{{ '/assets/scripts/vendors/jquery.js' | url | safe }}"></script>
 
     <script src="{{ '/assets/scripts/vendors/lenis.js' | url | safe }}"></script>
-
+    <script src="{{ '/assets/scripts/vendors/barba.umd.js' | url | safe }}"></script>
     <script src="{{ '/assets/scripts/vendors/gsap.min.js' | url | safe }}"></script>
     <script src="{{ '/assets/scripts/vendors/ScrollTrigger.min.js' | url | safe }}"></script>
 
