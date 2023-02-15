@@ -1,8 +1,8 @@
-<nav class="sticky bottom-10 w-fit left-1/2 -translate-x-1/2 pb-10 -mt-[53px]">
+<nav class="sticky bottom-10 w-fit left-1/2 -translate-x-1/2 pb-10 -mt-[53px]" data-menu>
   <ul class="inline-flex gap-5 bg-[#15181E] p-3 rounded-full">
     {% for item in menu %}
-      <li class="p-3 rounded-full {% if page.url === item.page %}bg-[#22262F] text-[#ffffff]{% endif %}">
-        <a href="{{ item.link }}">
+      <li class="rounded-full {% if loop.first %}active{% endif %} [&.active]:bg-[#22262F] [&.active]:text-[#ffffff]">
+        <a class="p-3 block" href="{{ item.link }}">
           <span>{{ item.text }}</span>
         </a>
       </li>

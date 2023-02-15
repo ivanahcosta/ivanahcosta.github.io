@@ -43,5 +43,13 @@ $(document).ready(function () {
   });
   barba.hooks.enter(() => {
     window.scrollTo(0, 0);
+    activePage();
   });
+  function activePage() {
+    $('[data-menu] li').removeClass('active');
+    $('[data-menu] li a[href="' + window.location.pathname + '"]')
+      .parent()
+      .addClass('active');
+  }
+  activePage();
 });

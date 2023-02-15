@@ -18,11 +18,11 @@
       {% include 'hero.njk' %}
       {% include 'contact.njk' %}
 
-      <div class="fixed h-screen w-full top-0 left-0 z-10 border-[20px] bg-[#0D0E12] border-[#111318] rounded-[50px] overflow-hidden" data-barba="container" data-barba-namespace="home" data-content-wrapper>
+      <div class="fixed h-screen w-full top-0 left-0 z-10 border-[20px] bg-[#0D0E12] border-[#111318] rounded-[50px] overflow-hidden" data-content-wrapper>
         <div class="absolute w-full h-screen overflow-y-auto" data-content-overflow>
           <div data-content>
             {% include '_header.njk' %}
-            <main>
+            <main data-barba="container" data-barba-namespace="home">
               {{ content | safe }}
             </main>
             {% include '_footer.njk' %}

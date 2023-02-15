@@ -1,22 +1,31 @@
 module.exports = [
   {
     text: 'Resumé',
-    link: '/',
+    link: '/pdf/cv.pdf',
+    icon: 'pdf',
   },
   {
     text: 'Github',
-    link: '/',
+    link: 'https://github.com/ivanahcosta',
+    user: '@ivanahcosta',
+    icon: 'github',
   },
   {
     text: 'Behance',
-    link: '/',
+    link: 'https://www.behance.net/ivana-costa',
+    user: '@ivana-costa',
+    icon: 'behance',
   },
   {
     text: 'Discord',
-    link: '/',
+    link: 'https://discordapp.com/channels/@me/Ivana#0544/',
+    user: '@Ivana#0544',
+    icon: 'discord',
   },
   {
-    text: 'oi@ivana.co',
-    link: '/',
+    text: 'E-mail',
+    link: 'mailto:oi@ivana.co',
+    user: 'oi@ivana.co',
+    icon: 'mail',
   },
 ];

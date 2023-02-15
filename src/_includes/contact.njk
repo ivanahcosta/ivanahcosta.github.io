@@ -4,26 +4,49 @@
       {% for item in social %}
         <li>
           <a class="py-5 container flex items-center justify-between gap-10" href="{{ item.link}}" target="_blank">
-            <span>{{ item.text }}</span>
-            {% if item.text === 'Discord' %}
-              <span class="grid grid-cols-1 text-right">
-                <span class="text-[0.7em]">Listening to</span>
-                <span>SUPERMODEL — Måneskin</span>
-              </span>
-              {% else%}
-              <span>@ivanahcosta</span>
-            {% endif %}
+            <span class="flex items-center gap-5">
+              {% svg item.icon, 'w-[1em] aspect-square' %}
+              <span>{{ item.text }}</span>
+            </span>
+            <span class="opacity-50">{{ item.user }}</span>
           </a>
         </li>
       {% endfor %}
-      <li>
-        <button class="py-5 container flex items-center justify-between gap-10" data-action="toggle-contact">
-          <span>Go back to exploring</span>
-          <span class="flex gap-2 items-center">
-            {% svg 'arrow-down', 'w-[1em] aspect-square' %}
+      <li class="text-[0.5em]">
+        <span class="py-5 container flex items-center justify-between gap-10">
+          <span class="flex gap-5 items-center">
+            {% image 'https://rollingstone.uol.com.br/media/uploads/2023/01/23rushmaneskin1.jpg', 'Music', '50px', 'w-10 aspect-square rounded-xl' %}
+            <span>
+              <p class="text-[0.7em] uppercase opacity-50">Last listened to</p>
+              <p>SUPERMODEL — Måneskin</p>
+            </span>
           </span>
-        </button>
-        {#  #}
+          <span class="flex gap-5 items-center">
+            {% image 'https://m.media-amazon.com/images/I/417GbcEWF2L.jpg', 'Music', '50px', 'w-10 aspect-square rounded-xl' %}
+            <span>
+              <p class="text-[0.7em] uppercase opacity-50">Last read</p>
+              <p>Sociedade do cansaço</p>
+            </span>
+          </span>
+          <span class="flex gap-5 items-center">
+            {% image 'https://cinepop.com.br/wp-content/uploads/2023/01/velma.jpg', 'Music', '50px', 'w-10 aspect-square rounded-xl' %}
+            <span>
+              <p class="text-[0.7em] uppercase opacity-50">Last watched</p>
+              <p>Velma (2023)</p>
+            </span>
+          </span>
+          <span>
+            <button class="py-5 container flex items-center justify-between gap-10" data-action="toggle-contact">
+              <span class="flex items-center gap-2">
+                {% svg 'explore', 'w-[1em] aspect-square' %}
+                <span>Go back to exploring</span>
+              </span>
+              <span class="flex gap-2 items-center w-10 h-10 aspect-square bg-white text-[#22262F] rounded-full justify-center">
+                {% svg 'arrow-down', 'w-[1em] aspect-square' %}
+              </span>
+            </button>
+          </span>
+        </span>
       </li>
     </ul>
   </div>
