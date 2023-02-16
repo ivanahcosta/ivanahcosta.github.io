@@ -81,9 +81,9 @@ permalink: "/index.html"
           <div class="grid grid-cols-2 gap-10">
             {% for item in project.data.thumbnail %}
               <div class="flex items-center justify-center p-[80px]" style="background-color: {{ project.data.color }}">
-                {% image item,
+                {% image 'projects/' + item,
                 project.data.title,
-                '100vw', 'rounded-lg shadow-lg' %}
+                '100vw', 'rounded-lg shadow-md' %}
               </div>
             {% endfor %}
           </div>

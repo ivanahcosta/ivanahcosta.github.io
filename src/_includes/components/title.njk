@@ -1,0 +1,20 @@
+{% macro section(text, icon, linkText, linkIcon, link) %}
+  <div class="py-5 flex gap-10 items-center justify-between">
+    {%if text %}
+      <h6 class="flex gap-3 items-center">
+        {%if icon %}
+          {% svg icon, 'w-[1em] aspect-square'%}
+        {% endif %}
+        <span>{{text}}</span>
+      </h6>
+      {%if link %}
+        <a class="flex gap-3 items-center" href="{{ link }}" target="_blank">
+          {%if linkIcon %}
+            {% svg linkIcon, 'w-[1em] aspect-square'%}
+          {% endif %}
+          <span>{{ linkText }}</span>
+        </a>
+      {% endif %}
+    {% endif %}
+  </div>
+{% endmacro %}

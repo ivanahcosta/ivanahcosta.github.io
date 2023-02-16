@@ -4,6 +4,8 @@ layout: "base"
 permalink: "/about.html"
 ---
 
+{% import "components/title.njk" as title %}
+
 <div class="grid grid-cols-1 gap-10 py-10">
   <section id="cta">
     <div class="container">
@@ -17,7 +19,7 @@ permalink: "/about.html"
   </section>
   <section id="about">
     <div class="container">
-      <h6>About</h6>
+      {{ title.section('About me') }}
       <div class="grid grid-cols-1 gap-5">
         <p>
           I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
@@ -39,7 +41,7 @@ permalink: "/about.html"
   </section>
   <section id="skills">
     <div class="container">
-      <h6>I can help with</h6>
+      {{ title.section('I can help with') }}
       <div class="grid grid-cols-4 gap-10">
         {% for item in skills %}
           <div class="flex gap-10">
@@ -60,11 +62,11 @@ permalink: "/about.html"
   </section>
   <section id="clients">
     <div class="container">
-      <h6>Featured brands I've worked with</h6>
+      {{ title.section('Featured brands I have worked with') }}
       <div class="grid grid-cols-4 border divide-y divide-x">
         {% for item in brands %}
           <div class="p-[150px] py-10">
-            {% image item | slug + '.png',
+            {% image 'brands/' + item | slug + '.png',
             item,
             '100vw' %}
           </div>
@@ -74,7 +76,7 @@ permalink: "/about.html"
   </section>
   <section id="experience">
     <div class="container">
-      <h6>Experience</h6>
+      {{ title.section('Experience', 'case', 'View my resumé','pdf', '/assets/pdf/cv.pdf') }}
       <div class="grid grid-cols-1 divide-y border-t">
         {% for item in experience %}
           <div class="py-5 grid grid-cols-3 gap-5">
@@ -88,7 +90,7 @@ permalink: "/about.html"
   </section>
   <section id="education">
     <div class="container">
-      <h6>Education</h6>
+      {{ title.section('Education') }}
       <div class="grid grid-cols-1 divide-y border-t">
         {% for item in education %}
           <div class="py-5 grid grid-cols-3 gap-5">

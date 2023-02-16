@@ -31,7 +31,7 @@ module.exports = function (config) {
       input: 'src',
       output: 'dist',
       includes: '_includes',
-      layouts: '_includes/layouts',
+      layouts: '_layouts',
     },
   };
 };
