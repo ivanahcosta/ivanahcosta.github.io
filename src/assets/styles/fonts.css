@@ -1,76 +1,11 @@
 @font-face {
   font-family: 'Cabinet Grotesk Regular';
-  font-style: normal;
-  font-weight: normal;
+  font-display: block;
   src: local('Cabinet Grotesk Regular'), url('../fonts/cabinet/CabinetGrotesk-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Cabinet Grotesk Thin';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Thin'), url('../fonts/cabinet/CabinetGrotesk-Thin.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabinet Grotesk Extralight';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Extralight'), url('../fonts/cabinet/CabinetGrotesk-Extralight.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabinet Grotesk Light';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Light'), url('../fonts/cabinet/CabinetGrotesk-Light.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabinet Grotesk Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Medium'), url('../fonts/cabinet/CabinetGrotesk-Medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabinet Grotesk Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Bold'), url('../fonts/cabinet/CabinetGrotesk-Bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabinet Grotesk Extrabold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Extrabold'), url('../fonts/cabinet/CabinetGrotesk-Extrabold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Cabinet Grotesk Black';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Cabinet Grotesk Black'), url('../fonts/cabinet/CabinetGrotesk-Black.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Circular Medium';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Circular Medium'), url('../fonts/circular/CircularStd-Medium.otf') format('opentype');
-}
-
-@font-face {
   font-family: 'Circular Book';
-  font-style: normal;
-  font-weight: normal;
+  font-display: block;
   src: local('Circular Book'), url('../fonts/circular/CircularStd-Book.otf') format('opentype');
-}
-
-@font-face {
-  font-family: 'Circular Light';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Circular Light'), url('../fonts/circular/CircularStd-Light.otf') format('opentype');
 }

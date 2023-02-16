@@ -1,11 +1,8 @@
-<footer class="py-10 grid grid-cols-1 gap-10" id="footer">
-  <div class="container">
-    <hr class="border-[#2B303B]/40">
-  </div>
-  <div class="container flex fap-10 justify-between">
+<footer class="py-10 border-t" id="footer">
+  <div class="container flex gap-10 justify-between">
     <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.</p>
     <div class="flex gap-10">
-      <ul class="flex gap-2 items-center">
+      <ul class="flex gap-5 items-center">
         {% for item in footer %}
           <li>
             <button>
@@ -13,14 +10,15 @@
             </button>
           </li>
           {% if not loop.last %}
-            <li class="text-[0.5em]">●</li>
+            <li class="text-[0.3em]">●</li>
             {% endif%}
           {% endfor %}
         </ul>
-        <a class="flex gap-2 items-center" href="#header">
+        <a class="flex gap-3 items-center" href="#header">
           {% svg 'arrow-up', 'w-[1em] aspect-square' %}
           <span>Go back to top</span>
         </a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>

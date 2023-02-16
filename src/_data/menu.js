@@ -10,7 +10,7 @@ module.exports = [
   {
     text: 'Lab',
     link: '/lab',
-    disabled: true,
+    // disabled: true,
     icon: 'potion',
   },
 ];

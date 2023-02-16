@@ -11,7 +11,7 @@ tech:
   - SASS
 color: '#5CD3E0'
 team: [{ name: Fernanda Cajado, link: /, position: 'UX/UI' }, { name: Fernanda Serra, link: /, position: 'UX/UI' }]
-description: 'A landing page to publicize the Veloe benefits for Bradesco clients.'
+description: As a developer, the task assigned was to work on a landing page intended to promote the distinct benefits of Veloe for clients of Bradesco. The objective was to design an interactive page that highlights the unique features of Veloe's services, customized to the requirements of Bradesco clients, and enhancing the overall user experience.
 link: 'https://www.banco.bradesco/veloe'
 thumbnail:
   - beneficios-bradesco-veloe-1.png

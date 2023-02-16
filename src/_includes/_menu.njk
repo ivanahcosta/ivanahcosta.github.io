@@ -1,21 +1,5 @@
-{% set projectsLength = collections['projects'].length %}
-
-<nav class="sticky bottom-10 w-fit left-1/2 -translate-x-1/2 pb-10 -mt-[53px]" data-menu>
-  <ul class="inline-flex gap-5 bg-[#15181E] p-3 rounded-full">
-    {% for item in menu %}
-      <li class="rounded-full {% if loop.first %}active{% endif %} [&.active]:bg-[#22262F] [&.active]:text-[#ffffff]">
-        <a class="p-3 flex gap-2 items-center " href="{{ item.link }}" {% if item.disabled %} disabled {% endif %}>
-          <span>
-            {{ item.text | safe }}
-            {% if item.text === 'Selected works' %}
-              <sup>{{ projectsLength }}</sup>
-            {% endif %}
-          </span>
-          {% if item.icon %}
-            {% svg item.icon, 'w-[1em] aspect-square' %}
-          {% endif %}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+<nav id="menu">
+  <div class="container">
+    menu
+  </div>
 </nav>

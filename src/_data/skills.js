@@ -7,7 +7,7 @@ module.exports = [
   {
     title: 'UI',
     description:
-      'Background in designing user interfaces that are intuitive and visually engaging. My focus on creating user-friendly interfaces is reflected in my attention to detail, from typography and color schemes to spacing and layout. ',
+      'I have background in designing user interfaces that are intuitive and visually engaging. My focus on creating user-friendly interfaces is reflected in my attention to detail, from typography and color schemes to spacing and layout. ',
     featured: true,
   },
   {

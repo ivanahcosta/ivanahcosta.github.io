@@ -12,7 +12,7 @@ tech:
   - SASS
 color: '#B91D5E'
 team: [{ name: Carolina Sobral, link: /, position: 'UX/UI' }]
-description: "A landing page to present Bradesco's “spend and earn” promotion, developed to be embedded in the brand's main website. The page included sections that allowed the user to observe some information from login, such as the amount spent on bank cards, with integrations being made with the client's backend team from an iframe."
+description: As part of a project to promote Bradesco's "spend and earn" program, I collaborated on the development of a landing page that was embedded within the company's primary website. The landing page incorporated various sections that enabled users to access information such as their bank card spending, with integrations made through an iframe and in close coordination with the client's backend team. <br><br>During this project, I leveraged my technical expertise in front-end development to deliver a seamless user experience that aligned with the client's branding guidelines. I collaborated closely with the backend team to ensure a smooth and efficient integration of the landing page, and implemented effective tracking and analytics tools to monitor user engagement and website performance.
 link: 'https://www.banco.bradesco/valem+'
 thumbnail:
   - suas-compras-valem-mais-1.png
@@ -21,3 +21,7 @@ featured: true
 side: false
 available: false
 ---
+
+As part of a project to promote Bradesco's "spend and earn" program, I collaborated on the development of a landing page that was embedded within the company's primary website. The landing page incorporated various sections that enabled users to access information such as their bank card spending, with integrations made through an iframe and in close coordination with the client's backend team.
+
+During this project, I leveraged my technical expertise in front-end development to deliver a seamless user experience that aligned with the client's branding guidelines. I collaborated closely with the backend team to ensure a smooth and efficient integration of the landing page, and implemented effective tracking and analytics tools to monitor user engagement and website performance.

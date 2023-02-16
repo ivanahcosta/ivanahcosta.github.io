@@ -13,7 +13,7 @@ tech:
   - SASS
 color: '#00A1CD'
 team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }]
-description: "System that sought to promote care for the seeds of typically Brazilian trees that the client had sent to its employees. The site was designed to be a social network for the seed, where it was possible to post photos and update the seed's growth status. In addition to internal integrations, there was integration with the instagram API so that it was possible to share photos of the plant on the social network and vice versa, using hashtags."
+description: I was the main developer in this website that sought to promote care for the seeds of typically Brazilian trees that the client had sent to its employees.<br><br> The site required complex integrations, both internally and externally with the Instagram API, to enable users to share photos of the plant on the social network and vice versa using hashtags. Overall, it was a challenging and rewarding project that allowed me to showcase my technical expertise in web development and API integrations.
 link: 'https://www.tnc.vc/aquaseed'
 thumbnail:
   - aquaseed-1.png

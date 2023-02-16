@@ -10,35 +10,21 @@
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url | safe }}"/>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url | safe }}"/>
   </head>
-  <body class="bg-[#111318] text-[#e3e5e885]" data-barba="wrapper">
+  <body class="bg-white text-black" data-barba="wrapper">
     {% svgsprite %}
 
-    <div class="fixed h-screen w-full top-0 left-0 overflow-screen">
+    {% include '_header.njk' %}
+    <main data-barba="container" data-barba-namespace="home">
+      {{ content | safe }}
+    </main>
+    {% include '_footer.njk' %}
 
-      {% include 'hero.njk' %}
-      {% include 'contact.njk' %}
-
-      <div class="fixed h-screen w-full top-0 left-0 z-10 border-[20px] bg-[#0D0E12] border-[#111318] rounded-[50px] overflow-hidden" data-content-wrapper>
-        <div class="absolute w-full h-screen overflow-y-auto" data-content-overflow>
-          <div data-content>
-            {% include '_header.njk' %}
-            <main data-barba="container" data-barba-namespace="home">
-              {{ content | safe }}
-            </main>
-            {% include '_footer.njk' %}
-            {% include '_menu.njk' %}
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <script src="{{ '/assets/scripts/vendors/jquery.js' | url | safe }}"></script>
+    {# <script src="{{ '/assets/scripts/vendors/jquery.js' | url | safe }}"></script>
 
     <script src="{{ '/assets/scripts/vendors/lenis.js' | url | safe }}"></script>
     <script src="{{ '/assets/scripts/vendors/barba.umd.js' | url | safe }}"></script>
     <script src="{{ '/assets/scripts/vendors/gsap.min.js' | url | safe }}"></script>
-    <script src="{{ '/assets/scripts/vendors/ScrollTrigger.min.js' | url | safe }}"></script>
+    <script src="{{ '/assets/scripts/vendors/ScrollTrigger.min.js' | url | safe }}"></script> #}
 
     <script type="module" src="{{ '/assets/scripts/main.js' | url | safe }}"></script>
   </body>

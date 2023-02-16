@@ -3,37 +3,32 @@ title: "Lab"
 layout: "base"
 permalink: "/lab.html"
 ---
-
-<section class="py-10" id="lab">
-  <div class="grid grid-cols-4 gap-10 p-10">
-    {% for i in range(0, 15) %}
-      <div class="p-10">
-        <div class="grid grid-cols-1 gap-5">
-          <div class="bg-white/10 rounded-xl w-10 aspect-square"></div>
-          <h2 class="text-[2em] text-[#ffffff]">
-            Name of the project
-          </h2>
-          <p class="pr-10">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, molestias minima eos inventore at beatae ea culpa id libero excepturi dolorum. Assumenda, laborum dolorem. Accusamus rem repellat iste pariatur nemo.
-          </p>
-          <div class="flex items-center gap-5 flex-wrap">
-            {% for i in range(0, 4) %}
-              <div>
-                <span class="border border-[#2B303B] p-1 px-3 text-[0.8em] rounded-full">tech {{ i }}</span>
-              </div>
-            {% endfor %}
-          </div>
-          <div class="flex gap-5 items-center">
-            <a class="bg-[#15181E] text-[#ffffff] rounded-full p-2 flex items-center gap-2" href="/" target="_blank">
-              {% svg 'repository', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2' %}
-            </a>
-            <a class="bg-[#15181E] text-[#ffffff] rounded-full p-2 flex items-center gap-2" href="/" target="_blank">
-              {% svg 'link', 'w-[1em] aspect-square box-content bg-[#22262F] rounded-full p-2' %}
-              <span>project.github.io</span>
-            </a>
-          </div>
+<div class="grid grid-cols-4 divide-ya gap-10 p-10">
+  {% for i in range(0, 15) %}
+    <section class="p-10">
+      <div class="grid grid-cols-1 gap-5">
+        <div class="bg-black/10 rounded-xl w-10 aspect-square"></div>
+        <h2 class="font-bold">
+          Name of the project
+        </h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, molestias minima eos inventore at beatae ea culpa id libero excepturi dolorum. Assumenda, laborum dolorem. Accusamus rem repellat iste pariatur nemo.
+        </p>
+        <div class="flex flex-wrap items-center gap-5">
+          {% for i in range(0, 4) %}
+            <span>tech {{ i }}</span>
+          {% endfor %}
+        </div>
+        <div class="flex flex-wrap gap-5 items-center">
+          <a class="flex gap-3 items-center" href="/" target="_blank">
+            {% svg 'repository', 'w-[1em] aspect-square' %}
+          </a>
+          <a class="flex gap-3 items-center" href="/" target="_blank">
+            {% svg 'link', 'w-[1em] aspect-square ' %}
+            <span>project.github.io</span>
+          </a>
         </div>
       </div>
-    {% endfor %}
-  </div>
-</section>
+    </section>
+  {% endfor %}
+</div>

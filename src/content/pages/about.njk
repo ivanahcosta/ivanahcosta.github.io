@@ -4,21 +4,23 @@ layout: "base"
 permalink: "/about.html"
 ---
 
-<section class="py-10 grid grid-cols-1 gap-10" id="about">
-  <div class="container grid grid-cols-1 gap-5">
-    <h3 class="text-[4em] leading-none text-[#ffffff] pr-10 font-serif">
-      I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.
-    </h3>
-    <p>
-      My passion lies in collaborating with clients to exceed their expectations and create digital solutions that stand out in the digital world.
+<div class="grid grid-cols-1 gap-10 py-10">
+  <section id="cta">
+    <div class="container">
+      <h3>
+        I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.
+      </h3>
+      <p>
+      My passion lies in collaborating with clients to exceed expectations and create digital solutions that stand out in the digital world.
     </p>
-  </div>
-  <div class="container grid grid-cols-2 gap-10" id="aboutme">
-    <div class="pr-10">
-      <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">About me</h6>
-      <div class="grid grid-cols-1 gap-5 pr-10">
-        <p class="text-[2em] font-serif leading-none">
-          I'm based in Sao Paolo — Brasil and am passionated about creating artisan digital experiences with focus on motion and interaction. With 6+ years in the game I've worked with clients in a wide array of industries around the world.
+    </div>
+  </section>
+  <section id="about">
+    <div class="container">
+      <h6>About</h6>
+      <div class="grid grid-cols-1 gap-5">
+        <p>
+          I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
         </p>
         <p>
           My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
@@ -34,62 +36,68 @@ permalink: "/about.html"
         </p>
       </div>
     </div>
-  </div>
-  <div class="container " id="skills">
-    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">I can help with</h6>
-    <div class="grid grid-cols-4 gap-10">
-      {% for item in skills %}
-        <div class="flex gap-10">
-          <div>
-            <p class="border border-[#2B303B] text-[#ffffff] font-serif w-10 h-10 rounded-full flex items-center justify-center">0{{ loop.index }}</p>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <h6>I can help with</h6>
+      <div class="grid grid-cols-4 gap-10">
+        {% for item in skills %}
+          <div class="flex gap-10">
+            <div>
+              <p>0{{ loop.index }}</p>
+            </div>
+            <div>
+              <h5>
+                {% if item.featured %}✨{% endif %}
+                {{ item.title }}
+              </h5>
+              <p>{{ item.description }}</p>
+            </div>
           </div>
-          <div>
-            <h5 class="text-[1.3em] text-[#ffffff] font-serif pt-1 pb-5">
-              {% if item.featured %}✨{% endif %}
-              {{ item.title }}
-            </h5>
-            <p>{{ item.description }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section id="clients">
+    <div class="container">
+      <h6>Featured brands I've worked with</h6>
+      <div class="grid grid-cols-4 border divide-y divide-x">
+        {% for item in brands %}
+          <div class="p-[150px] py-10">
+            {% image item | slug + '.png',
+            item,
+            '100vw' %}
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
-  <div class="container" id="clients">
-    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">Featured brands I've worked with</h6>
-    <div class="grid grid-cols-4 border border-[#2B303B]/40 divide-y divide-x divide-[#2B303B]/40 rounded-xl">
-      {% for item in brands %}
-        <div class="p-[150px] py-10">
-          {% set url = item | slug + '.png' %}
-          {% image url,
-          item,
-          '100vw',
-          'invert' %}
-        </div>
-      {% endfor %}
+  </section>
+  <section id="experience">
+    <div class="container">
+      <h6>Experience</h6>
+      <div class="grid grid-cols-1 divide-y border-t">
+        {% for item in experience %}
+          <div class="py-5 grid grid-cols-3 gap-5">
+            <p class="font-bold">{{ item.role }}</p>
+            <p>{{ item.agency }}</p>
+            <p class="text-right">{{ item.time}}</p>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-  <div class="container" id="experience">
-    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">Experience</h6>
-    <div class=" grid grid-cols-1 divide-y divide-[#2B303B]/40 border-t border-[#2B303B]">
-      {% for item in experience %}
-        <div class="py-5 grid grid-cols-3 gap-5">
-          <p class="text-[#ffffff] font-serif">{{ item.role }}</p>
-          <p>{{ item.agency }}</p>
-          <p class="text-right">{{ item.time}}</p>
-        </div>
-      {% endfor %}
+  </section>
+  <section id="education">
+    <div class="container">
+      <h6>Education</h6>
+      <div class="grid grid-cols-1 divide-y border-t">
+        {% for item in education %}
+          <div class="py-5 grid grid-cols-3 gap-5">
+            <p class="font-bold">{{ item.course }}</p>
+            <p>{{ item.school }}</p>
+            <p class="text-right">{{ item.time }}</p>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-  </div>
-  <div class="container" id="education">
-    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">Education and certifcations</h6>
-    <div class="grid grid-cols-1 divide-y divide-[#2B303B]/40 border-t border-[#2B303B]">
-      {% for item in education %}
-        <div class="py-5 grid grid-cols-3 gap-5">
-          <p class="text-[#ffffff] font-serif">{{ item.course }}</p>
-          <p>{{ item.school }}</p>
-          <p class="text-right">{{ item.time }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+  </section>
+</div>

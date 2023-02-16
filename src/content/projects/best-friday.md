@@ -11,7 +11,7 @@ tech:
   - Razor
 color: '#0034FF'
 team: [{ name: Larissa Gialbatti, link: /, position: 'UX/UI' }]
-description: 'Three-page hotsite focused on promoting Meio & Mensagem promotions on Black Friday 2017, in addition to encouraging newspaper subscribers to renew their subscriptions and convincing those who have not yet subscribed to subscribe.'
+description: I contributed to the creation of a three-page hotsite dedicated to promoting Meio & Mensagem's Black Friday 2017 promotions while also encouraging newspaper subscription renewals and new subscriptions. The project required careful attention to user experience, and we employed various design and technical features to ensure the website was engaging and effective in meeting its goals.
 link: 'https://www.meiomensagem.com'
 featured: true
 side: false

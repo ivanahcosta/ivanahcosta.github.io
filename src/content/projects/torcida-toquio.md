@@ -12,7 +12,7 @@ tech:
   - SASS
 color: '#AB113D'
 team: [{ name: Fernanda Cajado, link: /, position: 'UX' }, { name: Caroline Silva, link: /, position: 'UI' }]
-description: "Landing page to present the action-focused promotion for the 2020 Tokyo Olympics. In addition, the page had sections integrated with the customer's backend team, which allowed the user to see the numbers of coupons generated according to the amounts spent on Bradesco credit cards, which could turn into gift vouchers based on a raffle. The promotion was suspended due to the Covid-19 pandemic."
+description: I was responsible for the development of a landing page dedicated to promoting an action-focused campaign tied to the 2020 Tokyo Olympics. The landing page included sections that integrated with the client's backend team, allowing users to view the number of coupons generated based on their spending on Bradesco credit cards, with the potential to win gift vouchers through a raffle.<br><br>Throughout the development process, I leveraged my expertise in front-end development to create a visually compelling and responsive design that aligned with the client's branding guidelines. I also collaborated closely with the client's backend team to ensure seamless integration and effective data tracking, including the implementation of analytics tools to monitor user engagement and campaign performance.<br><br>Unfortunately, the promotion was ultimately suspended due to the outbreak of the Covid-19 pandemic. Nonetheless, I remain proud of my contributions to this project and the impact it had in driving engagement with the Bradesco brand.
 link: 'https://www.branco.bradesco/tokyo'
 featured: false
 side: false
