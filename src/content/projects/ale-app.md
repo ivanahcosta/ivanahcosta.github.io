@@ -14,7 +14,8 @@ color: '#0255A5'
 team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }]
 description: "Landing page focused on promoting Ale's application to its customers, with segmented targeting and small interactions based on scrolling the page."
 link: 'https://www.ale.vc'
-thumbnail: 'project.jpeg'
+thumbnail:
+  - ale-app-1.png
 featured: false
 side: false
 available: false

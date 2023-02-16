@@ -10,6 +10,12 @@ $(document).ready(function () {
     .reverse();
   $('[data-action="toggle-contact"]').on('click', function () {
     contact.reversed(!contact.reversed());
+    console.log(!contact.reversed());
+    if (!contact.reversed()) {
+      $('[data-header] .container').css('opacity', 0.5).css('pointer-events', 'none');
+    } else {
+      $('[data-header] .container').css('opacity', 1).css('pointer-events', 'all');
+    }
   });
   $('[data-contact]').css('padding-bottom', $('[data-header]').innerHeight() + 'px');
 });

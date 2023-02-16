@@ -17,7 +17,9 @@ color: '#95c3cd'
 team: [{ name: Flesch, link: /, position: 'ID Designer' }]
 description: 'Website to promote Versatil Day event, produced by Kota, presenting the event, topics, speakers, etc.'
 link: 'https://www.kotaversatilday.com.br'
-thumbnail: 'project.jpeg'
+thumbnail:
+  - kota-versatil-day-1.png
+  - kota-versatil-day-2.png
 featured: false
 side: false
 available: false

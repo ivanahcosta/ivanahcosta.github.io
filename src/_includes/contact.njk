@@ -1,12 +1,12 @@
 <section class="fixed h-screen w-full top-0 y-10 flex items-end justify-center" id="contact" data-contact>
   <div class="w-full relative">
-    <ul class="grid grid-cols-1 divide-y divide-[#0D0E12] text-[2em]">
+    <ul class="grid grid-cols-1 divide-y divide-[#0D0E12] text-[1.8em]">
       {% for item in social %}
         <li>
           <a class="py-5 container flex items-center justify-between gap-10" href="{{ item.link}}" target="_blank">
             <span class="flex items-center gap-5">
               {% svg item.icon, 'w-[1em] aspect-square' %}
-              <span>{{ item.text }}</span>
+              <span class="font-serif text-[#ffffff]">{{ item.text }}</span>
             </span>
             <span class="opacity-50">{{ item.user }}</span>
           </a>

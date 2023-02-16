@@ -5,7 +5,7 @@
   <div class="container flex fap-10 justify-between">
     <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.</p>
     <div class="flex gap-10">
-      <ul class="flex gap-2">
+      <ul class="flex gap-2 items-center">
         {% for item in footer %}
           <li>
             <button>
@@ -13,7 +13,7 @@
             </button>
           </li>
           {% if not loop.last %}
-            <li>●</li>
+            <li class="text-[0.5em]">●</li>
             {% endif%}
           {% endfor %}
         </ul>

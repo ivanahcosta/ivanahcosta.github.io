@@ -16,7 +16,9 @@ color: '#215614'
 team: [{ name: Flesch, link: /, position: 'ID Designer' }]
 description: 'Website to promote annual congress event produced by the client, presenting the event, topics, speakers, etc.'
 link: 'https://www.implanteperio.com.br'
-thumbnail: 'project.jpeg'
+thumbnail:
+  - congresso-internacional-implanteperio-1.png
+  - congresso-internacional-implanteperio-2.png
 featured: false
 side: false
 available: false

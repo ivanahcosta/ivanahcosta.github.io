@@ -4,24 +4,92 @@ layout: "base"
 permalink: "/about.html"
 ---
 
-<section class="py-10" id="about">
-  <div class="container">
-    <h3 class="text-[4em]">About page</h3>
-    <div class="grid grid-cols-3 gpa-10">
-      <div class="grid grid-cols-1 gap-5 py-10">
-        <p>
-          I'm a digital designer and  web developer from Sao paulo-Brasil, passionated about creating artisan digital experiences with focus on motion and interaction. With 6+ years in the game he has worked with clients in a wide array of industries around the world.
+<section class="py-10 grid grid-cols-1 gap-10" id="about">
+  <div class="container grid grid-cols-1 gap-5">
+    <h3 class="text-[4em] leading-none text-[#ffffff] pr-10 font-serif">
+      I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.
+    </h3>
+    <p>
+      My passion lies in collaborating with clients to exceed their expectations and create digital solutions that stand out in the digital world.
+    </p>
+  </div>
+  <div class="container grid grid-cols-2 gap-10" id="aboutme">
+    <div class="pr-10">
+      <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">About me</h6>
+      <div class="grid grid-cols-1 gap-5 pr-10">
+        <p class="text-[2em] font-serif leading-none">
+          I'm based in Sao Paolo — Brasil and am passionated about creating artisan digital experiences with focus on motion and interaction. With 6+ years in the game I've worked with clients in a wide array of industries around the world.
         </p>
         <p>
-          Since I've started working in Digital Design 15 years ago, I've become a well rounded designer who feels comfortable throughout the whole process of creating digital products from start to finish.
+          My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
         </p>
         <p>
-          Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints.  Im a passionate prototyper, who feels comfortable creating something testable at the level of fidelity that is appropriate to challenge a hypothesis. This can range from a simple click-dummy to a fully interactive hifi prototype that looks and feels like the real thing.
+          Since then, I've honed my skills through various projects and collaborations with other designers and developers. I've worked on everything from simple landing pages to complex web applications, and have always strived to create websites that are not only visually appealing, but also user-friendly and accessible.
         </p>
         <p>
-          Being in good company is very important to me and I love to learn from my peers and share my experience with them. It inspires me to empower colleagues to unlock their creative potential, so I‘ll support them do so whenever I can.
+          Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints. I'm a passionate prototyper, who feels comfortable creating something testable at the level of fidelity that is appropriate to challenge a hypothesis. This can range from a simple click-dummy to a fully interactive hifi prototype that looks and feels like the real thing.
+        </p>
+        <p>
+          Ultimately, my goal as a front-end developer is to create websites that delight and inspire, while also providing a seamless user experience. Whether I'm working on a personal project or collaborating with a team, I always strive to bring my best to the table and to help create something that we can all be proud of.
         </p>
       </div>
+    </div>
+  </div>
+  <div class="container " id="skills">
+    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">I can help with</h6>
+    <div class="grid grid-cols-4 gap-10">
+      {% for item in skills %}
+        <div class="flex gap-10">
+          <div>
+            <p class="border border-[#2B303B] text-[#ffffff] font-serif w-10 h-10 rounded-full flex items-center justify-center">0{{ loop.index }}</p>
+          </div>
+          <div>
+            <h5 class="text-[1.3em] text-[#ffffff] font-serif pt-1 pb-5">
+              {% if item.featured %}✨{% endif %}
+              {{ item.title }}
+            </h5>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container" id="clients">
+    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">Featured brands I've worked with</h6>
+    <div class="grid grid-cols-4 border border-[#2B303B]/40 divide-y divide-x divide-[#2B303B]/40 rounded-xl">
+      {% for item in brands %}
+        <div class="p-[150px] py-10">
+          {% set url = item | slug + '.png' %}
+          {% image url,
+          item,
+          '100vw',
+          'invert' %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container" id="experience">
+    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">Experience</h6>
+    <div class=" grid grid-cols-1 divide-y divide-[#2B303B]/40 border-t border-[#2B303B]">
+      {% for item in experience %}
+        <div class="py-5 grid grid-cols-3 gap-5">
+          <p class="text-[#ffffff] font-serif">{{ item.role }}</p>
+          <p>{{ item.agency }}</p>
+          <p class="text-right">{{ item.time}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container" id="education">
+    <h6 class="inline-flex mb-10 border border-[#2B303B] text-[#2B303B] rounded-full uppercase p-2 px-3 leading-none font-bold font-serif">Education and certifcations</h6>
+    <div class="grid grid-cols-1 divide-y divide-[#2B303B]/40 border-t border-[#2B303B]">
+      {% for item in education %}
+        <div class="py-5 grid grid-cols-3 gap-5">
+          <p class="text-[#ffffff] font-serif">{{ item.course }}</p>
+          <p>{{ item.school }}</p>
+          <p class="text-right">{{ item.time }}</p>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
