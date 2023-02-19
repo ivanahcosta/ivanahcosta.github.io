@@ -1,15 +1,19 @@
 @import '_animations.css';
 
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 html {
   scroll-behavior: initial;
-  /* filter: invert(1); */
+  overflow-x: hidden;
 }
 
 [disabled] {
   opacity: 0.3;
   pointer-events: none;
+}
+
+* {
+  box-sizing: border-box;
 }

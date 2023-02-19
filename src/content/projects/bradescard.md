@@ -1,11 +1,13 @@
 ---
 title: 'Bradescard'
 type: Website
-client: 'Bradescard'
+client:
+  - Bradescard
 agency: One Digital
 date: 2022-12-01
 services:
   - Development
+  - SEO
 tech:
   - Eleventy
   - Webpack

@@ -1,7 +1,8 @@
 ---
 title: 'Campanha Cartões Débito'
 type: Landing page
-client: 'Bradesco'
+client:
+  - Bradesco
 agency: One Digital
 date: 2020-07-31
 services:

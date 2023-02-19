@@ -1,7 +1,9 @@
 ---
 title: 'Torcida Tóquio'
 type: Landing page
-client: 'Bradesco, Visa'
+client:
+  - Bradesco
+  - Visa
 agency: One Digital
 date: 2020-02-12
 services:

@@ -1,7 +1,8 @@
 ---
 title: 'Máquinas Do Futuro'
 type: Landing page
-client: 'Bradesco'
+client:
+  - Bradesco
 agency: One Digital
 date: 2019-07-31
 services:

@@ -12,20 +12,25 @@
   </head>
   <body class="bg-white text-black" data-barba="wrapper">
     {% svgsprite %}
+    {% include 'common/loader.njk' %}
+
+    {% include 'common/menu.njk' %}
+
+    <div class="fixed bottom-10 left-1/2 -translate-x-1/2 flex gap-10 items-center justify-center z-[3]">
+      <button class="flex leading-none" data-action="toggle-menu">
+        <span>Open menu</span>
+        {% svg 'menu', 'w-[1em] aspect-square' %}
+      </button>
+      <input type="range" min="0" max="100" value="0" aria-label="Scroll the page"/>
+    </div>
 
     {% include 'common/header.njk' %}
     <main data-barba="container" data-barba-namespace="home">
       {{ content | safe }}
     </main>
+    {% include 'common/contact.njk' %}
     {% include 'common/footer.njk' %}
 
-    <script src="{{ '/assets/scripts/vendors/jquery.js' | url | safe }}"></script>
-
-    <script src="{{ '/assets/scripts/vendors/lenis.js' | url | safe }}"></script>
-    <script src="{{ '/assets/scripts/vendors/barba.js' | url | safe }}"></script>
-    <script src="{{ '/assets/scripts/vendors/gsap.js' | url | safe }}"></script>
-    <script src="{{ '/assets/scripts/vendors/ScrollTrigger.js' | url | safe }}"></script>
-
-    <script src="{{ '/assets/scripts/main.js' | url | safe }}"></script>
+    <script data-main="{{ '/assets/scripts/main.js' | url | safe }}" src="{{ '/assets/scripts/vendors/require.js' | url | safe }}"></script>
   </body>
 </html>

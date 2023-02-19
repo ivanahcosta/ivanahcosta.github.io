@@ -1,7 +1,8 @@
 ---
 title: 'Aquaseed'
 type: Website
-client: 'TNC'
+client:
+  - TNC
 agency: Newbacon
 date: 2018-03-01
 services:

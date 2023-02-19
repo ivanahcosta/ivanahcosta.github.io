@@ -1,7 +1,8 @@
 ---
 title: 'Transforme Sua Casa'
 type: Landing page
-client: 'Bradesco'
+client:
+  - Bradesco
 agency: One Digital
 date: 2020-09-21
 services:

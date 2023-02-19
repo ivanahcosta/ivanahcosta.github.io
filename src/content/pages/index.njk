@@ -3,103 +3,73 @@ title: "Works"
 layout: "base"
 permalink: "/index.html"
 ---
-
-<div class="grid grid-cols-1 divide-y">
-  {% asyncEach project in collections['projects'] | reverse %}
-  <section class="p-10" id="{{ project.data.title | slug }}">
-    <div class="container grid grid-cols-1 gap-5">
-      <div class="w-5 h-2" style="background-color: {{ project.data.color }}"></div>
-      <div class="w-5 h-5 flex items-center justify-center">
-        <span>{{ project.data.date | dateToFormat('yy') }}</span>
-      </div>
-      <h2>
-        {{ project.data.title}}
-      </h2>
-      <p>
-        {{ project.data.description | safe }}
-      </p>
-      <div class="grid cols-1 divide-y">
-        <p class="flex gap-5 py-3">
-          <strong class="w-[100px] basis-[100px]">Client: </strong>
-          <span>{{ project.data.client }}</span>
-        </p>
-        <p class="flex gap-5 py-3">
-          <strong class="w-[100px] basis-[100px]">Type: </strong>
-          <span>{{ project.data.type }}</span>
-        </p>
-        <p class="flex gap-5 py-3">
-          <strong class="w-[100px] basis-[100px]">Agency: </strong>
-          <span>{{ project.data.agency }}</span>
-        </p>
-        <p class="flex gap-5 py-3">
-          <strong class="w-[100px] basis-[100px]">Tech: </strong>
-          <span class="flex gap-5">
-            {% for item in project.data.tech %}
-              <span>
-                <span>{{ item }}</span>
-              </span>
-            {% endfor %}
-          </span>
-        </p>
-        <p class="flex gap-5 py-3">
-          <strong class="w-[100px] basis-[100px]">Services: </strong>
-          <span class="flex gap-5">
-            {% for item in project.data.services %}
-              <span>
-                <span>{{ item }}</span>
-              </span>
-            {% endfor %}
-          </span>
-        </p>
-        <p class="flex gap-5 py-3">
-          <strong class="w-[100px] basis-[100px]">Team: </strong>
-          <span class="flex gap-5">
-            {% for item in project.data.team %}
-              <span>
-                <span>{{ item.name | abbrFirstName }}</span>
-                <span class="opacity-60">({{ item.position }})</span>
-              </span>
-            {% endfor %}
-          </span>
-        </p>
-      </div>
+<section class="-mt-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <span>1. Selected works</span>
+    <div>
+      {%for item in ['All', 'SEO', 'Design', 'Development']%}
+        <button>{{ item }}</button>
+      {% endfor %}
+    </div>
+    <span>© 2016—2023</span>
+    <span class="text-right">Digital Designer & Web Developer</span>
+  </div>
+</section>
+<section class="py-10 grid grid-cols-1 gap-10">
+  <div class="container grid grid-cols-1 gap-10">
+    {% asyncEach project in collections['projects'] | reverse %}
+    <div class="grid grid-cols-4 gap-10">
       <div>
-        {% if project.data.available %}
-          <a class="flex gap-3" href="{{ project.data.link }}" target="_blank">
-            {% svg 'link', 'w-[1em] aspect-square' %}
-            <span>{{ project.data.link.replace('https://www.', '') }}</span>
-          </a>
-        {% else %}
-          <span class="flex gap-3 opacity-70">
-            {% svg 'no-link', 'w-[1em] aspect-square' %}
-            <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
-          </span>
-        {%endif %}
+        <div class="grid grid-cols-1 gap-5">
+          <p>1.{{loop.index}}&nbsp;{{project.data.title}}</p>
+          <p>{{project.data.description | safe}}</p>
+          {% if project.data.available %}
+            <a class="flex" href="{{ project.data.link }}" target="_blank">
+              {% svg 'link', 'w-[1em] aspect-square' %}
+              <span class="underline">{{ project.data.link.replace('https://www.', '') }}</span>
+            </a>
+          {% else %}
+            <span class="flex opacity-70">
+              {% svg 'no-link', 'w-[1em] aspect-square' %}
+              <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
+            </span>
+          {%endif %}
+        </div>
       </div>
-      <div>
-        {% if project.data.thumbnail | length %}
-          <div class="grid grid-cols-2 gap-10">
-            {% for item in project.data.thumbnail %}
-              <div class="flex items-center justify-center p-[80px]" style="background-color: {{ project.data.color }}">
-                {% image 'projects/' + item,
+      <div class="col-span-3 grid grid-cols-1 gap-5">
+        <div class="pt-[2.5em]">
+          <p>Type: {{project.data.type}}</p>
+          <p>Client: {{project.data.client}}</p>
+          <p>Agency: {{project.data.agency}}</p>
+          <p>Date: {{project.data.date | dateToFormat('yyyy')}}</p>
+          <p>Services: {{project.data.services}}</p>
+          <p>Tech: {{project.data.tech}}</p>
+        </div>
+        <div>
+          {% if project.data.thumbnail | length %}
+            <div class="grid grid-cols-2 gap-5">
+              {% for item in project.data.thumbnail %}
+                <div class="flex items-center justify-center p-[100px] bg-stone-300/50 " style="backgrounda-color: #bcbcbc">
+                  {% image 'projects/' + item,
+                  project.data.title,
+                  '100vw',
+                  'drop-shadow-xl' %}
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="grid grid-cols-2 gap-5">
+              <div class="flex items-center justify-center p-[100px] bg-stone-300/10" style="backgrounda-color: #bcbcbc">
+                {% image 'projects/bradescard-1.png',
                 project.data.title,
-                '100vw', 'rounded-lg shadow-md' %}
+                '100vw',
+                'opacity-0' %}
               </div>
-            {% endfor %}
-          </div>
-        {% endif %}
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
-  </section>
-  {% endeach %}
-</div>
-
-{# <div class="grid grid-cols-1 divide-y">
-  {% asyncEach project in collections['projects'] | reverse %}
-  <section class="py-10" id="{{ project.data.title | slug }}">
-    <div class="container">
-      {{ project.data.title}}
-    </div>
-  </section>
-  {% endeach %}
-</div> #}
+    {% endeach %}
+  </div>
+</section>

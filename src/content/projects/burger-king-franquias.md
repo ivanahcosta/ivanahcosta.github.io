@@ -1,7 +1,8 @@
 ---
 title: 'Burger King Franquias'
 type: Website
-client: 'Burger King'
+client:
+  - Burger King
 agency: Newbacon
 date: 2017-07-01
 services:

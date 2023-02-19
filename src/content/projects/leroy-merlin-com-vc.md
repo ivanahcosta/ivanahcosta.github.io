@@ -1,7 +1,8 @@
 ---
 title: 'Leroy Merlin ComVc'
 type: Website
-client: 'Leroy Merlin'
+client:
+  - Leroy Merlin
 agency: Newbacon
 date: 2018-06-01
 services:

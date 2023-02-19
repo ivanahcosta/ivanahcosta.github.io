@@ -4,102 +4,101 @@ layout: "base"
 permalink: "/about.html"
 ---
 
-{% import "components/title.njk" as title %}
-
-<div class="grid grid-cols-1 gap-10 py-10">
-  <section id="cta">
-    <div class="container">
-      <h3>
-        I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.
-      </h3>
+<section class="-mt-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <span>2. About me</span>
+    <span></span>
+    <span>Based in Sao Paolo</span>
+    <span class="text-right">Digital Designer & Web Developer</span>
+  </div>
+</section>
+<section class="py-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <div>
+      <p>2.1 I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.</p>
+      <p>My passion lies in collaborating with clients to exceed expectations and create digital solutions that stand out in the digital world.</p>
+    </div>
+    <div class="col-span-2">
       <p>
-      My passion lies in collaborating with clients to exceed expectations and create digital solutions that stand out in the digital world.
-    </p>
+        I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
+        <br><br>
+        My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
+        <br><br>
+        Since then, I've honed my skills through various projects and collaborations with other designers and developers. I've worked on everything from simple landing pages to complex web applications, and have always strived to create websites that are not only visually appealing, but also user-friendly and accessible.
+        <br><br>
+        Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints. I'm a passionate prototyper, who feels comfortable creating something testable at the level of fidelity that is appropriate to challenge a hypothesis. This can range from a simple click-dummy to a fully interactive hifi prototype that looks and feels like the real thing.
+        <br><br>
+        Ultimately, my goal as a front-end developer is to create websites that delight and inspire, while also providing a seamless user experience. Whether I'm working on a personal project or collaborating with a team, I always strive to bring my best to the table and to help create something that we can all be proud of.
+      </p>
     </div>
-  </section>
-  <section id="about">
-    <div class="container">
-      {{ title.section('About me') }}
-      <div class="grid grid-cols-1 gap-5">
-        <p>
-          I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
-        </p>
-        <p>
-          My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
-        </p>
-        <p>
-          Since then, I've honed my skills through various projects and collaborations with other designers and developers. I've worked on everything from simple landing pages to complex web applications, and have always strived to create websites that are not only visually appealing, but also user-friendly and accessible.
-        </p>
-        <p>
-          Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints. I'm a passionate prototyper, who feels comfortable creating something testable at the level of fidelity that is appropriate to challenge a hypothesis. This can range from a simple click-dummy to a fully interactive hifi prototype that looks and feels like the real thing.
-        </p>
-        <p>
-          Ultimately, my goal as a front-end developer is to create websites that delight and inspire, while also providing a seamless user experience. Whether I'm working on a personal project or collaborating with a team, I always strive to bring my best to the table and to help create something that we can all be proud of.
-        </p>
-      </div>
+  </div>
+</section>
+<section class="py-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <div>
+      <p>2.2 I can help with...</p>
     </div>
-  </section>
-  <section id="skills">
-    <div class="container">
-      {{ title.section('I can help with') }}
-      <div class="grid grid-cols-4 gap-10">
-        {% for item in skills %}
-          <div class="flex gap-10">
-            <div>
-              <p>0{{ loop.index }}</p>
-            </div>
-            <div>
-              <h5>
-                {% if item.featured %}✨{% endif %}
-                {{ item.title }}
-              </h5>
-              <p>{{ item.description }}</p>
-            </div>
+    <div class="col-span-3 grid grid-cols-3 gap-10">
+      {% for item in skills %}
+        <div class="flex gap-10">
+          <p>2.2.{{ loop.index }}</p>
+          <div>
+            <h5>
+              {% if item.featured %}✨{% endif %}
+              {{ item.title }}
+            </h5>
+            <p>{{ item.description }}</p>
           </div>
-        {% endfor %}
-      </div>
+        </div>
+      {% endfor %}
     </div>
-  </section>
-  <section id="clients">
-    <div class="container">
-      {{ title.section('Featured brands I have worked with') }}
-      <div class="grid grid-cols-4 border divide-y divide-x">
-        {% for item in brands %}
-          <div class="p-[150px] py-10">
-            {% image 'brands/' + item | slug + '.png',
-            item,
-            '100vw' %}
-          </div>
-        {% endfor %}
-      </div>
+  </div>
+</section>
+<section class="py-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <div>
+      <p>2.3 Brands I've worked with so far</p>
     </div>
-  </section>
-  <section id="experience">
-    <div class="container">
-      {{ title.section('Experience', 'case', 'View my resumé','pdf', '/assets/pdf/cv.pdf') }}
-      <div class="grid grid-cols-1 divide-y border-t">
-        {% for item in experience %}
-          <div class="py-5 grid grid-cols-3 gap-5">
-            <p class="font-bold">{{ item.role }}</p>
-            <p>{{ item.agency }}</p>
-            <p class="text-right">{{ item.time}}</p>
-          </div>
-        {% endfor %}
-      </div>
+    <div class="col-span-3 grid grid-cols-3">
+      {% for item in brands %}
+        <div class="p-[150px] py-5">
+          {% image 'brands/' + item | slug + '.png',
+          item,
+          '100vw' %}
+        </div>
+      {% endfor %}
     </div>
-  </section>
-  <section id="education">
-    <div class="container">
-      {{ title.section('Education') }}
-      <div class="grid grid-cols-1 divide-y border-t">
-        {% for item in education %}
-          <div class="py-5 grid grid-cols-3 gap-5">
-            <p class="font-bold">{{ item.course }}</p>
-            <p>{{ item.school }}</p>
-            <p class="text-right">{{ item.time }}</p>
-          </div>
-        {% endfor %}
-      </div>
+  </div>
+</section>
+<section class="py-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <div>
+      <p>2.4 Experience</p>
     </div>
-  </section>
-</div>
+    <div class="col-span-3 grid grid-cols-1 gap-10">
+      {% for item in experience %}
+        <div class="grid grid-cols-3 gap-10">
+          <p>2.4.{{loop.index}}&nbsp;{{ item.role }}</p>
+          <p>{{ item.agency }}</p>
+          <p>{{ item.time}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="py-10">
+  <div class="container grid grid-cols-4 gap-10">
+    <div>
+      <p>2.5 Education and certifications</p>
+    </div>
+    <div class="col-span-3 grid grid-cols-1 gap-10">
+      {% for item in education %}
+        <div class="grid grid-cols-3 gap-10">
+          <p>2.4.{{loop.index}}&nbsp;{{ item.course }}</p>
+          <p>{{ item.school }}</p>
+          <p>{{ item.time}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

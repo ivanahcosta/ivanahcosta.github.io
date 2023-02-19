@@ -1,7 +1,8 @@
 ---
 title: 'Best Friday'
 type: Website
-client: 'Meio & Mensagem'
+client:
+  - Meio & Mensagem
 agency: Newbacon
 date: 2017-11-01
 services:

@@ -1,7 +1,9 @@
 ---
 title: '100 Prêmios C&A'
 type: Landing page
-client: 'Bradesco, C&A'
+client:
+  - Bradesco
+  - C&A
 agency: One Digital
 date: 2019-04-24
 services:

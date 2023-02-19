@@ -1,7 +1,8 @@
 ---
 title: 'Suas Compras Valem +'
 type: Landing page
-client: 'Bradesco'
+client:
+  - Bradesco
 agency: One Digital
 date: 2022-04-27
 services:

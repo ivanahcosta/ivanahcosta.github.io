@@ -1,23 +1,8 @@
-<header class="py-10 border-b" id="header" data-header>
-  <div class="container flex gap-10 justify-between items-center">
-    <a href="/">
-      <h1 class="grid grid-cols-1">
-        <span class="font-bold">Ivana H. Costa</span>
-        <span>@nothingbutivana</span>
-      </h1>
-    </a>
-    <nav class="flex gap-5" data-menu>
-      {% for item in menu %}
-        <a class="flex gap-2 items-center [&.active]:text-red-700" href="{{ item.link }}" {% if item.disabled %}disabled{% endif %}>
-          <span>
-            {{ item.text | safe }}
-            {% if item.text === 'Selected works' %}{% endif %}
-          </span>
-          {% if item.icon %}
-            {% svg item.icon, 'w-[1em] aspect-square' %}
-          {% endif %}
-        </a>
-      {% endfor %}
-    </nav>
+<section class="py-10" data-header>
+  <div class="container flex gap-10 justify-between">
+    <h1>
+      Ivana Costa<sup>TM</sup>
+    </h1>
+    <button class="underline" data-action="scroll-to-bottom">Get in touch with me</button>
   </div>
-</header>
+</section>

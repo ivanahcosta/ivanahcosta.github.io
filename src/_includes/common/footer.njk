@@ -1,22 +1,11 @@
-<footer class="py-10 border-t" id="footer">
+<footer class="py-10 bg-stone-300/50" id="footer" data-footer>
   <div class="container flex gap-10 justify-between">
     <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.</p>
     <div class="flex gap-10">
-      <nav class="flex gap-5 items-center">
-        {% for item in footer %}
-          <button>
-            <span>{{ item.text }}</span>
-          </button>
-          {% if not loop.last %}
-            <span class="text-[0.3em]">●</span>
-            {% endif%}
-          {% endfor %}
-        </nav>
-        <a class="flex gap-3 items-center" href="#header">
-          {% svg 'arrow-up', 'w-[1em] aspect-square' %}
-          <span>Go back to top</span>
-        </a>
-      </div>
+      <button class="flex underline" data-action="scroll-to-header">
+        {% svg 'arrow-up', 'w-[1em] aspect-square' %}
+        <span>Go back to top</span>
+      </button>
     </div>
   </div>
 </footer>

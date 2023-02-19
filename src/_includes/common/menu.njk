@@ -1,0 +1,19 @@
+<section class="fixed top-0 left-0 w-full h-screen z-[3] hidden" data-menu>
+  <div class="container h-screen flex items-center">
+    <nav class="grid grid-cols-1 gap-10">
+      {% for item in menu %}
+        <a class="flex leading-none [&.active]:line-through [&.active]:pointer-events-none" href="{{ item.link }}" {% if item.disabled %}disabled{% endif %}>
+          <span>
+            {{loop.index}}.&nbsp;{{ item.text | safe }}
+            {% if item.text === 'Selected works' %}
+              <sup>{{ collections['projects'] | length }}</sup>
+            {% endif %}
+          </span>
+          {% if item.icon %}
+            {% svg item.icon, 'w-[1em] aspect-square' %}
+          {% endif %}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
