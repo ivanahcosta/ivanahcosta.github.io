@@ -3,73 +3,86 @@ title: "Works"
 layout: "base"
 permalink: "/index.html"
 ---
-<section class="-mt-10">
-  <div class="container grid grid-cols-4 gap-10">
-    <span>1. Selected works</span>
+{% import "components/title.njk" as title %}
+
+<section>
+  <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-10">
+    {{title.primary({text: 'Selected works', number: '1.'})}}
     <div>
       {%for item in ['All', 'SEO', 'Design', 'Development']%}
         <button>{{ item }}</button>
       {% endfor %}
     </div>
-    <span>© 2016—2023</span>
-    <span class="text-right">Digital Designer & Web Developer</span>
+    <span class="hidden md:block">© 2016—2023</span>
+    <span class="hidden md:block">Digital Designer & Web Developer</span>
   </div>
 </section>
-<section class="py-10 grid grid-cols-1 gap-10">
-  <div class="container grid grid-cols-1 gap-10">
-    {% asyncEach project in collections['projects'] | reverse %}
-    <div class="grid grid-cols-4 gap-10">
-      <div>
-        <div class="grid grid-cols-1 gap-5">
-          <p>1.{{loop.index}}&nbsp;{{project.data.title}}</p>
-          <p>{{project.data.description | safe}}</p>
-          {% if project.data.available %}
-            <a class="flex" href="{{ project.data.link }}" target="_blank">
-              {% svg 'link', 'w-[1em] aspect-square' %}
-              <span class="underline">{{ project.data.link.replace('https://www.', '') }}</span>
-            </a>
-          {% else %}
-            <span class="flex opacity-70">
-              {% svg 'no-link', 'w-[1em] aspect-square' %}
-              <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
-            </span>
-          {%endif %}
-        </div>
+
+{% asyncEach project in collections['projects'] | reverse %}
+<section  id="{{project.data.title | slug}}">
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
+    <div>
+      <div class="grid grid-cols-1 gap-5">
+        {{title.primary({text: project.data.title, number: '1.'+loop.index})}}
+        <p>{{project.data.description | safe}}</p>
+        {% if project.data.available %}
+          <a class="flex" href="{{ project.data.link }}" target="_blank">
+            {% svg 'link', 'w-[1em] aspect-square' %}
+            <span class="underline">{{ project.data.link.replace('https://www.', '') }}</span>
+          </a>
+        {% else %}
+          <span class="flex opacity-70">
+            {% svg 'no-link', 'w-[1em] aspect-square' %}
+            <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
+          </span>
+        {%endif %}
       </div>
-      <div class="col-span-3 grid grid-cols-1 gap-5">
-        <div class="pt-[2.5em]">
-          <p>Type: {{project.data.type}}</p>
-          <p>Client: {{project.data.client}}</p>
-          <p>Agency: {{project.data.agency}}</p>
-          <p>Date: {{project.data.date | dateToFormat('yyyy')}}</p>
-          <p>Services: {{project.data.services}}</p>
-          <p>Tech: {{project.data.tech}}</p>
-        </div>
+    </div>
+    <div class="md:col-span-3 ">
+      <div class="grid grid-cols-1 gap-5">
+        <ul class="grid grid-cols-1 divide-y divide-[#000000]/40 -mt-2">
+          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <strong>Type: </strong>
+            <span>{{project.data.type}}</span>
+          </li>
+          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <strong>Client: </strong>
+            <span>{{project.data.client}}</span>
+          </li>
+          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <strong>Agency: </strong>
+            <span>{{project.data.agency}}</span>
+          </li>
+          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <strong>Year: </strong>
+            <span>{{project.data.date | dateToFormat('yyyy')}}</span>
+          </li>
+          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <strong>Services: </strong>
+            <span>{{project.data.services}}</span>
+          </li>
+          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <strong>Tech: </strong>
+            <span>{{project.data.tech}}</span>
+          </li>
+        </ul>
         <div>
           {% if project.data.thumbnail | length %}
-            <div class="grid grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
               {% for item in project.data.thumbnail %}
-                <div class="flex items-center justify-center p-[100px] bg-stone-300/50 " style="backgrounda-color: #bcbcbc">
+                <div class="flex items-center justify-center p-10 md:p-[50px] bg-[#000000]/20">
                   {% image 'projects/' + item,
                   project.data.title,
                   '100vw',
-                  'drop-shadow-xl' %}
+                  'grayscale drop-shadow-xl' %}
                 </div>
               {% endfor %}
             </div>
           {% else %}
-            <div class="grid grid-cols-2 gap-5">
-              <div class="flex items-center justify-center p-[100px] bg-stone-300/10" style="backgrounda-color: #bcbcbc">
-                {% image 'projects/bradescard-1.png',
-                project.data.title,
-                '100vw',
-                'opacity-0' %}
-              </div>
-            </div>
           {% endif %}
         </div>
       </div>
     </div>
-    {% endeach %}
   </div>
 </section>
+{% endeach %}

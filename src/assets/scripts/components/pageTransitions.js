@@ -19,7 +19,10 @@ define(['jquery', 'barba', 'gsap', '../components/loader', '../components/menu']
           },
         ],
       });
-      barba.hooks.enter(() => {
+      barba.hooks.enter(function (e) {
+        console.log(e.current.namespace);
+        console.log(e.next.namespace);
+        $('html').attr('data-theme', e.next.namespace);
         setTimeout(function () {
           loader.animation().restart();
           window.scrollTo(0, 0);

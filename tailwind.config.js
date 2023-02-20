@@ -2,8 +2,13 @@
 module.exports = {
   content: ['./src/**/*.{njk,md}', './src/**/*.svg'],
   theme: {
+    colors: {
+      backgroundclr: 'rgb(var(--color-backgroundclr) / <alpha-value>)',
+      textclr: 'rgb(var(--color-textclr) / <alpha-value>)',
+      loaderclr: 'rgb(var(--color-loaderclr) / <alpha-value>)',
+    },
     fontFamily: {
-      sans: 'Arial, Circular Book',
+      sans: 'Circular Book',
       serif: 'Georgia, Cabinet Grotesk Regular',
     },
     container: {

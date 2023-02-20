@@ -3,19 +3,21 @@ title: "About"
 layout: "base"
 permalink: "/about.html"
 ---
+{% import "components/title.njk" as title %}
 
-<section class="-mt-10">
-  <div class="container grid grid-cols-4 gap-10">
-    <span>2. About me</span>
-    <span></span>
-    <span>Based in Sao Paolo</span>
-    <span class="text-right">Digital Designer & Web Developer</span>
+<section>
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-10">
+    {{title.primary({text: 'About me', number: '2.'})}}
+    <span class="hidden md:block"></span>
+    <span class="hidden md:block">Based in Sao Paolo</span>
+    <span class="hidden md:block">Digital Designer & Web Developer</span>
   </div>
 </section>
-<section class="py-10">
-  <div class="container grid grid-cols-4 gap-10">
+
+<section id="about">
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
     <div>
-      <p>2.1 I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.</p>
+      {{title.primary({text: 'I create awesome user-friendly websites and interactive experiences that help people and companies achieve their goals.', number: '2.1'})}}
       <p>My passion lies in collaborating with clients to exceed expectations and create digital solutions that stand out in the digital world.</p>
     </div>
     <div class="col-span-2">
@@ -33,12 +35,10 @@ permalink: "/about.html"
     </div>
   </div>
 </section>
-<section class="py-10">
-  <div class="container grid grid-cols-4 gap-10">
-    <div>
-      <p>2.2 I can help with...</p>
-    </div>
-    <div class="col-span-3 grid grid-cols-3 gap-10">
+<section id="skills">
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
+    {{title.primary({text: 'I can help with...', number: '2.2'})}}
+    <div class="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
       {% for item in skills %}
         <div class="flex gap-10">
           <p>2.2.{{ loop.index }}</p>
@@ -54,14 +54,12 @@ permalink: "/about.html"
     </div>
   </div>
 </section>
-<section class="py-10">
-  <div class="container grid grid-cols-4 gap-10">
-    <div>
-      <p>2.3 Brands I've worked with so far</p>
-    </div>
-    <div class="col-span-3 grid grid-cols-3">
+<section id="clients">
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
+    {{title.primary({text: 'Brands I have worked with so far', number: '2.3'})}}
+    <div class="md:col-span-3 grid grid-cols-2 md:grid-cols-3">
       {% for item in brands %}
-        <div class="p-[150px] py-5">
+        <div class="p-10 md:p-[150px] md:py-5">
           {% image 'brands/' + item | slug + '.png',
           item,
           '100vw' %}
@@ -70,14 +68,12 @@ permalink: "/about.html"
     </div>
   </div>
 </section>
-<section class="py-10">
-  <div class="container grid grid-cols-4 gap-10">
-    <div>
-      <p>2.4 Experience</p>
-    </div>
-    <div class="col-span-3 grid grid-cols-1 gap-10">
+<section id="experience">
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
+    {{title.primary({text: 'Experience', number: '2.4'})}}
+    <div class="md:col-span-3 grid grid-cols-1 gap-5 md:gap-10">
       {% for item in experience %}
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
           <p>2.4.{{loop.index}}&nbsp;{{ item.role }}</p>
           <p>{{ item.agency }}</p>
           <p>{{ item.time}}</p>
@@ -86,14 +82,12 @@ permalink: "/about.html"
     </div>
   </div>
 </section>
-<section class="py-10">
-  <div class="container grid grid-cols-4 gap-10">
-    <div>
-      <p>2.5 Education and certifications</p>
-    </div>
-    <div class="col-span-3 grid grid-cols-1 gap-10">
+<section id="education">
+  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
+    {{title.primary({text: 'Education and certifications', number: '2.5'})}}
+    <div class="md:col-span-3 grid grid-cols-1 gap-5 md:gap-10">
       {% for item in education %}
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:gap-10">
           <p>2.4.{{loop.index}}&nbsp;{{ item.course }}</p>
           <p>{{ item.school }}</p>
           <p>{{ item.time}}</p>
