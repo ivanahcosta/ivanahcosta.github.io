@@ -1,34 +1,26 @@
-<section class="mt-10 py-10 grid grid-cols-1 gap-10 bg-stone-300/50">
+<section class="py-10 grid grid-cols-1 gap-10" id="contact" data-contact>
   <div class="container">
-    <ul class="grid grid-cols-1 gap-5 md:gap-10">
+    <div class="grid grid-cols-1 divide-y">
       {% for item in social %}
-        <li>
-          <a class="flex justify-between" href="#" target="_blank">
-            <span>{{ item.text }}</span>
-            <span>{{ item.user }}</span>
-          </a>
-        </li>
+        <a class="py-5 flex justify-between" href="{{ item.link }}" target="_blank">
+          <span>{{ item.text }}</span>
+          <button class="flex underline">
+            <span>{{item.user}}</span>
+            {%svg 'arrow-right-up', 'w-[1em] aspect-square'%}
+          </button>
+        </a>
       {% endfor %}
-    </ul>
+    </div>
   </div>
-  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
-    <div>
-      <div>
-        <span>Last listened</span>
-        <p>Stamp on it - GOT the beat</p>
+  <div class="container grid grid-cols-1 gap-10">
+    {% for item in icebreakers %}
+      <div class="flex gap-5 leading-none">
+        {% image item.image, 'l', '100vw', 'w-10 h-10 aspect-square' %}
+        <div>
+          <span>{{item.title}}</span>
+          <p>{{item.text}}</p>
+        </div>
       </div>
-    </div>
-    <div>
-      <div>
-        <span>Last read</span>
-        <p>Sociedade do cansaço</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <span>Last watched</span>
-        <p>Velma (2023)</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>

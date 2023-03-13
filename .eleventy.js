@@ -20,6 +20,7 @@ module.exports = function (config) {
   });
 
   config.addLayoutAlias('base', 'base.njk');
+  config.addLayoutAlias('project', 'project.njk');
 
   config.addPassthroughCopy('./src/assets/*/**');
 

@@ -3,86 +3,27 @@ title: "Works"
 layout: "base"
 permalink: "/index.html"
 ---
-{% import "components/title.njk" as title %}
 
-<section>
-  <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-10">
-    {{title.primary({text: 'Selected works', number: '1.'})}}
-    <div>
-      {%for item in ['All', 'SEO', 'Design', 'Development']%}
-        <button>{{ item }}</button>
-      {% endfor %}
-    </div>
-    <span class="hidden md:block">© 2016—2023</span>
-    <span class="hidden md:block">Digital Designer & Web Developer</span>
+<section class="grid grid-cols-1 gap-10" id="projects" data-projects>
+  <div class="container grid grid-cols-1 divide-y">
+    {% asyncEach project in collections['projects'] | reverse %}
+    <a class="py-5 flex gap-10 justify-between" href="{{project.url}}" data-project>
+      <div>
+        <span>{{ project.data.date | dateToFormat('yy') }}</span>
+        <span>—</span>
+        <span>{{project.data.title}}</span>
+      </div>
+      <button class="flex underline">
+        <span>View project</span>
+        {%svg 'plus', 'w-[1em] aspect-square'%}
+      </button>
+    </a>
+    {% endeach %}
+  </div>
+  <div class="container flex items-center justify-center">
+    <a class="flex underline" href="/lab">
+      <span>View labs page</span>
+      {%svg 'potion', 'w-[1em] aspect-square'%}
+    </a>
   </div>
 </section>
-
-{% asyncEach project in collections['projects'] | reverse %}
-<section  id="{{project.data.title | slug}}">
-  <div class="container grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-10">
-    <div>
-      <div class="grid grid-cols-1 gap-5">
-        {{title.primary({text: project.data.title, number: '1.'+loop.index})}}
-        <p>{{project.data.description | safe}}</p>
-        {% if project.data.available %}
-          <a class="flex" href="{{ project.data.link }}" target="_blank">
-            {% svg 'link', 'w-[1em] aspect-square' %}
-            <span class="underline">{{ project.data.link.replace('https://www.', '') }}</span>
-          </a>
-        {% else %}
-          <span class="flex opacity-70">
-            {% svg 'no-link', 'w-[1em] aspect-square' %}
-            <span class="line-through">{{ project.data.link.replace('https://www.', '') }}</span>
-          </span>
-        {%endif %}
-      </div>
-    </div>
-    <div class="md:col-span-3 ">
-      <div class="grid grid-cols-1 gap-5">
-        <ul class="grid grid-cols-1 divide-y divide-[#000000]/40 -mt-2">
-          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <strong>Type: </strong>
-            <span>{{project.data.type}}</span>
-          </li>
-          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <strong>Client: </strong>
-            <span>{{project.data.client}}</span>
-          </li>
-          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <strong>Agency: </strong>
-            <span>{{project.data.agency}}</span>
-          </li>
-          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <strong>Year: </strong>
-            <span>{{project.data.date | dateToFormat('yyyy')}}</span>
-          </li>
-          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <strong>Services: </strong>
-            <span>{{project.data.services}}</span>
-          </li>
-          <li class="py-2 grid grid-cols-1 md:grid-cols-3 gap-10">
-            <strong>Tech: </strong>
-            <span>{{project.data.tech}}</span>
-          </li>
-        </ul>
-        <div>
-          {% if project.data.thumbnail | length %}
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {% for item in project.data.thumbnail %}
-                <div class="flex items-center justify-center p-10 md:p-[50px] bg-[#000000]/20">
-                  {% image 'projects/' + item,
-                  project.data.title,
-                  '100vw',
-                  'grayscale drop-shadow-xl' %}
-                </div>
-              {% endfor %}
-            </div>
-          {% else %}
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endeach %}

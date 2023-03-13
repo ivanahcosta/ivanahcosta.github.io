@@ -1,21 +1,21 @@
 requirejs.config({
-  baseUrl: 'assets/scripts/vendors',
+  baseUrl: '/assets/scripts/vendors',
   paths: {
     components: '../components',
     jquery: 'jquery',
     lenis: 'lenis',
     barba: 'barba',
     gsap: 'gsap',
+    ScrollTrigger: 'ScrollTrigger',
+    splittype: 'splittype',
   },
 });
 
 define(function (require) {
-  var loader = require('./components/loader');
   var smoothScroll = require('./components/smoothScroll');
   var pageTransitions = require('./components/pageTransitions');
-  var menu = require('./components/menu');
-  loader.init();
+  var animations = require('./components/animations');
   smoothScroll.init();
   pageTransitions.init();
-  menu.init();
+  animations.init();
 });

@@ -1,0 +1,51 @@
+---
+layout: base
+---
+
+{% block content %}
+  <section class="py-10 grid grid-cols-1 gap-10" id="project" data-project-pagee>
+    <div class="container">
+      <h2>{{title}}</h2>
+      <p>{{ description | safe }}</p>
+      <ul class="grid grid-cols-1 divide-y">
+        <li class="py-5 flex gap-5">
+          <strong>Type</strong>
+          <span class="col-span-2">{{type}}</span>
+        </li>
+        <li class="py-5 flex gap-5">
+          <strong>Client</strong>
+          <span class="col-span-2">{{client}}</span>
+        </li>
+        <li class="py-5 flex gap-5">
+          <strong>Agency</strong>
+          <span class="col-span-2">{{agency}}</span>
+        </li>
+        <li class="py-5 flex gap-5">
+          <strong>Year</strong>
+          <span class="col-span-2">{{date | dateToFormat('yyyy')}}</span>
+        </li>
+      </ul>
+      <div class="flex flex-wrap gap-5">
+        {% for item in services %}
+          <span>{{item}}</span>
+        {% endfor %} /
+        {% for item in tech %}
+          <span>{{item}}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="container">
+      {% if thumbnail | length %}
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-5">
+          {% for item in thumbnail %}
+            <div class="flex items-center justify-center p-[50px]">
+              {% image 'projects/' + item,
+              title,
+              '100vw' %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

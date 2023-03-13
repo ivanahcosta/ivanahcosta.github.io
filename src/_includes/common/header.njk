@@ -1,10 +1,22 @@
-<section class="py-10" data-header>
-  <div class="container flex gap-10 justify-between">
-    <h1>
-      Ivana Costa<sup>TM</sup>
-    </h1>
-    <button class="underline" data-action="scroll-to-bottom">
-      <span>Get in touch <span class="hidden md:inline">with me</span></span>
-    </button>
+<header class="py-10" id="header" data-header>
+  <div class="container flex gap-10 justify-between overflow-hidden">
+    <a href="/">
+      <h1 class="grid grid-cols-1">
+        <span>Ivana H. Costa</span>
+        <span>© 2016 — 22</span>
+      </h1>
+    </a>
+    <div class="flex gap-5 justify-end">
+      {% include 'common/menu.njk' %}
+      <p>
+        Available from from march 2023
+      </p>
+      <div>
+        <a class="flex underline" href="#contact">
+          <span>Get in touch</span>
+          {% svg 'arrow-down', 'w-[1em] aspect-square' %}
+        </a>
+      </div>
+    </div>
   </div>
-</section>
+</header>

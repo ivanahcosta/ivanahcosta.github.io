@@ -1,28 +1,14 @@
 @import '_animations.css';
 
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 html {
   scroll-behavior: initial;
   overflow-x: hidden;
 }
-
 [disabled] {
   opacity: 0.3;
   pointer-events: none;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-/* body#works {
-  background-color: #111111;
-  color: white;
-}
-body#about {
-  background-color: red;
-  color: black;
-} */

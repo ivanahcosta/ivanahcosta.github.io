@@ -1,4 +1,5 @@
 {
   "tags": "projects",
-  "permalink": false
+  "permalink": "projects/{{ title | slugify }}/index.html",
+  "layout": "project"
 }
