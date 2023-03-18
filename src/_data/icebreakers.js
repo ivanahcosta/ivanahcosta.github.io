@@ -1,7 +1,7 @@
 module.exports = [
   {
     title: 'Last listened to',
-    text: 'Stamp on it - GOT the beat',
+    text: 'Stamp on it (GOT the beat)',
     image: 'https://akamai.sscdn.co/letras/272x272/albuns/0/6/1/b/01674130959.jpg',
   },
   {
