@@ -8,7 +8,9 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-  class="ai ai-ArrowUp">
-  <path d="M12 20V4" />
-  <path d="M5 11l7-7 7 7" />
+  class="ai ai-FullScreen">
+  <path d="M2 7V2h5" />
+  <path d="M22 7V2h-5" />
+  <path d="M7 22H2v-5" />
+  <path d="M17 22h5v-5" />
 </svg>

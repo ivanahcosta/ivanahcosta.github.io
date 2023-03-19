@@ -21,7 +21,7 @@ define(['jquery', 'barba', 'gsap'], function ($, barba, gsap) {
       });
     },
     init: function () {
-      // this.basicTransition();
+      this.basicTransition();
     },
   };
 });

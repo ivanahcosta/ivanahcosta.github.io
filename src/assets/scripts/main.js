@@ -13,9 +13,7 @@ requirejs.config({
 
 define(function (require) {
   var smoothScroll = require('./components/smoothScroll');
-  var pageTransitions = require('./components/pageTransitions');
   var animations = require('./components/animations');
   smoothScroll.init();
-  pageTransitions.init();
   animations.init();
 });

@@ -13,15 +13,14 @@
   <body class="bg-white text-black lowercase" id="{{ title | slug }}" data-barba="wrapper">
     {% svgsprite %}
     {# {% include 'common/loader.njk' %} #}
-    {# {% include 'common/header.njk' %} #}
-    {# {% include 'common/hero.njk' %} #}
+    {% include 'common/menu.njk' %}
 
     <main data-barba="container" data-barba-namespace="{{ title | slug }}">
       {{ content | safe }}
     </main>
 
-    {# {% include 'common/contact.njk' %} #}
-    {# {% include 'common/footer.njk' %} #}
+    {% include 'common/contact.njk' %}
+    {% include 'common/footer.njk' %}
     <script data-main="{{ '/assets/scripts/main.js' | url | safe }}" src="{{ '/assets/scripts/vendors/require.js' | url | safe }}"></script>
   </body>
 </html>

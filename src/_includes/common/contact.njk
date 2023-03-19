@@ -1,26 +1,39 @@
-<section class="py-10 grid grid-cols-1 gap-10" id="contact" data-contact>
+{% import "components/title.njk" as title %}
+
+<section class="py-10 px-5 grid grid-cols-1 gap-5" id="contact">
   <div class="container">
+    {{ title.primary({text: 'Get in touch', icon: 'paper-airplane'}) }}
     <div class="grid grid-cols-1 divide-y">
       {% for item in social %}
-        <a class="py-5 flex justify-between" href="{{ item.link }}" target="_blank">
-          <span>{{ item.text }}</span>
-          <button class="flex underline">
-            <span>{{item.user}}</span>
-            {%svg 'arrow-right-up', 'w-[1em] aspect-square'%}
-          </button>
+        <a class="py-5 flex gap-5 md:gap-10 items-center justify-between" href="{{ item.link }}" target="_blank">
+          <div class="flex gap-5 items-center">
+            <div class="w-10 aspect-square bg-stone-200 flex items-center justify-center">
+              {% svg item.icon, 'w-[1em] aspect-square' %}
+            </div>
+            <div>{{ item.text }}</div>
+          </div>
+          <div class="flex gap-5 items-center">
+            <div class="opacity-50">{{item.user}}</div>
+            <button class="flex p-3 border">
+              {%svg 'arrow-right-up', 'w-[1em] aspect-square'%}
+            </button>
+          </div>
         </a>
       {% endfor %}
     </div>
   </div>
-  <div class="container grid grid-cols-1 gap-10">
-    {% for item in icebreakers %}
-      <div class="flex gap-5 leading-none">
-        {% image item.image, 'l', '100vw', 'w-10 h-10 aspect-square' %}
-        <div>
-          <span>{{item.title}}</span>
-          <p>{{item.text}}</p>
+  <div class="container">
+    {{ title.primary({text: 'Icebreakers', icon: 'fire'}) }}
+    <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+      {% for item in icebreakers %}
+        <div class="p-5 flex gap-5 items-center border">
+          {% image item.image, 'l', '100vw', 'w-10 aspect-square' %}
+          <div>
+            <div class="opacity-50">{{item.title}}</div>
+            <div>{{item.text}}</div>
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>

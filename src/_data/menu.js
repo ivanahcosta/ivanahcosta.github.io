@@ -11,6 +11,6 @@ module.exports = [
     text: 'Lab',
     link: '/lab',
     disabled: true,
-    icon: 'potion',
+    icon: 'telescope',
   },
 ];

@@ -1,22 +1,18 @@
-<header class="py-10" id="header" data-header>
-  <div class="container flex gap-10 justify-between overflow-hidden">
-    <a href="/">
-      <h1 class="grid grid-cols-1">
-        <span>Ivana H. Costa</span>
-        <span>© 2016 — 22</span>
-      </h1>
-    </a>
-    <div class="flex gap-5 justify-end">
-      {% include 'common/menu.njk' %}
-      <p>
-        Available from from march 2023
-      </p>
+<section class="md:mt-10 py-10 px-5" id="actions">
+  <div class="container grid grid-cols-1 md:flex gap-5 md:gap-10">
+    <div class="flex gap-5 items-center">
+      <button class="flex p-3 border">
+        {% svg 'sound', 'w-[1em] aspect-square' %}
+      </button>
+    </div>
+    <div class="flex flex-wrap gap-x-2 md:gap-5 items-center">
       <div>
-        <a class="flex underline" href="#contact">
-          <span>Get in touch</span>
-          {% svg 'arrow-down', 'w-[1em] aspect-square' %}
-        </a>
+        <span>00:00</span> — São Paulo, Brasil
+      </div>
+      <div>•</div>
+      <div>
+        i'm most likely <span>being like water</span>.
       </div>
     </div>
   </div>
-</header>
+</section>

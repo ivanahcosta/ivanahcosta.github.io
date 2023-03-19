@@ -1,11 +1,7 @@
-<footer class="py-10" id="footer" data-footer>
-  <div class="container flex gap-10 justify-between">
-    <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.</p>
-    <div class="flex gap-10">
-      <a class="flex underline" href="#header" data-action="scroll-to-header">
-        <span>Scroll back to top</span>
-        {% svg 'arrow-up', 'w-[1em] aspect-square' %}
-      </a>
-    </div>
+<footer class="py-10 px-5 grid grid-cols-1 gap-5 border-t" id="footer">
+  <div class="container flex gap-5 md:gap-10 items-center justify-between">
+    <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved. Built with ❥, 11ty, tailwindcss, jquery and gsap.</p>
+    <div class="flex gap-10"></div>
   </div>
+  <div class="container h-[50px]"></div>
 </footer>

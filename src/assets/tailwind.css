@@ -1,17 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  [data-theme='works'] {
-    /* --color-backgroundclr: 45 49 53;
-    --color-textclr: 255 255 255; */
-    --color-loaderclr: 11 16 20;
-  }
-
-  [data-theme='about'] {
-    /* --color-backgroundclr: 107 115 121;
-    --color-textclr: 11 16 20; */
-    --color-loaderclr: 11 16 20;
-  }
-}

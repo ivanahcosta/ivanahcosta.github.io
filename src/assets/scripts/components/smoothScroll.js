@@ -1,5 +1,5 @@
 define(['jquery', 'lenis'], function ($, lenis) {
-  var smooth = new lenis({
+  var smoothness = new lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     direction: 'vertical',
@@ -13,7 +13,7 @@ define(['jquery', 'lenis'], function ($, lenis) {
   return {
     scroll: function () {
       function raf(time) {
-        smooth.raf(time);
+        smoothness.raf(time);
         requestAnimationFrame(raf);
       }
       requestAnimationFrame(raf);
