@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     title: 'Last read',
-    text: 'Sociedade do cansaço',
+    text: 'Sociedade do Cansaço',
     image: 'https://kbimages1-a.akamaihd.net/1adf2d09-f4bc-4f02-a5bc-f0718e5362c9/1200/1200/False/sociedade-do-cansaco-2.jpg',
   },
   {

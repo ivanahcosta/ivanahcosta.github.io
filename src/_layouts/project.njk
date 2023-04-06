@@ -3,82 +3,83 @@ layout: base
 ---
 
 {% block content %}
-  {% import "components/title.njk" as tag %}
-  <section class="md:mt-10 py-10 px-5" id="actions">
-    <div class="container grid grid-cols-1 md:flex gap-5 md:gap-10">
-      <div class="grid grid-cols-1 md:flex gap-5 items-center">
-        <div class="flex">
-          <a class="flex p-3 border" href="/">
-            {% svg 'arrow-left', 'w-[1em] aspect-square' %}
+  <section class="py-10" id="project">
+    <div class="container">
+      <h3 class="text-[0.7em] text-stone-600 font-bold uppercase pb-10 border-b border-white/10">
+        Project overview
+      </h3>
+    </div>
+    <div class="container pt-10">
+      <h2 class="text-[2.5em] md:text-[3em] leading-[1] max-w-[880px]">{{ title }}</h2>
+    </div>
+    <div class="container pt-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+      <div>
+        <p>{{ description | safe }}</p>
+        <div class="flex py-5">
+          <a class="p-2 pl-5 bg-[#101010] border border-white/10 rounded-full flex gap-3 items-center {{'pointer-events-none text-stone-700' if not available }}" href="{{ link }}" target="_blank">
+            <span class="{{ 'line-through' if not available }}">
+              {{ link | cleanLink }}
+            </span>
+            {% if available%}
+              {% svg 'link', 'w-[1em] aspect-square box-content bg-white text-black p-5 rounded-full' %}
+            {% else %}
+              {% svg 'link-no', 'w-[1em] aspect-square box-content bg-white text-black p-5 rounded-full' %}
+            {% endif %}
           </a>
         </div>
-        <div class="flex flex-wrap gap-x-2 md:gap-5 items-center">
-          {% for item in services %}
-            <span>{{item}}</span>
-          {% endfor %} /
-        {% for item in tech %}
-            <span>{{item}}</span>
-          {% endfor %}
-        </div>
+        <ul class="grid grid-cols-1 divide-y divide-white/10 text-stone-400">
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Type</strong>
+            <span class="col-span-2">{{type}}</span>
+          </li>
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Client</strong>
+            <span class="col-span-2">{{client}}</span>
+          </li>
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Year</strong>
+            <span class="col-span-2">{{date | dateToFormat('yyyy')}}</span>
+          </li>
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Agency</strong>
+            <span class="col-span-2">{{agency}}</span>
+          </li>
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Services</strong>
+            {% for item in services %}
+              <span class="rounded-full text-[0.8em] uppercase bg-stone-800 text-stone-300 p-3 leading-none opacity-70">{{ item }}</span>
+            {% endfor %}
+          </li>
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Tech</strong>
+            {% for item in tech %}
+              <span class="rounded-full text-[0.8em] uppercase bg-stone-800 text-stone-300 p-3 leading-none opacity-70">{{ item }}</span>
+            {% endfor %}
+          </li>
+          <li class="py-5 flex flex-wrap gap-2 items-center">
+            <strong>Team</strong>
+            {% for item in team %}
+              <span class="rounded-full text-[0.8em] uppercase bg-stone-800 text-stone-300 p-3 leading-none opacity-70">{{ item.name | abbrFirstName }}
+                <span class="text-stone-500">({{ item.position }})</span>
+              </span>
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2">
+        {% if thumbnail | length %}
+          <div class="grid grid-cols-1 gap-5">
+            {% for item in thumbnail %}
+              <div class="bg-stone-900/50 p-5 md:p-10">
+                {% image 'projects/' + item,
+                  title,
+                  '100vw', 'w-full drop-shadow-xl  grayscale' %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </section>
 
-  <section class="px-5 grid grid-cols-1 gap-5" id="project" data-project-page>
-    <div class="container">
-      <div class="flex gap-5 items-center">
-        <div>
-          <div class="w-10 aspect-square bg-stone-200"></div>
-        </div>
-        <h2 class="text-[1.5em] md:text-[2em]">{{ title }}</h2>
-      </div>
-    </div>
-    <div class="container">
-      {{ tag.primary({text: 'Description', icon: 'text-left'}) }}
-      <p>{{ description | safe }}</p>
-    </div>
-    <div class="container">
-      {{ tag.primary({text: 'Additional info', icon: 'info'}) }}
-      <ul class="grid grid-cols-1 divide-y">
-        <li class="py-5 flex gap-5">
-          <strong>Type</strong>
-          <span class="col-span-2">{{type}}</span>
-        </li>
-        <li class="py-5 flex gap-5">
-          <strong>Client</strong>
-          <span class="col-span-2">{{client}}</span>
-        </li>
-        <li class="py-5 flex gap-5">
-          <strong>Agency</strong>
-          <span class="col-span-2">{{agency}}</span>
-        </li>
-        <li class="py-5 flex gap-5">
-          <strong>Year</strong>
-          <span class="col-span-2">{{date | dateToFormat('yyyy')}}</span>
-        </li>
-        <li class="py-5 flex gap-5">
-          <strong>Team</strong>
-          <span class="flex gap-5">
-            {% for item in team %}
-              <span>{{item.name | abbrFirstName }}</span>
-            {% endfor %}
-          </span>
-        </li>
-      </ul>
-    </div>
-    <div class="container">
-      {{ tag.primary({text: 'Images', icon: 'image'}) }}
-      {% if thumbnail | length %}
-        <div class="grid grid-cols-1 md:grid-cols-1 gap-5">
-          {% for item in thumbnail %}
-            <div class="flex items-center justify-center p-[50px] bg-stone-200">
-              {% image 'projects/' + item,
-              title,
-              '100vw' %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  </section>
 {% endblock %}

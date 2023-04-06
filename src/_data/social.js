@@ -18,14 +18,14 @@ module.exports = [
   },
   {
     text: 'Discord',
-    link: 'https://discordapp.com/channels/@me/Ivana#0544/',
-    user: '@Ivana#0544',
+    link: 'https://discordapp.com/channels/@me/ivana#9261/',
+    user: '@ivana#9261',
     icon: 'discord',
   },
   {
     text: 'E-mail',
-    link: 'mailto:oi@ivana.co',
-    user: 'oi@ivana.co',
+    link: 'mailto:ivanahccosta@gmail.com',
+    user: 'ivanahccosta@gmail.com',
     icon: 'mail',
   },
 ];

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><svg
   width="24px"
   height="24px"
-  stroke-width="2"
   viewBox="0 0 24 24"
+  stroke-width="2"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   color="currentColor">
   <path
-    d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 001.143.124"
+    d="M7.143 16.995c-.393 0-.775-.043-1.143-.123-2.29-.506-4-2.496-4-4.874 0-2.714 2.226-4.923 5-4.996M13.318 9.634A5.517 5.517 0 0011 7.5"
     stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"></path>
   <path
-    d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997 0-2.379-1.71-4.37-4-4.874A5.304 5.304 0 0016.857 7"
+    d="M16.857 7c.393 0 .775.043 1.143.124 2.29.505 4 2.495 4 4.874 0 2.76-2.302 4.997-5.143 4.997h-1.714c-2.826 0-5.143-2.506-5.143-4.997 0 0 0-.998.5-1.498M3 3l18 18"
     stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"

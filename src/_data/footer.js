@@ -1,8 +1,14 @@
 module.exports = [
   {
-    text: 'Credits',
+    text: 'Colophon',
+    link: '/colophon-credits',
   },
   {
-    text: 'Privacy Police',
+    text: 'Uses',
+    link: '/uses',
+  },
+  {
+    text: 'Imprint',
+    link: '/imprint',
   },
 ];

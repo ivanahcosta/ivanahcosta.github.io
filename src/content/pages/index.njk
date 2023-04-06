@@ -3,196 +3,58 @@ title: "Works"
 layout: "base"
 permalink: "/index.html"
 ---
-{% import "components/title.njk" as title %}
 
-{% include 'common/header.njk' %}
-{% include 'common/hero.njk' %}
-<section class="pt-10 px-5 md:px-10" id="works">
-  <div class="container">
-    {{ title.primary({text: 'Selected works <sup>' + collections['projects'].length + '</sup>', icon: 'dot-grid-fill'}) }}
-  </div>
-  <div class="grid grid-cols-1 divide-y">
-    {% asyncEach project in collections['projects'] | reverse %}
-    <a class="py-5" href="{{project.url}}">
-      <div class="container flex gap-5 md:gap-10 items-center justify-between">
-        <div class="flex gap-5 items-center">
-          <div class="w-10 aspect-square bg-stone-200"></div>
-          <div>
-            <h3 class="flex gap-5">
-              <span class="truncate max-w-[200px] md:max-w-auto">{{ project.data.title }}</span>
-              {% if loop.first %}
-                <span class="text-[0.8em] leading-none px-2 bg-green-500 flex items-center">
-                  <span>new</span>
-                </span>
-              {% endif %}
-            </h3>
-            <p class="opacity-50">{{ project.data.type }} — {{ project.data.date | dateToFormat('yyyy')}}</p>
-          </div>
-        </div>
-        <div class="flex">
-          <button class="flex p-3 border">
-            {%svg 'arrow-right', 'w-[1em] aspect-square'%}
-          </button>
-        </div>
-      </div>
-    </a>
-    {% endeach %}
-  </div>
-</section>
-
-{# <div class="fixed bottom-10 left-0 w-full flex gap-5 justify-center">
-  <nav class="inline-flex gap-1 p-1 border rounded-xl bg-white shadow-lg">
-    {% for item in menu %}
-      <a class="p-2 px-4 rounded-xl {% if loop.first %}bg-black text-white{% endif %}" href="{{ item.link | url}}" {%if item.disabled %}disabled{% endif %}>{{ item.text | safe }}</a>
-    {% endfor %}
-  </nav>
-  <div class="flex items-center">
-    <button class="border p-3 rounded-xl bg-white">
-      {%svg 'arrow-down', 'w-[1em] aspect-square' %}
-    </button>
-  </div>
-</div>
-
-<section class="mt-10 py-10   grid grid-cols-1 gap-5">
-  <div class="container flex gap-5 items-center justify-between">
-    <div class="flex gap-2 items-center">
-      <button class="bg-stone-200 p-1 rounded-lg">
-        {%svg 'sun', 'w-[1em] aspect-square' %}
-      </button>
-      <span>17:48 — São Paulo, Brasil</span>
-      <span>•</span>
-      <span>most likely watching CNN.</span>
-    </div>
-    <div class="flex">
-      <button>EN</button>
-    </div>
-  </div>
-  <div class="container grid grid-cols-1 gap-5">
-    <h2 class="text-[2em]">
-      <strong>Ivana H. Costa</strong>
-      {% image 'profile1.jpg', 'Ivana H. Costa', '100vw', 'w-[1em] aspect-square rounded-lg inline-block' %}
-      is a Digital Designer and Web Developer (front-end specialized {% svg 'code', 'w-[0.8em] aspect-square inline-block' %}) based in São Paulo, Brasil  {% image 'map.jpg', 'Zona Norte, São Paulo', '100vw', 'w-[1em] aspect-square rounded-lg inline-block' %} with 6 {% svg 'plus-circle', 'w-[0.8em] aspect-square inline-block' %} years of experience in building {% svg 'tools', 'w-[0.8em] aspect-square inline-block' %} things for the web.
-    </h2>
-    <p>
-      Currently available for work. <a class="underline" href="#contact">Get in touch.</a>
+<section class="pb-5 md:py-10" id="hero">
+  <div class="container pb-5">
+    <p class="text-[0.7em] text-stone-600 font-bold uppercase">Local time</p>
+    <p class="grid md:flex md:gap-3 text-[0.8em] text-stone-300">
+      <span>
+        <span data-local-time>00:00am</span>
+        <span>GMT-3</span>
+        <span class="hidden md:inline">—</span></span>
+      <span>
+        <span data-status class="status busy"></span>
+        <span data-status-text>most likely watching TV right now.</span>
+      </span>
     </p>
   </div>
-</section>
-
-<section class="pb-10 px-10 grid grid-cols-1 gap-10">
   <div class="container">
-    <div class="border-t mb-5"></div>
-    <div class="flex gap-2 items-center">
-      <button class="bg-stone-200 p-1 rounded-lg">
-        {%svg '3d-select-face', 'w-[1em] aspect-square' %}
-      </button>
-      <h3>
-        Selected works <sup>17</sup>
-      </h3>
-    </div>
-  </div>
-  <div class="grid grid-cols-1 divide-y -mt-5">
-    {% asyncEach project in collections['projects'] | reverse %}
-    <a class="py-5" href="{{project.url}}" data-project>
-      <div class="container flex gap-10 items-center justify-between">
-        <div class="flex gap-5 items-center">
-          <div>
-            <div class="w-10 aspect-square bg-stone-200 rounded-xl"></div>
-          </div>
-          <div>
-            <div class="flex gap-2 items-center">
-              <span class="w-2 aspect-square rounded-full" style="background-color: {{project.data.color}}"></span>
-              <span class="text-[1.2em]">{{project.data.title}}</span>
-              {% if loop.first %}
-                <span class="bg-green-500 p-1 px-2 rounded-md text-[0.5em] uppercase text-white">New</span>
-              {% endif %}
-            </div>
-            <div class="flex gap-2 items-center opacity-50">
-              <span>{{project.data.type}}</span>
-              <span>—</span>
-              <span>{{project.data.date | dateToFormat('yyyy')}}</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <button class="p-1 rounded-lg">
-            {% svg 'plus', 'w-[1em] aspect-square' %}
-          </button>
-        </div>
-      </div>
-    </a>
-    {% endeach %}
+    <h2 class="text-[2.5em] md:text-[3em] leading-none max-w-[880px]">
+      I'm a Digital Designer & Web Developer with 6+ years of experience in building things for the web.
+    </h2>
   </div>
 </section>
 
-<section class="py-10 grid grid-cols-1 gap-10">
+<section class="py-10" id="projects">
   <div class="container">
-    <div class="border-t mb-5"></div>
-    <div class="flex gap-2 items-center">
-      <button class="bg-stone-200 p-1 rounded-lg">
-        {%svg 'telegram', 'w-[1em] aspect-square' %}
-      </button>
-      <h3>
-        Get in touch
-      </h3>
-    </div>
+    <h3 class="text-[0.7em] text-stone-600 font-bold uppercase pb-10 border-b border-white/10">
+      Selected works
+      <sup>{{ collections['projects']  | length}}</sup>
+    </h3>
   </div>
-  <div class="container -mt-5">
-    <div class="grid grid-cols-1 divide-y">
-      {% for item in social %}
-        <a class="py-5 flex items-center justify-between" href="{{ item.link }}" target="_blank">
-          <div class="flex gap-5 items-center">
-            <div>
-              <div class="w-10 aspect-square bg-stone-200 rounded-xl"></div>
-            </div>
-            <span class="text-[1.2em]">{{ item.text }}</span>
+  <div class="grid grid-cols-1 divide-y divide-white/10" data-projects-wrapper>
+    {% for project in collections['projects'] | reverse %}
+      <a class="container" href="{{ project.url }}" data-hover="eye">
+        <div class="py-5 md:py-10 flex flex-wrap md:flex-nowrap gap-x-2 md:gap-10 items-center md:justify-between">
+          <div class="w-[100%] md:w-[40%]">
+            <h3 class="text-[2em] truncate">{{ project.data.title }}</h3>
           </div>
-          <span class="flex gap-5">
-            <span class="opacity-50">{{item.user}}</span>
-            <button class="p-1 rounded-lg">
-              {%svg 'arrow-right-up', 'w-[1em] aspect-square'%}
-            </button>
-          </span>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-  <div class="container">
-    <div class="border-t mb-5"></div>
-    <div class="flex gap-2 items-center">
-      <button class="bg-stone-200 p-1 rounded-lg">
-        {%svg 'temperature-low', 'w-[1em] aspect-square' %}
-      </button>
-      <h3>
-        Icebreakers
-      </h3>
-    </div>
-  </div>
-  <div class="container grid grid-cols-2 gap-5">
-    {% for item in icebreakers %}
-      <div class="flex gap-5">
-        <div>
-          {% image item.image, 'l', '100vw', 'w-10 h-10 aspect-square rounded-lg mb-5' %}
+          <div class="text-stone-400 md:w-[15%]">
+            <span>{{ project.data.client }}</span>
+          </div>
+          <div class="text-stone-400 md:w-[5%]">
+            <span class="inline md:hidden">/</span>
+            <span>{{ project.data.date | dateToFormat('yyyy') }}</span>
+          </div>
+          <div class="md:pt-0 md:w-[25%]">
+            <div class="flex gap-2 md:gap-3 justify-end">
+              {% for item in project.data.services %}
+                <span class="p-2 md:px-4 bg-white/10 rounded-full text-[0.5em] md:text-[0.6em] uppercase text-stone-500 font-bold">{{ item }}</span>
+              {% endfor %}
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="opacity-50 text-[0.8em]">{{item.title}}</p>
-          <p class="text-[1.2em]">{{item.text}}</p>
-        </div>
-      </div>
+      </a>
     {% endfor %}
   </div>
 </section>
-
-<section class="pb-10">
-  <div class="border-t container flex gap-10 items-center justify-between pt-10 pb-1">
-    <div class="leading-none">
-      © 2023<br>
-      Build by Ivana
-    </div>
-    <div>
-      <button class="border p-3 rounded-lg">
-        {% svg 'arrow-up', 'w-[1em] aspect-square' %}
-      </button>
-    </div>
-  </div>
-</section> #}

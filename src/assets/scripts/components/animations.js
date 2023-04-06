@@ -4,7 +4,7 @@ define(['jquery', 'gsap', 'ScrollTrigger'], function ($, gsap, ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
   return {
     init: function () {
-      console.log('aniamtions');
+      console.log('animations');
     },
   };
 });

@@ -1,18 +1,16 @@
-<section class="md:mt-10 py-10 px-5" id="actions">
-  <div class="container grid grid-cols-1 md:flex gap-5 md:gap-10">
-    <div class="flex gap-5 items-center">
-      <button class="flex p-3 border">
-        {% svg 'sound', 'w-[1em] aspect-square' %}
-      </button>
-    </div>
-    <div class="flex flex-wrap gap-x-2 md:gap-5 items-center">
-      <div>
-        <span>00:00</span> — São Paulo, Brasil
-      </div>
-      <div>•</div>
-      <div>
-        i'm most likely <span>being like water</span>.
-      </div>
+<header class="py-5 pb-10 md:py-10" id="header">
+  <div class="container flex gap-10 items-center justify-between">
+    <h1 class="font-bold">
+      <a href="{{ '/' | url }}">
+        <span>© Ivana Costa</span>
+      </a>
+    </h1>
+    <div>
+      <a class="flex gap-5 items-center" href="#contact">
+        <span class="hidden md:block border-r border-white/10 pr-5">Available for work</span>
+        <span class="hidden md:block text-stone-500">Get in touch</span>
+        {% svg 'paper-airplane', 'w-[1em] aspect-square box-content p-3 md:p-6 rounded-full bg-[#101010] border border-white/10 text-white' %}
+      </a>
     </div>
   </div>
-</section>
+</header>

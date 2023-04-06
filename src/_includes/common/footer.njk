@@ -1,7 +1,16 @@
-<footer class="py-10 px-5 grid grid-cols-1 gap-5 border-t" id="footer">
-  <div class="container flex gap-5 md:gap-10 items-center justify-between">
-    <p>© {{site.buildTime | dateToFormat('yyyy') }} All rights reserved. Built with ❥, 11ty, tailwindcss, jquery and gsap.</p>
-    <div class="flex gap-10"></div>
+<footer class="py-10 pb-[150px] md:pb-[65px] bg-black text-stone-400" id="footer">
+  <div class="container md:flex gap-10 items-center justify-between">
+    <p class="text-center md:text-left">
+      <span class="text-stone-500">©</span>
+      {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.
+    </p>
+    <div class="flex gap-3 items-center justify-center md:justify-end">
+      {% for item in footer %}
+        <a href="{{ item.link | url }}">{{ item.text }}</a>
+        {% if not loop.last %}
+          <span class="text-stone-500">•</span>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
-  <div class="container h-[50px]"></div>
 </footer>

@@ -1,16 +1,10 @@
 module.exports = [
   {
-    text: 'Works',
+    text: 'Works <sup>15</sup>',
     link: '/',
   },
   {
     text: 'About',
     link: '/about',
-  },
-  {
-    text: 'Lab',
-    link: '/lab',
-    disabled: true,
-    icon: 'telescope',
   },
 ];

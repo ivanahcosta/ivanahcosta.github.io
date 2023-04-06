@@ -3,88 +3,108 @@ title: "About"
 layout: "base"
 permalink: "/about.html"
 ---
-{% import "components/title.njk" as title %}
 
-{% include 'common/header.njk' %}
-{% include 'common/hero.njk' %}
-<section class="pt-10 px-5 md:px-10" id="background">
-  <div class="container">
-    {{ title.primary({text: 'Background', icon: 'full-screen'}) }}
-    <div class="grid grid-cols-1 gap-5">
+<section class="py-10 hidden md:block">
+  <div class="container grid grid-cols-3 gap-10">
+    <div>
+      <h3 class="border-b border-white/10 pb-10 mb-10 uppercase text-stone-600 font-bold text-[0.7em]">Based in</h3>
+      <p>Sao Paolo—Brazil</p>
+    </div>
+    <div>
+      <h3 class="border-b border-white/10 pb-10 mb-10 uppercase text-stone-600 font-bold text-[0.7em]">Experience</h3>
+      <p>Over 6 years</p>
+    </div>
+    <div>
+      <h3 class="border-b border-white/10 pb-10 mb-10 uppercase text-stone-600 font-bold text-[0.7em]">Former</h3>
       <p>
-        I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
-      </p>
-      <p>
-        My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
-      </p>
-      <p>
-        Since then, I've honed my skills through various projects and collaborations with other designers and developers. I've worked on everything from simple landing pages to complex web applications, and have always strived to create websites that are not only visually appealing, but also user-friendly and accessible.
-      </p>
-      <p>
-        Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints. I'm a passionate prototyper, who feels comfortable creating something testable at the level of fidelity that is appropriate to challenge a hypothesis. This can range from a simple click-dummy to a fully interactive hifi prototype that looks and feels like the real thing.
-      </p>
-      <p>
-        Ultimately, my goal as a front-end developer is to create websites that delight and inspire, while also providing a seamless user experience. Whether I'm working on a personal project or collaborating with a team, I always strive to bring my best to the table and to help create something that we can all be proud of.
+        Tech lead <strong>@onedigital</strong>
       </p>
     </div>
   </div>
 </section>
 
-<section class="pt-10 px-5 md:px-10" id="skills">
+<section class="py-10">
   <div class="container">
-    {{ title.primary({text: 'Skills', icon: 'star'}) }}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      {% for item in skills %}
-        <div>
-          <h5 class="font-bold">
-            {% if item.featured %}✨{% endif %}
-            {{ item.title }}
-          </h5>
-          <p>{{ item.description }}</p>
-        </div>
-      {% endfor %}
-    </div>
+    <h2 class="text-[2.5em] md:text-[3em] leading-none max-w-[880px]">
+      {% image 'profile.jpg', 'Ivana H. Costa', '100vw', 'w-[1em] aspect-square rounded-full inline-block' %}
+      I use my <span class="text-stone-400">creativity</span>, <span class="text-stone-400">expertise</span> & <span class="text-stone-400">pretty</span> to create timeless exper iences for number of users.
+    </h2>
   </div>
 </section>
 
-<section class="pt-10 px-5 md:px-10" id="clients">
+<section class="py-10 grid grid-cols-1 gap-5">
+  <div class="container grid grid-cols-1 md:grid-cols-2 gap-10">
+    <p>
+      I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
+      <br><br>
+      My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
+      <br><br>
+
+    </p>
+    <p>
+      Since then, I've honed my skills through various projects and collaborations with other designers and developers. I've worked on everything from simple landing pages to complex web applications, and have always strived to create websites that are not only visually appealing, but also user-friendly and accessible.
+      <br><br>
+      Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints.
+    </p>
+  </div>
+  <div class="container flex flex-wrap gap-3 items-center">
+    <span class="w-full md:w-auto"># What I can help you with:</span>
+    {% for item in skills %}
+      <span class="rounded-full text-[0.8em] uppercase bg-stone-800 text-stone-300 p-3 leading-none opacity-70">{{ item.title}}</span>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="py-10">
   <div class="container">
-    {{ title.primary({text: 'Clients', icon: 'leaf'}) }}
+    <h3 class="uppercase text-stone-600 font-bold text-[0.7em] border-b border-white/10 pb-10 mb-10">Experience</h3>
+    {% for item in experience %}
+      <div class="py-3 md:flex gap-10 items-center justify-between">
+        <h4 class="text-[1.2em]">{{ item.role }} @ {{ item.agency }}</h4>
+        <p class="text-stone-500">{{ item.time}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="py-10">
+  <div class="container">
+    <h3 class="uppercase text-stone-600 font-bold text-[0.7em] border-b border-white/10 pb-10 mb-10">Education and honors</h3>
+    {% for item in education %}
+      <div class="py-3 md:flex gap-10 items-center justify-between">
+        <h4 class="text-[1.2em]">{{ item.course }} @ {{ item.school }}</h4>
+        <p class="text-stone-500">{{ item.time}}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="py-10">
+  <div class="container grid grid-cols-1 md:flex gap-5 md:gap-10 justify-end">
+    <a class="p-2 pl-5 bg-[#101010] border border-white/10 rounded-full flex gap-3 items-center justify-between" href="/" target="_blank">
+      <span>View LinkedIn</span>
+      {% svg 'linkedin', 'w-[1em] aspect-square box-content bg-white text-black p-5 rounded-full' %}
+    </a>
+    <a class="p-2 pl-5 bg-[#101010] border border-white/10 rounded-full flex gap-3 items-center justify-between" href="/" target="_blank">
+      <span>View my resumé</span>
+      {% svg 'file', 'w-[1em] aspect-square box-content bg-white text-black p-5 rounded-full' %}
+    </a>
+  </div>
+</section>
+
+<section class="py-10">
+  <div class="container ">
+    <h3 class="text-[0.7em] text-stone-600 font-bold uppercase pb-10">
+      Featured brands I've worked with
+    </h3>
+  </div>
+  <div class="container border-t border-white/10 pt-10">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
       {% for item in brands %}
-        <div class="bg-stone-200 p-10">
+        <div class="p-10 md:px-20 bg-stone-900/50">
           {% image 'brands/' + item | slug + '.png',
           item,
           '100vw',
-          'opacity-70' %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<section class="pt-10 px-5 md:px-10" id="experience">
-  <div class="container">
-    {{ title.primary({text: 'Experience', icon: 'shipping-box'}) }}
-    <div class="grid grid-cols-1 divide-y">
-      {% for item in experience %}
-        <div class="py-5">
-          <p class="font-bold">{{ item.role }}</p>
-          <p>{{ item.agency }}</p>
-          <p>{{ item.time}}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<section class="pt-10 px-5 md:px-10" id="education">
-  <div class="container">
-    {{ title.primary({text: 'Education', icon: 'book'}) }}
-    <div class="grid grid-cols-1 divide-y">
-      {% for item in education %}
-        <div class="py-5">
-          <p class="font-bold">{{ item.course }}</p>
-          <p>{{ item.school }}</p>
-          <p>{{ item.time}}</p>
+          'invert w-full' %}
         </div>
       {% endfor %}
     </div>

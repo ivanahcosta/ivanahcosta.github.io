@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url | safe }}"/>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url | safe }}"/>
   </head>
-  <body class="bg-white text-black lowercase" id="{{ title | slug }}" data-barba="wrapper">
+  <body class="bg-[#010101] text-[#fafafa] md:text-[19px] lowercase" id="{{ title | slug }}" data-barba="wrapper">
     {% svgsprite %}
+
     {# {% include 'common/loader.njk' %} #}
     {% include 'common/menu.njk' %}
+    {% include 'common/header.njk' %}
 
-    <main data-barba="container" data-barba-namespace="{{ title | slug }}">
+    <main>
       {{ content | safe }}
     </main>
 

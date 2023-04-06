@@ -14,4 +14,10 @@ module.exports = {
     }
     return splitName.join(' ');
   },
+
+  cleanLink: function (link) {
+    const str = link;
+    const result = str.replace(/^https:\/\/www\./i, '');
+    return result;
+  },
 };
