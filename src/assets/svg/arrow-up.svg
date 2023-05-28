@@ -1,14 +1,10 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="36"
-  height="36"
+<?xml version="1.0" encoding="UTF-8"?><svg
+  width="24px"
+  height="24px"
   viewBox="0 0 24 24"
+  stroke-width="1.5"
   fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  class="ai ai-ArrowUp">
-  <path d="M12 20V4" />
-  <path d="M5 11l7-7 7 7" />
+  xmlns="http://www.w3.org/2000/svg"
+  color="currentColor">
+  <path d="M12 21V3m0 0l8.5 8.5M12 3l-8.5 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 </svg>

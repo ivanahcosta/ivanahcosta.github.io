@@ -6,7 +6,7 @@ client:
 agency: Doacomm
 date: 2016-02-10
 services:
-  - Development
+  - Desenvolvimento
   - SEO
   - Design
 tech:
@@ -16,12 +16,14 @@ tech:
   - Illustrator
 color: '#95c3cd'
 team: [{ name: Flesch, link: /, position: 'ID Designer' }]
-description: I was responsible for the design and development of the website aimed at promoting the Kota Versatil Day event produced by Kota. The website was designed to showcase the event, its topics, and featured speakers. Through a user-friendly interface, attendees were able to easily access all necessary information regarding the event, including registration and logistical details.<br><br>In addition, I made sure that the website was optimized for search engines, making it easier for potential attendees to find the event online. This was achieved through the use of relevant keywords, meta descriptions, and other on-page SEO techniques.
+description: Fui responsável pelo design e desenvolvimento do site destinado a promoção do evento Kota Versatil Day produzido pela Kota. O site foi projetado para mostrar o evento, seus tópicos e palestrantes. Por meio de uma interface amigável, os participantes puderam acessar facilmente todas as informações necessárias sobre o evento, incluindo inscrições e detalhes logísticos.<br><br>Além disso, certifiquei-me de que o site fosse otimizado para os mecanismos de busca, facilitando o acesso para participantes em potencial encontrarem o evento online. Isso foi alcançado por meio do uso de palavras-chave relevantes, meta descrições e outras técnicas de SEO na página.
 link: 'https://www.kotaversatilday.com.br'
 thumbnail:
-  - kota-versatil-day-1.png
-  - kota-versatil-day-2.png
+  - 1.png
+  - 2.png
 featured: false
 side: false
 available: false
+archived: false
+emoji: 👨‍⚕️
 ---

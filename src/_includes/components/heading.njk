@@ -1,5 +1,10 @@
-{% macro section(params) %}
-  <h3 class="text-stone-400">
+{% macro sectionPrimary(params) %}
+  <h3 class="p-2 px-4 rounded-full border border-white inline-flex">
     {{ params.text | safe }}
   </h3>
+{% endmacro %}
+{% macro sectionSecondary(params) %}
+  <h4 class="uppercase text-stone-500">
+    {{ params.text | safe }}
+  </h4>
 {% endmacro %}

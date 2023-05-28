@@ -6,16 +6,18 @@ client:
 agency: One Digital
 date: 2020-07-31
 services:
-  - Development
+  - Desenvolvimento
 tech:
   - jQuery
   - Webpack
   - SASS
-color: '#2B479C'
+color: '#0066FF'
 team: [{ name: Caroline Silva, link: /, position: 'UX/UI' }]
-description: As part of a campaign to promote the use of Bradesco's debit cards, I contributed to the development of a landing page designed to encourage customers to unlock and make transactions using their cards. The landing page was tailored to appeal to Bradesco's target audience and included clear calls-to-action, along with intuitive navigation and an engaging visual design.<br><br>During this project, I leveraged my technical expertise in front-end development to create a seamless user experience, while adhering to the client's branding guidelines. I also implemented effective tracking and analytics tools to monitor user engagement and website performance, including click-through rates and conversion rates.
+description: Como parte de uma campanha de promoção do uso dos cartões de débito do Bradesco, contribuí para o desenvolvimento de uma landing page com o objetivo de incentivar os clientes a desbloquear e realizar transações com seus cartões. A página de destino foi adaptada para atrair o público-alvo do Bradesco e incluiu frases de chamariz claras, navegação intuitiva e design visual envolvente.<br><br>Durante este projeto, aproveitei minha experiência técnica em desenvolvimento front-end para criar uma experiência de usuário perfeita, aderindo às diretrizes de marca do cliente. Também implementei ferramentas eficazes de rastreamento e análise para monitorar o envolvimento do usuário e o desempenho do site, incluindo taxas de cliques e taxas de conversão.
 link: 'https://www.banco.bradesco/debito'
 featured: false
 side: false
 available: true
+archived: false
+emoji: 🏷️
 ---

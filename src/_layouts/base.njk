@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="{{ title | slug }}">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.author + ' — Portfolio | ' + title }}</title>
+    <title>{{ site.author + ' — ' + title }}</title>
     {% include "common/meta.njk" %}
     <link rel="stylesheet" href="{{ '/assets/styles/fonts.css' | url | safe }}"/>
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url | safe }}"/>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url | safe }}"/>
   </head>
-  <body class="bg-[#010101] text-[#fafafa] md:text-[19px] lowercase" id="{{ title | slug }}" data-barba="wrapper">
-    {% svgsprite %}
+  <body class="bg-black text-white" data-barba="wrapper">
 
-    {# {% include 'common/loader.njk' %} #}
-    {% include 'common/menu.njk' %}
-    {% include 'common/header.njk' %}
+    <div hidden>{% svgsprite %}</div>
 
-    <main>
+    {% include "common/loader.njk" %}
+    {% include "common/header.njk" %}
+    <main data-barba="container" data-barba-namespace="home">
       {{ content | safe }}
     </main>
+    {% include "common/contact.njk" %}
+    {% include "common/footer.njk" %}
 
-    {% include 'common/contact.njk' %}
-    {% include 'common/footer.njk' %}
     <script data-main="{{ '/assets/scripts/main.js' | url | safe }}" src="{{ '/assets/scripts/vendors/require.js' | url | safe }}"></script>
   </body>
 </html>

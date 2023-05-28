@@ -1,60 +1,91 @@
 ---
-title: "Works"
+title: "Projetos"
 layout: "base"
 permalink: "/index.html"
 ---
 
-<section class="pb-5 md:py-10" id="hero">
-  <div class="container pb-5">
-    <p class="text-[0.7em] text-stone-600 font-bold uppercase">Local time</p>
-    <p class="grid md:flex md:gap-3 text-[0.8em] text-stone-300">
-      <span>
-        <span data-local-time>00:00am</span>
-        <span>GMT-3</span>
-        <span class="hidden md:inline">—</span></span>
-      <span>
-        <span data-status class="status busy"></span>
-        <span data-status-text>most likely watching TV right now.</span>
-      </span>
-    </p>
-  </div>
-  <div class="container">
-    <h2 class="text-[2.5em] md:text-[3em] leading-none max-w-[880px]">
-      I'm a Digital Designer & Web Developer with 6+ years of experience in building things for the web.
-    </h2>
-  </div>
-</section>
+{% import "components/heading.njk" as heading %}
+
+{% include "hero.njk" %}
 
 <section class="py-10" id="projects">
   <div class="container">
-    <h3 class="text-[0.7em] text-stone-600 font-bold uppercase pb-10 border-b border-white/10">
-      Selected works
-      <sup>{{ collections['projects']  | length}}</sup>
-    </h3>
+    {{ heading.sectionPrimary({ text: 'Projetos selecionados' }) }}
   </div>
-  <div class="grid grid-cols-1 divide-y divide-white/10" data-projects-wrapper>
-    {% for project in collections['projects'] | reverse %}
-      <a class="container" href="{{ project.url }}" data-hover="eye">
-        <div class="py-5 md:py-10 flex flex-wrap md:flex-nowrap gap-x-2 md:gap-10 items-center md:justify-between">
-          <div class="w-[100%] md:w-[40%]">
-            <h3 class="text-[2em] truncate">{{ project.data.title }}</h3>
+  <div class="grid grid-cols-1 divide-y" data-projects>
+    {% for item in collections['project'] | reverse %}
+      <div class="container" data-project>
+        <div class="py-10 flex gap-5 md:gap-10 items-center justify-between cursor-pointer" data-project-title>
+          <div class="flex gap-5 md:gap-10 items-center">
+            {% if item.data.thumbnail | length %}
+              <div>
+                {% image 'projects/' + item.data.title | slug + '/' + item.data.thumbnail[0],
+                item.data.title,
+                '100vw', 'w-[50px] md:w-[130px]' %}
+              </div>
+            {% else %}
+              <div class="w-[50px] h-[30px] md:w-[130px] md:h-[76px] bg-stone-500"></div>
+            {% endif %}
+            <div>({{ item.data.date | dateToFormat('yy') }})</div>
+            <div>{{ item.data.title }}</div>
           </div>
-          <div class="text-stone-400 md:w-[15%]">
-            <span>{{ project.data.client }}</span>
-          </div>
-          <div class="text-stone-400 md:w-[5%]">
-            <span class="inline md:hidden">/</span>
-            <span>{{ project.data.date | dateToFormat('yyyy') }}</span>
-          </div>
-          <div class="md:pt-0 md:w-[25%]">
-            <div class="flex gap-2 md:gap-3 justify-end">
-              {% for item in project.data.services %}
-                <span class="p-2 md:px-4 bg-white/10 rounded-full text-[0.5em] md:text-[0.6em] uppercase text-stone-500 font-bold">{{ item }}</span>
-              {% endfor %}
+          <div class="hidden md:block">{{ item.data.client }}</div>
+        </div>
+        <div class="z-10 fixed md:absolute top-[20px] md:top-0 left-[20px] md:left-[20px] p-5 w-[calc(100vw-40px)] md:w-[280px] h-[calc(100vh-40px)] md:h-auto hidden bg-stone-200 text-black" data-project-content>
+          <div class="absolute top-3 right-3 w-3 aspect-square rounded-full bg-black"></div>
+          <div class="h-full flex flex-col gap-5 justify-between">
+            <div class="flex flex-col gap-5">
+              <div class="flex flex-wrap gap-1 items-center">
+                {% for item in item.data.services %}
+                  <span class="p-1 px-2 rounded-full border border-current text-[0.8em]">{{ item }}</span>
+                {% endfor %}
+              </div>
+              <div class="md:hidden">
+                <div>{{ item.data.title }}</div>
+                <div>{{ item.data.date | dateToFormat('yyyy') }}</div>
+                <div>{{ item.data.client }}</div>
+              </div>
+              <div>
+                <ul class="grid grid-cols-1 divide-y divide-black/10">
+                  <li class="py-1 before:block before:text-[0.5em] before:content-['HTTP:']">
+                    <a class="flex gap-3 items-center" href="{{ item.data.link }}">
+                      <span>{{ item.data.link | cleanLink }}</span>
+                      {% svg 'arrow-right-up', 'w-[1em] aspect-square' %}
+                    </a>
+                  </li>
+                  <li class="py-1 before:block before:text-[0.5em] before:content-['Tipo:']">{{ item.data.type }}</li>
+                  <li class="py-1 before:block before:text-[0.5em] before:content-['Agência:']">{{ item.data.agency }}</li>
+                  {% if item.data.team | length %}
+                    <li class="py-1 before:block before:text-[0.5em] before:content-['Time:']">
+                      {% for item in item.data.team %}
+                        <span>
+                          <span>{{ item.name | abbrFirstName }}</span>
+                          <span class="text-stone-500">({{ item.position}})</span>
+                        </span>
+                      {% endfor %}
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+              <div class="grid grid-cols-2 gap-5 md:hidden">
+                {% if item.data.thumbnail | length %}
+                  {% for thumbnail in item.data.thumbnail %}
+                    {% image 'projects/' + item.data.title | slug + '/' + thumbnail,
+                    item.data.title,
+                    '100vw' %}
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+            <div>
+              <button class="w-full p-3 border border-current flex gap-3 items-center justify-center" data-action="project-close">
+                <span>Fechar</span>
+                {% svg 'cancel', 'w-[1em] aspect-square' %}
+              </button>
             </div>
           </div>
         </div>
-      </a>
+      </div>
     {% endfor %}
   </div>
 </section>

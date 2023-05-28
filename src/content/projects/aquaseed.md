@@ -6,7 +6,7 @@ client:
 agency: Newbacon
 date: 2018-03-01
 services:
-  - Development
+  - Desenvolvimento
 tech:
   - jQuery
   - ajax
@@ -14,12 +14,14 @@ tech:
   - SASS
 color: '#00A1CD'
 team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }]
-description: I was the main developer in this website that sought to promote care for the seeds of typically Brazilian trees that the client had sent to its employees.<br><br> The site required complex integrations, both internally and externally with the Instagram API, to enable users to share photos of the plant on the social network and vice versa using hashtags. Overall, it was a challenging and rewarding project that allowed me to showcase my technical expertise in web development and API integrations.
+description: Fui o principal desenvolvedor desse site que buscava promover o cuidado com as sementes de árvores tipicamente brasileiras que o cliente havia enviado para seus funcionários.<br><br> O site exigia integrações complexas, tanto interna quanto externamente com a API do Instagram, para permitir que os usuários compartilhem fotos da planta na rede social e vice-versa usando hashtags. No geral, foi um projeto desafiador e recompensador que me permitiu mostrar minha experiência técnica em desenvolvimento web e integrações de API.
 link: 'https://www.tnc.vc/aquaseed'
 thumbnail:
-  - aquaseed-1.png
-  - aquaseed-2.png
+  - 1.png
+  - 2.png
 featured: true
 side: false
 available: false
+archived: false
+emoji: 🌱
 ---

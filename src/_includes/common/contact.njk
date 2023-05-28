@@ -1,22 +1,18 @@
-<section class="py-10 bg-black text-stone-400 grid grid-cols-1 gap-5" id="contact">
+{% import "components/heading.njk" as heading %}
 
+<section class="min-h-[calc(100vh-220px)] py-10 grid grid-cols-1 gap-10" id="contact">
   <div class="container">
-    <h3 class="text-[0.7em] text-stone-600 font-bold uppercase pb-10 border-b border-white/10">
-      Get in touch with me
-      <sup>{{ collections['projects']  | length}}</sup>
-    </h3>
+    {{ heading.sectionPrimary({ text: 'Contato' }) }}
   </div>
   <div class="container">
-    <div class="grid grid-cols-1 divide-y divide-white/10">
+    <div>Vamos trabalhar juntos</div>
+  </div>
+  <div class="container">
+    {{ heading.sectionSecondary({ text: 'Redes sociais' }) }}
+    <div class="grid grid-cols-1 gap-5">
       {% for item in social %}
-        <a class="py-5 md:py-10 flex items-center justify-between" href="{{ item.link }}" target="_blank" data-hover="arrow-right-up">
-          <span class="flex gap-5 md:text-[1.5em]">
-            {% svg item.icon, 'w-[1em] aspect-square' %}
-            <span>{{ item.text }}</span>
-          </span>
-          <span class="overflow-hidden flex items-center gap-10">
-            <span class="text-stone-500">{{ item.user }}</span>
-          </span>
+        <a href="{{ item.link }}" target="_blank">
+          <span>{{ item.text }}</span>
         </a>
       {% endfor %}
     </div>

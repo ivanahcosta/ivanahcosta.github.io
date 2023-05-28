@@ -1,16 +1,10 @@
-<footer class="py-10 pb-[150px] md:pb-[65px] bg-black text-stone-400" id="footer">
-  <div class="container md:flex gap-10 items-center justify-between">
-    <p class="text-center md:text-left">
-      <span class="text-stone-500">©</span>
-      {{site.buildTime | dateToFormat('yyyy') }} All rights reserved.
-    </p>
-    <div class="flex gap-3 items-center justify-center md:justify-end">
-      {% for item in footer %}
-        <a href="{{ item.link | url }}">{{ item.text }}</a>
-        {% if not loop.last %}
-          <span class="text-stone-500">•</span>
-        {% endif %}
-      {% endfor %}
+<footer class="py-10 pb-20" id="footer">
+  <div class="container">
+    <div class="grid md:flex gap-10 items-center justify-between">
+      <p>© {{ site.buildTime | dateToFormat('yyyy') }} Ivana Costa ✶<br class="block md:hidden"> Todos os direitos reservados.</p>
+      <a href="#hero">
+        {% svg 'arrow-up', 'w-[1em] aspect-square' %}
+      </a>
     </div>
   </div>
 </footer>

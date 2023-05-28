@@ -6,18 +6,20 @@ client:
 agency: One Digital
 date: 2020-09-21
 services:
-  - Development
+  - Desenvolvimento
 tech:
   - jQuery
   - Webpack
   - SASS
-color: '#702D7C'
+color: '#BD79F2'
 team: [{ name: Caroline Silva, link: /, position: 'UX/UI' }]
-description: As part of a comprehensive campaign to promote Bradesco's credit and debit card products across multiple brands, I contributed to the development of a landing page that enabled users to generate coupons based on their card spending, with prizes awarded through a drawing mechanism. The landing page was integrated with the client's main website and included a user login feature, which allowed users to access their coupons or opt out of the promotion.<br><br>During this project, I utilized my expertise in front-end development to create a visually appealing and user-friendly design that aligned with the client's branding standards. I also collaborated closely with the backend team to ensure seamless integration and effective data tracking, including performance analytics and user engagement metrics.
+description: Como parte de uma ampla campanha de divulgação dos produtos de cartões de crédito e débito do Bradesco em diversas bandeiras, contribuí para o desenvolvimento de uma landing page que permitia aos usuários gerar cupons com base nos gastos do cartão, com premiação por meio de sorteio. A página de destino foi integrada ao site principal do cliente e incluiu um recurso de login do usuário, que permitia aos usuários acessar seus cupons ou cancelar a promoção.<br><br>Durante este projeto, utilizei minha experiência em desenvolvimento front-end para criar um design visualmente atraente e fácil de usar, alinhado com os padrões de marca do cliente. Também colaborei de perto com a equipe de back-end para garantir integração perfeita e rastreamento de dados eficaz, incluindo análise de desempenho e métricas de engajamento do usuário.
 link: 'https://www.banco.bradesco/suacasa'
 thumbnail:
-  - transforme-sua-casa-1.png
+  - 1.png
 featured: true
 side: false
 available: false
+emoji: 🏠
+icon: home
 ---

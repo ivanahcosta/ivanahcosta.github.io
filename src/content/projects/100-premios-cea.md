@@ -7,15 +7,17 @@ client:
 agency: One Digital
 date: 2019-04-24
 services:
-  - Development
+  - Desenvolvimento
 tech:
   - jQuery
   - SASS
-color: '#ebc75b'
+color: '#FFB800'
 team: [{ name: Caroline Silva, link: /, position: 'UX/UI' }, { name: Fernanda Cajado, link: /, position: 'UX/UI' }]
-description: As a developer, the landing page for a Bradesco C&A card promotion was created. The promotion generated coupons that could be redeemed for prizes if they were drawn when the user spent R$100 or more. The landing page was integrated with the client's back-end team, allowing the user to log in and view their coupons.
+description: Como desenvolvedor, foi criada a landing page da promoção do cartão Bradesco C&A. A promoção gerou cupons que poderiam ser trocados por prêmios caso fossem sorteados quando o usuário gastasse R$ 100 ou mais. A página de destino foi integrada à equipe de back-end do cliente, permitindo que o usuário faça login e visualize seus cupons.
 link: 'https://www.banco.bradesco'
 featured: false
 side: false
 available: false
+archived: false
+emoji: 💎
 ---

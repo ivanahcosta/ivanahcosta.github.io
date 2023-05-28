@@ -18,8 +18,19 @@ define(['jquery', 'lenis'], function ($, lenis) {
       }
       requestAnimationFrame(raf);
     },
+    anchors: function () {
+      $('a[href^="#"]').each((i, anchor) => {
+        $(anchor).on('click', function (e) {
+          e.preventDefault();
+          smoothness.scrollTo(this.getAttribute('href'));
+        });
+      });
+    },
     init: function () {
+      window.smoothness = smoothness;
+
       this.scroll();
+      this.anchors();
     },
   };
 });

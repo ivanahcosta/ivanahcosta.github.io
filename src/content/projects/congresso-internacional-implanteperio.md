@@ -1,12 +1,12 @@
 ---
-title: 'Congresso Internacional Implanteperio'
+title: 'Congresso Intl Implanteperio'
 type: Website
 client:
   - Implanteperio
 agency: Doacomm
 date: 2016-10-10
 services:
-  - Development
+  - Desenvolvimento
   - SEO
   - Design
 tech:
@@ -15,12 +15,14 @@ tech:
   - Photoshop
 color: '#215614'
 team: [{ name: Flesch, link: /, position: 'ID Designer' }]
-description: As the designer and developer, I created a website to promote the annual congress event produced by the client. The website showcased various aspects of the event such as topics, speakers, and other relevant information.<br><br>To make the website more engaging, I utilized various design elements such as high-quality images, custom graphics, and an intuitive color scheme. These elements were intended to grab the user's attention and create a visual experience that conveyed the message of the event. Furthermore, I integrated various interactive features, such as registration forms, to make the website more functional and increase user engagement.
+description: Como designer e desenvolvedor, criei um site para promover o congresso anual produzido pelo cliente. O site apresentou vários aspectos do evento, como tópicos, palestrantes e outras informações relevantes.<br><br>Para tornar o site mais atraente, utilizei vários elementos de design, como imagens de alta qualidade, gráficos personalizados e uma interface intuitiva esquema de cores. Esses elementos pretendiam atrair a atenção do usuário e criar uma experiência visual que transmitisse a mensagem do evento. Além disso, integrei vários recursos interativos, como formulários de registro, para tornar o site mais funcional e aumentar o engajamento do usuário.
 link: 'https://www.implanteperio.com.br'
 thumbnail:
-  - congresso-internacional-implanteperio-1.png
-  - congresso-internacional-implanteperio-2.png
+  - 1.png
+  - 2.png
 featured: false
 side: false
 available: false
+archived: false
+emoji: 🦷
 ---

@@ -1,112 +1,78 @@
 ---
-title: "About"
+title: "Sobre"
 layout: "base"
-permalink: "/about.html"
+permalink: "/sobre.html"
 ---
 
-<section class="py-10 hidden md:block">
-  <div class="container grid grid-cols-3 gap-10">
-    <div>
-      <h3 class="border-b border-white/10 pb-10 mb-10 uppercase text-stone-600 font-bold text-[0.7em]">Based in</h3>
-      <p>Sao Paolo—Brazil</p>
-    </div>
-    <div>
-      <h3 class="border-b border-white/10 pb-10 mb-10 uppercase text-stone-600 font-bold text-[0.7em]">Experience</h3>
-      <p>Over 6 years</p>
-    </div>
-    <div>
-      <h3 class="border-b border-white/10 pb-10 mb-10 uppercase text-stone-600 font-bold text-[0.7em]">Former</h3>
+{% import "components/heading.njk" as heading %}
+{% include "hero.njk" %}
+
+<section class="py-10 grid grid-cols-1 gap-10" id="about">
+  <div class="container">
+    {{ heading.sectionPrimary({ text: 'Sobre mim' }) }}
+  </div>
+  <div class="container">
+    <div class="grid grid-cols-1 gap-5">
       <p>
-        Tech lead <strong>@onedigital</strong>
+        Minha jornada como desenvolvedor front-end começou quando eu ainda estava na faculdade. Fiquei intrigado com a ideia de criar algo com o qual as pessoas pudessem interagir e se divertir, e os sites pareciam o meio perfeito. Comecei a aprender HTML e CSS por conta própria e logo me vi viciado.
+      </p>
+      <p>
+        Desde então, aperfeiçoei minhas habilidades por meio de vários projetos e colaborações com outros designers e desenvolvedores. Trabalhei em tudo, desde páginas de destino simples até aplicativos da Web complexos, e sempre me esforcei para criar sites que não fossem apenas visualmente atraentes, mas também fáceis de usar e acessíveis.
+      </p>
+      <p>
+        Tendo trabalhado tanto em design quanto em desenvolvimento web, adquiri um bom entendimento de diferentes pilhas de tecnologia e suas possibilidades. Isso me torna um defensor de designers e desenvolvedores, tentando encontrar soluções elegantes que sejam funcionais e visualmente agradáveis - mas sempre dentro das restrições técnicas. Sou um prototipador apaixonado, que se sente à vontade para criar algo testável no nível de fidelidade adequado para desafiar uma hipótese. Isso pode variar de um simples boneco de clique a um protótipo hi-fi totalmente interativo que se parece com a coisa real.
       </p>
     </div>
   </div>
-</section>
-
-<section class="py-10">
   <div class="container">
-    <h2 class="text-[2.5em] md:text-[3em] leading-none max-w-[880px]">
-      {% image 'profile.jpg', 'Ivana H. Costa', '100vw', 'w-[1em] aspect-square rounded-full inline-block' %}
-      I use my <span class="text-stone-400">creativity</span>, <span class="text-stone-400">expertise</span> & <span class="text-stone-400">pretty</span> to create timeless exper iences for number of users.
-    </h2>
+    {{ heading.sectionSecondary({ text: 'Status' }) }}
+    <p>Disponível para trabalho a partir de Maio/23.</p>
   </div>
-</section>
-
-<section class="py-10 grid grid-cols-1 gap-5">
-  <div class="container grid grid-cols-1 md:grid-cols-2 gap-10">
-    <p>
-      I'm based in São Paulo — Brasil and passionate about creating unique and tailored digital experiences that prioritize motion and interaction. With over 6 years of experience in the field, I have had the pleasure of working with clients in various industries from around the globe.
-      <br><br>
-      My journey as a front-end developer began when I was still in college. I was intrigued by the idea of creating something that people could interact with and enjoy, and websites seemed like the perfect medium. I started learning HTML and CSS on my own, and soon found myself hooked.
-      <br><br>
-
-    </p>
-    <p>
-      Since then, I've honed my skills through various projects and collaborations with other designers and developers. I've worked on everything from simple landing pages to complex web applications, and have always strived to create websites that are not only visually appealing, but also user-friendly and accessible.
-      <br><br>
-      Having worked both in design and web development, I have acquired a good understanding of different tech stacks and their possibilities. This makes me an advocate for both designers and developers, trying to find elegant solutions which are both functionally and visually pleasing - but are always within technical constraints.
-    </p>
-  </div>
-  <div class="container flex flex-wrap gap-3 items-center">
-    <span class="w-full md:w-auto"># What I can help you with:</span>
-    {% for item in skills %}
-      <span class="rounded-full text-[0.8em] uppercase bg-stone-800 text-stone-300 p-3 leading-none opacity-70">{{ item.title}}</span>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="py-10">
   <div class="container">
-    <h3 class="uppercase text-stone-600 font-bold text-[0.7em] border-b border-white/10 pb-10 mb-10">Experience</h3>
-    {% for item in experience %}
-      <div class="py-3 md:flex gap-10 items-center justify-between">
-        <h4 class="text-[1.2em]">{{ item.role }} @ {{ item.agency }}</h4>
-        <p class="text-stone-500">{{ item.time}}</p>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-<section class="py-10">
-  <div class="container">
-    <h3 class="uppercase text-stone-600 font-bold text-[0.7em] border-b border-white/10 pb-10 mb-10">Education and honors</h3>
-    {% for item in education %}
-      <div class="py-3 md:flex gap-10 items-center justify-between">
-        <h4 class="text-[1.2em]">{{ item.course }} @ {{ item.school }}</h4>
-        <p class="text-stone-500">{{ item.time}}</p>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="py-10">
-  <div class="container grid grid-cols-1 md:flex gap-5 md:gap-10 justify-end">
-    <a class="p-2 pl-5 bg-[#101010] border border-white/10 rounded-full flex gap-3 items-center justify-between" href="/" target="_blank">
-      <span>View LinkedIn</span>
-      {% svg 'linkedin', 'w-[1em] aspect-square box-content bg-white text-black p-5 rounded-full' %}
-    </a>
-    <a class="p-2 pl-5 bg-[#101010] border border-white/10 rounded-full flex gap-3 items-center justify-between" href="/" target="_blank">
-      <span>View my resumé</span>
-      {% svg 'file', 'w-[1em] aspect-square box-content bg-white text-black p-5 rounded-full' %}
-    </a>
-  </div>
-</section>
-
-<section class="py-10">
-  <div class="container ">
-    <h3 class="text-[0.7em] text-stone-600 font-bold uppercase pb-10">
-      Featured brands I've worked with
-    </h3>
-  </div>
-  <div class="container border-t border-white/10 pt-10">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-      {% for item in brands %}
-        <div class="p-10 md:px-20 bg-stone-900/50">
-          {% image 'brands/' + item | slug + '.png',
-          item,
-          '100vw',
-          'invert w-full' %}
-        </div>
+    {{ heading.sectionSecondary({ text: 'Experiência' }) }}
+    <ul class="grid grid-cols-1">
+      {% for item in experience %}
+        <li>
+          <span>{{ item.role }} @ {{ item.agency }}</span>
+          <span>({{ item.time }})</span>
+        </li>
       {% endfor %}
+    </ul>
+  </div>
+  <div class="container">
+    {{ heading.sectionSecondary({ text: 'Educação e honras' }) }}
+    <ul class="grid grid-cols-1">
+      {% for item in education %}
+        <li>
+          <span>{{ item.course }} @ {{ item.school }}</span>
+          <span>({{ item.time }})</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="container">
+    {{ heading.sectionSecondary({ text: 'Marcas que já trabalhei' }) }}
+    <ul class="grid grid-cols-2 gap-x-10">
+      {% for item in brands %}
+        <li>{{ item.brand }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="container">
+    {{ heading.sectionSecondary({ text: 'Mais' }) }}
+    <div class="grid grid-cols-1">
+      <a class="flex gap-3 items-center" href="/" target"_blank">
+        <span>Baixar CV</span>
+        {% svg 'arrow-right-up', 'w-[1em] aspect-square' %}
+      </a>
+      <a class="flex gap-3 items-center" href="/" target"_blank">
+        <span>Visite LinkedIn</span>
+        {% svg 'arrow-right-up', 'w-[1em] aspect-square' %}
+      </a>
+      <a class="flex gap-3 items-center" href="/" target"_blank">
+        <span>Visite Read.CV</span>
+        {% svg 'arrow-right-up', 'w-[1em] aspect-square' %}
+      </a>
     </div>
   </div>
 </section>

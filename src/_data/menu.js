@@ -1,10 +1,10 @@
 module.exports = [
   {
-    text: 'Works <sup>15</sup>',
+    text: 'Projetos <sup>15</sup>',
     link: '/',
   },
   {
-    text: 'About',
-    link: '/about',
+    text: 'Sobre',
+    link: '/sobre',
   },
 ];

@@ -1,71 +1,19 @@
+@import '_animations.css';
+@import 'components/cursor.css';
+@import 'components/projects.css';
 ::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 
 html {
   scroll-behavior: initial;
   overflow-x: hidden;
-  /* filter: invert(1); */
 }
+html.touch *:hover {
+  all: unset !important;
+}
+
 [disabled] {
   opacity: 0.33;
   pointer-events: none;
-}
-
-.status:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background: #f9e9a2;
-  border-radius: 100%;
-  opacity: 0.5;
-  transform: translate(-50%, -50%) scale(3);
-  animation: status-animation 3s infinite;
-}
-
-.status {
-  position: relative;
-  display: inline-block;
-  vertical-align: 1px;
-  width: 8px;
-  height: 8px;
-  margin: 0 6px;
-  background: #ffdd40;
-  color: transparent;
-  border-radius: 100%;
-  flex: 0 0 auto;
-}
-.status.busy,
-.status.busy:before {
-  background: #e60000;
-}
-.status.away,
-.status.away:before {
-  background: #ff9900;
-}
-.status.available,
-.status.available:before {
-  background: #00e600;
-}
-.status.offline,
-.status.offline:before {
-  background: #666666;
-}
-
-@keyframes status-animation {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0.8;
-  }
-  70% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(3);
-  }
-  to {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-  }
 }

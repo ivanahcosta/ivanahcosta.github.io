@@ -6,19 +6,20 @@ client:
 agency: One Digital
 date: 2019-07-31
 services:
-  - Development
+  - Desenvolvimento
 tech:
   - jQuery
   - Webpack
   - AOS.js
 color: '#372589'
 team: [{ name: Edineide Oliveira, link: /, position: 'UI' }]
-description: I worked in this landing page to showcase the client's primary promotional campaign, featuring transactional sections that seamlessly integrated with the bank's backend team through iframes. The page's futuristic design, coupled with an enticing reward system, provided an ideal canvas for me to incorporate animations and subtle interactions, rendering a polished and fluid user experience.<br><br>By utilizing best practices in front-end development and optimizing the user experience, I played a key role in driving engagement and conversion for the client's promotional campaign.
+description: Trabalhei nesta página de destino para mostrar a principal campanha promocional do cliente, apresentando seções transacionais que se integravam perfeitamente à equipe de back-end do banco por meio de iframes. O design futurista da página, juntamente com um sistema de recompensa atraente, forneceu uma tela ideal para eu incorporar animações e interações sutis, proporcionando uma experiência de usuário polida e fluida.<br><br>Utilizando as melhores práticas no desenvolvimento front-end e otimizando a experiência do usuário, desempenhei um papel fundamental na geração de engajamento e conversão para a campanha promocional do cliente.
 link: 'https://www.banco.bradesco/futuro'
 thumbnail:
-  - maquinas-do-futuro-1.png
-  - maquinas-do-futuro-2.png
+  - 1.png
+  - 2.png
 featured: true
 side: false
-available: false
+archived: false
+emoji: 🚗
 ---

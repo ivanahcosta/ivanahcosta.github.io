@@ -3,17 +3,23 @@ module.exports = {
   content: ['./src/**/*.{njk,md}', './src/**/*.svg'],
   theme: {
     fontFamily: {
-      sans: 'Inter, sans-serif',
-      serif: 'SchmalfetteCP, serif',
+      sans: 'Neue, sans-serif',
+      serif: 'Instrument Serif, serif',
+      druk: 'Druk, sans-serif',
     },
     container: {
       center: true,
       padding: {
-        'DEFAULT': '1rem',
-        'sm': '2rem',
-        'lg': '4rem',
-        'xl': '5rem',
-        '2xl': '7rem',
+        'DEFAULT': '1.5rem',
+        'sm': '1.5rem',
+        'lg': '2.5rem',
+        'xl': '2.5rem',
+        '2xl': '2.5rem',
+      },
+    },
+    extend: {
+      borderColor: {
+        DEFAULT: 'rgb(255 255 255 / 0.2)',
       },
     },
   },
