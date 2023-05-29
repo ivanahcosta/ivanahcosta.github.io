@@ -22,7 +22,9 @@ define(['jquery', 'lenis'], function ($, lenis) {
       $('a[href^="#"]').each((i, anchor) => {
         $(anchor).on('click', function (e) {
           e.preventDefault();
-          smoothness.scrollTo(this.getAttribute('href'));
+          smoothness.scrollTo(this.getAttribute('href'), {
+            offset: -20,
+          });
         });
       });
     },

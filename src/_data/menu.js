@@ -1,6 +1,6 @@
 module.exports = [
   {
-    text: 'Projetos <sup>15</sup>',
+    text: 'Projetos',
     link: '/',
   },
   {

@@ -1,4 +1,11 @@
-define(['jquery', 'barba', 'gsap', '../components/smoothScroll', '../components/menu'], function ($, barba, gsap, smoothScroll, menu) {
+define(['jquery', 'barba', 'gsap', '../components/smoothScroll', '../components/menu', '../components/hero'], function (
+  $,
+  barba,
+  gsap,
+  smoothScroll,
+  menu,
+  hero,
+) {
   var gsap = gsap.gsap;
 
   return {

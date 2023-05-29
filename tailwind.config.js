@@ -5,7 +5,7 @@ module.exports = {
     fontFamily: {
       sans: 'Neue, sans-serif',
       serif: 'Instrument Serif, serif',
-      druk: 'Druk, sans-serif',
+      noto: 'Noto, sans-serif',
     },
     container: {
       center: true,

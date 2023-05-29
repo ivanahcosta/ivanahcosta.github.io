@@ -24,15 +24,15 @@ permalink: "/index.html"
                 '100vw', 'w-[50px] md:w-[130px]' %}
               </div>
             {% else %}
-              <div class="w-[50px] h-[30px] md:w-[130px] md:h-[76px] bg-stone-500"></div>
+              <div class="w-[50px] h-[30px] md:w-[130px] md:h-[76px] bg-stone-500"  style="background-color: {{ item.data.color }}"></div>
             {% endif %}
             <div>({{ item.data.date | dateToFormat('yy') }})</div>
             <div>{{ item.data.title }}</div>
           </div>
           <div class="hidden md:block">{{ item.data.client }}</div>
         </div>
-        <div class="z-10 fixed md:absolute top-[20px] md:top-0 left-[20px] md:left-[20px] p-5 w-[calc(100vw-40px)] md:w-[280px] h-[calc(100vh-40px)] md:h-auto hidden bg-stone-200 text-black" data-project-content>
-          <div class="absolute top-3 right-3 w-3 aspect-square rounded-full bg-black"></div>
+        <div class="z-10 fixed md:absolute top-[20px] md:top-0 left-[20px] md:left-[20px] p-5 w-[calc(100vw-40px)] md:w-[280px] h-[calc(100vh-40px)] md:h-auto hidden border-t-[10px] bg-stone-200 shadow-xl text-black" style="border-color: {{ item.data.color }}" data-project-content>
+          <div class="absolute top-3 right-3 w-5 aspect-square rounded-full bg-black"></div>
           <div class="h-full flex flex-col gap-5 justify-between">
             <div class="flex flex-col gap-5">
               <div class="flex flex-wrap gap-1 items-center">
@@ -46,10 +46,10 @@ permalink: "/index.html"
                 <div>{{ item.data.client }}</div>
               </div>
               <div>
-                <ul class="grid grid-cols-1 divide-y divide-black/10">
+                <ul class="grid grid-cols-1 divide-y divide-black/10 md:text-[0.8em]">
                   <li class="py-1 before:block before:text-[0.5em] before:content-['HTTP:']">
-                    <a class="flex gap-3 items-center" href="{{ item.data.link }}">
-                      <span>{{ item.data.link | cleanLink }}</span>
+                    <a class="flex gap-3 items-center" href="{{ item.data.link }}" target="_blank">
+                      <span class="{{ 'line-through' if not item.data.available }}">{{ item.data.link | cleanLink }}</span>
                       {% svg 'arrow-right-up', 'w-[1em] aspect-square' %}
                     </a>
                   </li>
