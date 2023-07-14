@@ -6,12 +6,12 @@ client:
 agency: One Digital
 date: 2022-12-01
 services:
-  - Desenvolvimento
+  - Development
   - SEO
 tech:
-  - Eleventy
-  - Webpack
+  - 11ty
   - Nunjucks
+  - SASS
 color: '#E208B2'
 team:
   [
@@ -19,18 +19,24 @@ team:
     { name: Amanda Garcia, link: /, position: 'UX/UI' },
     { name: Rhayane Cassemiro, link: /, position: 'Front-end' },
   ]
-description: Como desenvolvedor líder, contribuí com o redesenho do site institucional da Bradescard, provedora de soluções de crédito e subsidiária do Bradesco. O projeto envolveu a integração do site com uma ferramenta de back-end aprovada, o que exigiu o desenvolvimento de um framework de front-end para agilizar futuras manutenções. <br><br> Em minha função, aproveitei meu conhecimento técnico para implementar um design moderno e fácil de usar, ao mesmo tempo em que seguia as diretrizes de marca estabelecidas. Trabalhei em colaboração com a equipe de desenvolvimento para garantir a integração perfeita com o back-end, priorizando o desempenho, a acessibilidade e a manutenção do site.
+description: |
+  I led the development of the redesign project for Bradescard's institutional website, which provides credit solutions on behalf of Bradesco. Our primary objective was to give the site a modern and clean aesthetic. Throughout the project, I actively participated in the UI and UX stages, collaborating closely with the design team and client to ensure technical feasibility.
+
+  We implemented a contemporary design structure that emphasized collaboration with the development team. This allowed us to seamlessly integrate a client-approved tool into the website. Our development priorities included optimizing performance, ensuring accessibility, and streamlining maintenance to facilitate the addition of new features in the future.
+
+  As the lead developer, I played a key role in ensuring that the website not only had a visually appealing design but also met technical requirements and industry standards. By actively participating in the UI and UX stages, I ensured that the website provided a seamless and engaging experience for visitors.
+
+  Throughout the development process, we prioritized performance optimization to ensure fast loading times and smooth browsing. We also focused on making the website accessible to all users, adhering to accessibility guidelines. Additionally, we implemented a streamlined maintenance process to facilitate future updates and the addition of new features.
+
+  I was excited to lead this project and collaborate with the design team and client to create a modern and user-friendly website for Bradescard.
 link: 'https://www.bradescard.com.br'
 thumbnail:
   - 1.png
   - 2.png
-featured: false
+  - 3.png
+featured: true
 side: false
 available: true
 archived: false
 emoji: 💳
 ---
-
-In the redesign of the institutional website for Bradescard, a subsidiary of Bradesco that offers credit solutions, the front-end development was led by an experienced developer. The project required the development of a framework that facilitated future maintenance, as the website needed to be integrated into an approved back-end tool.
-
-Throughout the project, the developer ensured that the website adhered to established brand guidelines while delivering a modern and user-friendly design. The developer worked collaboratively with the development team to ensure seamless integration with the backend, while prioritizing website performance, accessibility, and maintainability.

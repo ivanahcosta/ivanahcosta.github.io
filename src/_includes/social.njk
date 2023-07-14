@@ -1,0 +1,13 @@
+{% if social %}
+  <section id="social">
+    <div class="container">
+      {% for item in socialLinks %}
+        <div>
+          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-cursor="External">
+            <span>{{ item.text }}↗</span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

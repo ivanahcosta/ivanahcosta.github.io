@@ -1,7 +1,0 @@
-<nav class="flex gap-5 items-center" id="menu">
-  {% for item in menu %}
-    <a class="[&.active]:underline" href="{{ item.link | url }}">
-      {{ item.text | safe }}
-    </a>
-  {% endfor %}
-</nav>

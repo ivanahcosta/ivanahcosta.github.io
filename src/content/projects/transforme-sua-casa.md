@@ -6,14 +6,19 @@ client:
 agency: One Digital
 date: 2020-09-21
 services:
-  - Desenvolvimento
+  - Development
 tech:
   - jQuery
   - Webpack
   - SASS
 color: '#BD79F2'
 team: [{ name: Caroline Silva, link: /, position: 'UX/UI' }]
-description: Como parte de uma ampla campanha de divulgação dos produtos de cartões de crédito e débito do Bradesco em diversas bandeiras, contribuí para o desenvolvimento de uma landing page que permitia aos usuários gerar cupons com base nos gastos do cartão, com premiação por meio de sorteio. A página de destino foi integrada ao site principal do cliente e incluiu um recurso de login do usuário, que permitia aos usuários acessar seus cupons ou cancelar a promoção.<br><br>Durante este projeto, utilizei minha experiência em desenvolvimento front-end para criar um design visualmente atraente e fácil de usar, alinhado com os padrões de marca do cliente. Também colaborei de perto com a equipe de back-end para garantir integração perfeita e rastreamento de dados eficaz, incluindo análise de desempenho e métricas de engajamento do usuário.
+description: |
+  I was involved in the development of a dedicated landing page for Bradesco which aimed to promote an action-focused campaign associated with the Tokyo 2020 Olympics. The landing page featured integrated sections that seamlessly connected with the client's backend team, enabling users to track the number of coupons generated based on their expenses with Bradesco credit cards. By participating, users had a chance to enter a raffle and potentially win shopping vouchers. I utilized my front-end expertise to create a visually appealing and responsive design that aligned with the client's brand guidelines, ensuring a cohesive user experience.
+
+  Throughout the project, I collaborated closely with the client's backend team to ensure a smooth integration process and effective data tracking. We implemented analytics tools to monitor user engagement and campaign performance.
+
+  Unfortunately, due to the outbreak of the Covid-19 pandemic, the promotion had to be suspended.
 link: 'https://www.banco.bradesco/suacasa'
 thumbnail:
   - 1.png

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  header,
+  section,
+  footer {
+    @apply py-[1.5rem] md:py-[2.5rem] grid grid-cols-1 gap-10;
+  }
+  .container {
+    @apply px-[1.5rem] md:px-[10rem];
+  }
+}

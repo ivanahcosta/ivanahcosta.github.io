@@ -1,6 +1,6 @@
-@import '_animations.css';
-@import 'components/cursor.css';
-@import 'components/projects.css';
+@import 'common/fonts.css';
+@import 'vendors/lenis.css';
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -9,11 +9,8 @@ html {
   scroll-behavior: initial;
   overflow-x: hidden;
 }
-html.touch *:hover {
-  all: unset !important;
-}
 
 [disabled] {
-  opacity: 0.33;
+  opacity: 0.3;
   pointer-events: none;
 }

@@ -6,7 +6,7 @@
     "clean": "rimraf dist",
     "start": "run-s clean dev",
     "dev": "run-p dev:*",
-    "dev:11ty": "npx @11ty/eleventy --serve --port=5524",
+    "dev:11ty": "npx @11ty/eleventy --serve --incremental --port=5525",
     "dev:css": "tailwindcss -i src/assets/tailwind.css -o dist/assets/tailwind.css --watch --postcss",
     "build": "run-s clean build:*",
     "build:11ty": "npx @11ty/eleventy",

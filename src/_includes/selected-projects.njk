@@ -1,0 +1,14 @@
+{% if selectedProjects %}
+  <section id="selected-projects">
+    <div class="container grid grid-cols-1 divide-y">
+      {% for item in collections['project'] | reverse %}
+        <a href="{{ item.data.link }}" target="_blank">
+          <div class="py-10">
+            <div>{{ item.data.title }}</div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endif %}

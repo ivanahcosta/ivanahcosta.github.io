@@ -6,22 +6,28 @@ client:
 agency: Doacomm
 date: 2016-02-10
 services:
-  - Desenvolvimento
+  - Development
   - SEO
   - Design
 tech:
   - PHP
   - jQuery
   - Photoshop
-  - Illustrator
 color: '#95c3cd'
 team: [{ name: Flesch, link: /, position: 'ID Designer' }]
-description: Fui responsável pelo design e desenvolvimento do site destinado a promoção do evento Kota Versatil Day produzido pela Kota. O site foi projetado para mostrar o evento, seus tópicos e palestrantes. Por meio de uma interface amigável, os participantes puderam acessar facilmente todas as informações necessárias sobre o evento, incluindo inscrições e detalhes logísticos.<br><br>Além disso, certifiquei-me de que o site fosse otimizado para os mecanismos de busca, facilitando o acesso para participantes em potencial encontrarem o evento online. Isso foi alcançado por meio do uso de palavras-chave relevantes, meta descrições e outras técnicas de SEO na página.
+description: |
+  I was responsible for meticulously designing and developing the website to promote Kota's event. My focus was on creating an intuitive interface that effectively showcased event details, topics, and speakers. The goal was to make it effortless for participants to access information such as registrations and logistics. In addition to the design and development aspects, I implemented various measures to optimize the website for search engines. This included strategically using relevant keywords, crafting compelling meta descriptions, and employing other SEO techniques. These enhancements aimed to improve the online visibility and accessibility of the website, making it easier for potential attendees to find information about the event.
+
+  I took great care to ensure that the website provided a seamless and user-friendly experience. By organizing event details in a clear and intuitive manner, participants could easily navigate the website and access the information they needed. This included features such as a user-friendly registration system and comprehensive logistical information to assist attendees in planning their participation.
+
+  Furthermore, by implementing SEO techniques, I aimed to enhance the website's visibility in search engine results. This meant considering relevant keywords and meta descriptions to improve its ranking and attract more potential attendees.
+
+  I was excited to contribute to the success of Kota's event by developing a website that effectively showcased its details and facilitated participant engagement. By creating an intuitive interface and implementing SEO optimizations, I strived to improve online visibility and accessibility, making it easier for attendees to find and engage with the event.
 link: 'https://www.kotaversatilday.com.br'
 thumbnail:
   - 1.png
   - 2.png
-featured: false
+featured: true
 side: false
 available: false
 archived: false

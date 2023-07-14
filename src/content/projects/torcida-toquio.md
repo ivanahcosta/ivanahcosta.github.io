@@ -7,15 +7,20 @@ client:
 agency: One Digital
 date: 2020-02-12
 services:
-  - Desenvolvimento
+  - Development
 tech:
   - AOS.js
   - Webpack
   - SASS
 color: '#FA1D1D'
 team: [{ name: Fernanda Cajado, link: /, position: 'UX' }, { name: Caroline Silva, link: /, position: 'UI' }]
-description: Fui responsável pelo desenvolvimento de uma landing page dedicada à promoção de uma campanha focada em ação vinculada às Olimpíadas de Tóquio 2020. A página de destino continha seções que se integravam à equipe de back-end do cliente, permitindo que o usuário visualizasse a quantidade de cupons gerados com base nos gastos com os cartões de crédito Bradesco, com possibilidade de ganhar vale-compras por meio de sorteio.<br><br>Ao longo do processo processo de desenvolvimento, aproveitei minha experiência em desenvolvimento front-end para criar um design visualmente atraente e responsivo que se alinhasse com as diretrizes de marca do cliente. Também colaborei de perto com a equipe de back-end do cliente para garantir integração perfeita e rastreamento de dados eficaz, incluindo a implementação de ferramentas de análise para monitorar o envolvimento do usuário e o desempenho da campanha.<br><br>Infelizmente, a promoção foi suspensa devido ao surto de a pandemia de Covid-19. No entanto, continuo orgulhoso de minhas contribuições para este projeto e do impacto que teve na promoção do engajamento com a marca Bradesco.
+description: |
+  I had the privilege of being involved in the development of a dedicated landing page for Bradesco, specifically designed to promote an action-focused campaign associated with the Tokyo 2020 Olympics. The landing page seamlessly integrated various sections that connected with the client's backend team. This allowed users to easily track the number of coupons generated based on their expenses with Bradesco credit cards, providing them with the exciting opportunity to participate in a raffle and potentially win shopping vouchers. To ensure a cohesive user experience, I utilized my front-end expertise to create a visually appealing and responsive design that perfectly aligned with the client's brand guidelines.
+
+  Throughout the project, I worked closely with the client's backend team, fostering a collaborative environment that facilitated a smooth integration process and effective data tracking. By implementing advanced analytics tools, we were able to closely monitor user engagement and measure the campaign's performance. However, despite our efforts and dedication, the promotion unfortunately had to be suspended due to the outbreak of the Covid-19 pandemic. Although this was a setback, I remain proud of the work we accomplished and the seamless landing page we developed. The campaign may be revisited and adapted in the future, and I look forward to the opportunity to continue contributing to impactful projects like this.
 link: 'https://www.branco.bradesco/tokyo'
+thumbnail:
+  - 1.png
 featured: false
 side: false
 available: false

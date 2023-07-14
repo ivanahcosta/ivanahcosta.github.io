@@ -1,19 +1,9 @@
-<section class="min-h-[calc(100vh-46px)] md:h-[calc(100vh-110px)] py-10 flex flex-col gap-10 items-center justify-center" id="hero">
-  <div class="container" style="container-type: inline-size;">
-    <div class="text-center text-[15cqw] md:text-[8cqw] leading-[1]" role="textbox" aria-label="">
-      <div class="indent-[26cqw]">Eu_sou</div>
-      <div class="indent-[0cqw]">uma_#DEV</div>
-      <div class="indent-[15cqw]">Criativa<span class="font-noto text-[0.8em] align-middle">♠</span></div>
-      <div class="indent-[0cqw]">de_@SP<span class="font-noto text-[0.8em] align-middle">🌧</span>_com</div>
-      <div class="-indent-[15cqw]">6+_anos_de</div>
-      <div class="indent-[3cqw]">experiencia</div>
+{% if hero %}
+  <section id="hero">
+    <div class="container">
+      <h2>
+        Front-end developer
+      </h2>
     </div>
-  </div>
-  <div class="container flex items-baseline justify-center">
-    <a class="p-5 rounded-full border border-white aspect-square" href="#projects" data-action="scrolldown">
-      {% svg 'arrow-down', 'w-[1em] aspect-square' %}
-    </a>
-  </div>
-</section>
-
-<div class="-z-[1] absolute top-[75vh] md:top-[50vh] left-1/2 -translate-x-1/2 container aspect-square rounded-full bg-stone-500 pointer-events-none" style="background-image: radial-gradient(black, transparent);" data-radial></div>
+  </section>
+{% endif %}

@@ -1,12 +1,7 @@
-<header class="z-10 sticky top-0 pt-5 md:pt-10 text-[0.8em] leading-[1]" id="header">
-  <div class="container flex flex-wrap  items-center justify-between">
-    <a class="flex gap-3 items-center" href="/">
-      <div class="w-[2em] bg-stone-500 shadow-xl rounded-full aspect-square"></div>
-      <div>
-        <h1>Ivana H. Costa</h1>
-        <span class="text-stone-400">Disponível⤷maio/23</span>
-      </div>
-    </a>
-    {% include "common/menu.njk" %}
-  </div>
-</header>
+{% if header %}
+  <header id="header">
+    <div class="container">
+      header
+    </div>
+  </header>
+{% endif %}

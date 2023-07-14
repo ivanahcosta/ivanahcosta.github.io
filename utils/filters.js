@@ -29,6 +29,14 @@ module.exports = {
     const result = str.replace(/^https:\/\/www\./i, '');
     return result;
   },
+  featuredOnly: function (collection) {
+    const filtered = collection.filter((item) => item.data.featured == true);
+    return filtered;
+  },
+  featuredOnlyClients: function (clients) {
+    const filtered = clients.filter((item) => item.featured == true);
+    return filtered;
+  },
 
   console: function (value) {
     return util.inspect(value);

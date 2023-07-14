@@ -6,14 +6,17 @@ client:
 agency: Newbacon
 date: 2019-02-01
 services:
-  - Desenvolvimento
+  - Development
 tech:
   - jQuery
   - SASS
   - Razor
 color: '#0255A5'
-team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }]
-description: Desenvolvi uma landing page com uma estratégia de conteúdo direcionado para promover o aplicativo para android e iphone da Ale para seus clientes. Trabalhando junto com a equipe de back-end, implementamos uma abordagem de segmentação para personalização de conteúdo.<br><br>Ao adicionar interações sutis baseadas em rolagem e detalhes envolventes, criamos uma experiência mais dinâmica e imersiva para os usuários. Isso não apenas tornou a página mais atraente visualmente, mas também ajudou a manter os usuários engajados e interessados no conteúdo.
+team: [{ name: Felix Kenji, link: /, position: 'UX/UI' }, { name: Rafael, link: /, position: 'Back-end' }]
+description: |
+  In developing the landing page to promote Ale's Android and iPhone app, we employed a targeted content strategy. It was my responsibility to closely collaborate with the back-end team and implement a threaded approach to content personalization. Our goal was to create a dynamic and captivating user experience by incorporating subtle scroll-based interactions and immersive details.
+
+  Throughout the process, I focused on enhancing the visual appeal of the page while effectively engaging and maintaining user interest in the content. By utilizing these techniques, we were able to create an engaging and personalized experience for Ale's customer base, encouraging them to explore and interact with the app.
 link: 'https://www.ale.vc'
 thumbnail:
   - 1.png
