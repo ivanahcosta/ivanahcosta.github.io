@@ -9,12 +9,24 @@
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url }}"/>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}"/>
   </head>
-  <body class="bg-white text-black uppercase text-[16px] md:text-[24px]">
+  <body class="bg-[#d6d6d6] text-[#fb3f1a] uppercase text-[16px] md:text-[24px] leading-[1]">
 
     <div hidden>{% svgsprite %}</div>
-    {# {% include "common/loader.njk" %} #}
+    {% include "common/loader.njk" %}
 
     {{ content | safe }}
+
+    <svg id="pixelate-filter">
+      <defs>
+        <filter id="pixelate" x="0" y="0">
+          <feFlood x="2" y="2" height="1" width="1"/>
+          <feComposite width="10" height="10"/>
+          <feTile result="a"/>
+          <feComposite in="SourceGraphic" in2="a" operator="in"/>
+          <feMorphology operator="dilate" radius="5"/>
+        </filter>
+      </defs>
+    </svg>
 
     <script data-main="{{ '/assets/scripts/main.js' | url }}" src="{{ '/assets/scripts/vendors/require.js' | url | safe }}"></script>
 

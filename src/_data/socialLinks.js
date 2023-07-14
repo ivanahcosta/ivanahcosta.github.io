@@ -13,9 +13,9 @@ module.exports = [
   },
   {
     text: 'Savee',
-    link: 'https://discordapp.com/channels/@me/ivana#9261/',
-    user: '@ivana#9261',
-    icon: 'discord',
+    link: 'https://savee.it/ivanacosta/',
+    user: 'ivanacosta',
+    icon: 'pin',
   },
   {
     text: 'Discord',

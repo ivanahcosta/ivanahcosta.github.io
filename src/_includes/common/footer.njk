@@ -1,7 +1,24 @@
 {% if footer %}
   <footer id="footer">
     <div class="container">
-      <p>footer</p>
+      <div class="border-t"></div>
+    </div>
+    <div class="container flex flex-col md:flex-row gap-5 md:gap-10 justify-between">
+      <div class="flex gap-5 justify-between">
+        <p>São Paulo, BR</p>
+        <p data-time>00:00</p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-5">
+        <p class="hidden md:inline">©{{ site.buildTime | dateToFormat('yyyy') }} Ivana Costa. All rights reserved.</p>
+        <div class="flex gap-5 justify-between md:justify-start">
+          <button class="underline inline-flex gap-3 items-center uppercase">
+            <span>Credits</span>
+          </button>
+          <a class="underline inline-flex gap-3 items-center" href="{{ '/#about' | url }}">
+            <span>Go back to top⤴</span>
+          </a>
+        </div>
+      </div>
     </div>
   </footer>
 {% endif %}

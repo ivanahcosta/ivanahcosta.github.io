@@ -1,10 +1,40 @@
 {% if selectedProjects %}
   <section id="selected-projects">
-    <div class="container grid grid-cols-1 divide-y">
+    <div class="container" style="container-type: inline-size;">
+      <h2 class="-ml-[1cqw] mt-[2cqw] uppercase text-[26cqw]">
+        <div class="-mt-[11cqw] flex items-center justify-end">
+          <span>Selected</span>
+        </div>
+        <div class="-mt-[11cqw] flex items-center justify-between">
+          <span class="issaemoji text-[0.8em]">💯</span>
+          <span>↘works</span>
+        </div>
+      </h2>
+    </div>
+    <div class="container grid grid-cols-1 divide-y" style="container-type: inline-size;">
       {% for item in collections['project'] | reverse %}
-        <a href="{{ item.data.link }}" target="_blank">
-          <div class="py-10">
-            <div>{{ item.data.title }}</div>
+        <a href="{{ item.data.link }}" target="_blank" data-project>
+          <div class="py-[5cqw] md:py-[1cqw] grid grid-cols-1 gap-2 md:gap-5">
+            <div class="text-[16cqw] leading-[0.6] truncate">
+              <span>{{ item.data.title }}</span>
+            </div>
+            <div class="flex flex-col md:flex-row gap-2 md:gap-10 items-start md:items-center justify-between">
+              <div class="flex gap-3 md:gap-5 items-center">
+                <div>{{ item.data.date | dateToFormat('yyyy') }}</div>
+                <span>・</span>
+                <div>{{ item.data.client }}</div>
+                <span>・</span>
+                <div>{{ item.data.type }}</div>
+              </div>
+              <div class="flex gap-3 md:gap-5 items-center">
+                {% for service in item.data.services %}
+                  <span class="border md:border-[3px] border-current rounded-xl">{{ service }}</span>
+                {% endfor %}
+                {% for tech in item.data.tech %}
+                  <span class="border md:border-[3px] border-current rounded-xl">{{ tech }}</span>
+                {% endfor %}
+              </div>
+            </div>
           </div>
         </a>
       {% endfor %}

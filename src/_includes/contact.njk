@@ -1,7 +1,43 @@
 {% if contact %}
+  <section class="text-[#1c1c1c] md:text-[1.3em] gap-0 overflow-x-hidden md:pt-20" id="ribbons">
+    {% for i in range(0,2)%}
+      <div class="scale-[1.1] bg-[#959595] uppercase relative overflow-x-hidden {{ '!bg-[#fb3f1a] rotate-3 -translate-y-1/2' if loop.last }}">
+        <div class="w-fit flex gap-5 items-center overflow-x-hidden">
+          {% for i in range(0, 20)%}
+            <div class="shrink-0 py-5 md:py-10 flex gap-5 items-center {{ 'opacity-50' if loop.last }}">
+              <span>Available for work</span>
+              <span>—</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
   <section id="contact">
-    <div class="container">
-      <p>Get in touch with me.</p>
+    <div class="container" style="container-type: inline-size;">
+      <h2 class="-ml-[1cqw] mt-[2cqw] uppercase text-[26cqw]">
+        <div class="-mt-[11cqw] flex items-center">
+          <span>Hey, get in</span>
+        </div>
+        <div class="-mt-[11cqw] flex items-center justify-between">
+          <span>touch</span>
+          <span class="issaemoji">📬</span>
+        </div>
+        <div class="-mt-[11cqw] flex items-center justify-between">
+          <span>✨✨</span>
+          <span class="underline">mail me</span>
+        </div>
+      </h2>
+    </div>
+    <div class="container flex justify-between">
+      {% for item in socialLinks %}
+        <div class="border border-current rounded-full md:text-[4em]">
+          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank">
+            <span>{{ item.text }}↗</span>
+          </a>
+        </div>
+      {% endfor %}
     </div>
   </section>
 {% endif %}

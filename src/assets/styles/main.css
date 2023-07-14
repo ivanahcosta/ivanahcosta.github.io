@@ -14,3 +14,13 @@ html {
   opacity: 0.3;
   pointer-events: none;
 }
+
+#pixelate-filter {
+  height: 1px;
+  width: 1px;
+}
+.issaemoji {
+  line-height: 1.1;
+  text-shadow: 1px 1px 1px black;
+  filter: url('#pixelate') grayscale(1) contrast(1.3);
+}
