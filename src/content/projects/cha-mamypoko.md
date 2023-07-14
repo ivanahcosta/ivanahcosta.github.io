@@ -16,7 +16,8 @@ team: [{ name: Gustavo, link: /, position: 'UX/UI' }]
 description: |
   Lorem
 link: 'https://www.chadebebemamypoko.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
   - 3.png

@@ -18,7 +18,8 @@ description: |
 
   To ensure optimal performance and track user engagement, we implemented effective tracking and analytics tools. These tools allowed us to monitor user interactions and gain valuable insights into website performance, such as click-through rates and user behavior. By leveraging these insights, we were able to continuously optimize the landing page for improved user engagement and conversion rates. Our focus on seamless integration, streamlined user experience, and data-driven optimization contributed to the success of the promotion and maximized the effectiveness of Bradesco's campaign.
 link: 'https://www.banco.bradesco/valem+'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: true

@@ -18,7 +18,8 @@ description: |
 
   Throughout the process, I focused on enhancing the visual appeal of the page while effectively engaging and maintaining user interest in the content. By utilizing these techniques, we were able to create an engaging and personalized experience for Ale's customer base, encouraging them to explore and interact with the app.
 link: 'https://www.ale.vc'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
 featured: false
 side: false

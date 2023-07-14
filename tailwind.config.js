@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       borderColor: {
-        DEFAULT: 'rgb(0 0 0 / 0.1)',
+        // DEFAULT: 'rgb(0 0 0 / 0.1)',
+        DEFAULT: '#fb3f1a',
       },
     },
   },

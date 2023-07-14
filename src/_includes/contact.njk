@@ -1,10 +1,10 @@
 {% if contact %}
   <section class="text-[#1c1c1c] md:text-[1.3em] gap-0 overflow-x-hidden md:pt-20" id="ribbons">
     {% for i in range(0,2)%}
-      <div class="scale-[1.1] bg-[#959595] uppercase relative overflow-x-hidden {{ '!bg-[#fb3f1a] rotate-3 -translate-y-1/2' if loop.last }}">
+      <div class="bg-[#959595] uppercase relative overflow-x-hidden {{ '!bg-[#fb3f1a] rotate-3 -translate-y-1/2' if loop.last }}">
         <div class="w-fit flex gap-5 items-center overflow-x-hidden">
           {% for i in range(0, 20)%}
-            <div class="shrink-0 py-5 md:py-10 flex gap-5 items-center {{ 'opacity-50' if loop.last }}">
+            <div class="shrink-0 py-5 lg:py-10 flex gap-5 items-center {{ 'opacity-50' if loop.last }}">
               <span>Available for work</span>
               <span>—</span>
             </div>
@@ -17,24 +17,29 @@
   <section id="contact">
     <div class="container" style="container-type: inline-size;">
       <h2 class="-ml-[1cqw] mt-[2cqw] uppercase text-[26cqw]">
-        <div class="-mt-[11cqw] flex items-center">
-          <span>Hey, get in</span>
+        <div class="-mt-[11cqw] flex items-center justify-between">
+          <span>Hey,</span>
+          <span>get</span>
+          <span>in</span>
         </div>
         <div class="-mt-[11cqw] flex items-center justify-between">
           <span>touch</span>
           <span class="issaemoji">📬</span>
         </div>
         <div class="-mt-[11cqw] flex items-center justify-between">
-          <span>✨✨</span>
-          <span class="underline">mail me</span>
+          <span>✨</span>
+          <span>
+            <a class="underline" href="mailto:ivanahcosta@gmail.com" target="_blank" data-cursor="✉">:::mail</a>
+          </span>
+          <span>or</span>
         </div>
       </h2>
     </div>
-    <div class="container flex justify-between">
+    <div class="container flex justify-between" style="container-type: inline-size;">
       {% for item in socialLinks %}
-        <div class="border border-current rounded-full md:text-[4em]">
-          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank">
-            <span>{{ item.text }}↗</span>
+        <div class="border border-current rounded-full text-[7cqw]">
+          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-cursor="↗">
+            <span>{{ item.text }}</span>
           </a>
         </div>
       {% endfor %}

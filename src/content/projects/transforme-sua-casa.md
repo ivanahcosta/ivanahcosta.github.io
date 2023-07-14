@@ -20,7 +20,8 @@ description: |
 
   Unfortunately, due to the outbreak of the Covid-19 pandemic, the promotion had to be suspended.
 link: 'https://www.banco.bradesco/suacasa'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
 featured: true
 side: false

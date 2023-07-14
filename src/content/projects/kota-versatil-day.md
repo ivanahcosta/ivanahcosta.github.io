@@ -24,7 +24,8 @@ description: |
 
   I was excited to contribute to the success of Kota's event by developing a website that effectively showcased its details and facilitated participant engagement. By creating an intuitive interface and implementing SEO optimizations, I strived to improve online visibility and accessibility, making it easier for attendees to find and engage with the event.
 link: 'https://www.kotaversatilday.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: true

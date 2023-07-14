@@ -20,7 +20,8 @@ description: |
 
   Throughout the development process, we remained focused on creating an interactive and visually appealing platform that highlighted the benefits of Veloe. We were excited to contribute to the project and provide Bradesco customers with a compelling and informative landing page.
 link: 'https://www.banco.bradesco/veloe'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: false

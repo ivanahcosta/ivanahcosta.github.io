@@ -21,7 +21,8 @@ description: |
 
   Our team worked collaboratively to ensure that the system catered to the specific needs of Burger King and its potential franchisees. We leveraged our expertise to develop a cohesive system that simplified the acquisition process and facilitated informed decision-making. It was gratifying to contribute to a project that not only met the objectives of Burger King but also provided a user-friendly platform for potential franchisees to embark on their entrepreneurial journey.
 link: 'https://www.burgerkingfranquias.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
   - 3.png

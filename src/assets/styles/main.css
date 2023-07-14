@@ -1,5 +1,8 @@
-@import 'common/fonts.css';
 @import 'vendors/lenis.css';
+@import 'common/fonts.css';
+@import 'components/animations.css';
+@import 'components/cursor.css';
+@import 'components/imageEffect.css';
 
 ::-webkit-scrollbar {
   display: none;
@@ -13,14 +16,4 @@ html {
 [disabled] {
   opacity: 0.3;
   pointer-events: none;
-}
-
-#pixelate-filter {
-  height: 1px;
-  width: 1px;
-}
-.issaemoji {
-  line-height: 1.1;
-  text-shadow: 1px 1px 1px black;
-  filter: url('#pixelate') grayscale(1) contrast(1.3);
 }

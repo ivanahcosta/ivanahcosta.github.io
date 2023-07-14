@@ -26,7 +26,8 @@ description: |
 
   We were excited to contribute to the project and create a visually appealing and engaging website that effectively conveyed the message of the event.
 link: 'https://www.implanteperio.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: false

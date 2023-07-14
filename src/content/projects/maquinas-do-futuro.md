@@ -18,7 +18,8 @@ description: |
 
   Throughout the development process, we focused on creating a polished and seamless user experience. We paid close attention to every detail, ensuring that the landing page not only looked visually appealing but also functioned flawlessly. By incorporating attractive rewards and leveraging subtle animations and interactions, we aimed to captivate users and encourage their active participation. Additionally, by working closely with the bank's backend team, we seamlessly integrated the transactional sections, allowing users to engage with the campaign seamlessly. The application of front-end development best practices and the optimization of the user experience played a crucial role in the project's success, leading to impressive levels of engagement and conversion.
 link: 'https://www.banco.bradesco/futuro'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: true

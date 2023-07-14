@@ -1,1 +1,16 @@
-<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="296" height="296" style="fill:#DEDEDE;stroke:#555555;stroke-width:2"/><text x="50%" y="50%" font-size="18" text-anchor="middle" alignment-baseline="middle" font-family="monospace, sans-serif" fill="#555555">300&#215;300</text></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddd;
+      }
+
+      .cls-2 {
+        fill: #fb3f1a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" width="180" height="180"/>
+  <path class="cls-1" d="m40,141.13V41.13h100v100H40Zm71.39-14.26v-7.13h7.18v-7.18h7.13v-7.13h-7.13v7.13h-7.18v7.18h-42.82v-7.18h-7.18v-7.13h-7.13v7.13h7.13v7.18h7.18v7.13h42.82Zm-35.69-42.87v-28.56h-7.13v28.56h7.13Zm35.69,0v-28.56h-7.13v28.56h7.13Z"/>
+</svg>

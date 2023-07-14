@@ -9,6 +9,8 @@
     @apply py-[1.5rem] md:py-[2.5rem] grid grid-cols-1 gap-5 md:gap-10;
   }
   .container {
-    @apply px-[1.5rem] md:px-[10rem];
+    @apply px-[1.5rem] xl:px-[5rem] 2xl:px-[10rem];
   }
 }
+
+/* md:text-[1.5em] lg:text-[2em]  xl:text-[3em] 2xl:text-[4em] */

@@ -2,26 +2,30 @@
 
 Ivana is a Digital Designer and Web Developer based in São Paulo, Brasil.
 
-## WIP
+## Stack
 
 ### Tailwindcss
 
-Ordem para classes tailwind:
+Preferred order of classes:
 
 - z-index
-- posicionamento
-- tamanhos
-- padding, margem
-- bordas
+- position
+- width, height
+- padding, margin
+- borders
 - displays: flex, block, etc
-- cor
-- texto
-- cursor, pointer events, etc
+- bg and text colors
+- text (size, transform, line height, indentation, etc.)
+- cursor, pointer events, etc.
 
-### To-do
+### WIP
 
-- [x] Responsive
-- [x] Animations
-- [x] Micro-interactions
+- [x] Responsive: XS, SM, MD, XL, 2XL
+- [x] Responsive project mobile: XS, SM, MD
+- [x] Animations: cursor, intro, on-scroll, image effect, emoji effect, endless marquee
+- [x] Micro-interactions: hover on links, rotate title on project hover(desk)
 - [ ] SEO
 - [ ] Acessibility
+
+fazer mobile dos projetos, arrumar imagens dos projetos, fazer animações de intro, fazer curriculo
+enviar curriculos 🥳🥳

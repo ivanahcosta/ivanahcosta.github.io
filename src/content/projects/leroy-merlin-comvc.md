@@ -18,7 +18,8 @@ description: |
 
   Throughout the development process, we meticulously integrated various components to ensure the system could analyze user data effectively and generate personalized offers and coupons that aligned with their preferences and requirements. We focused on implementing intricate algorithms and seamlessly integrating them into the portal to guarantee accurate recommendations. Our aim was to create a user-centric platform that provided a smooth and intuitive interface, enabling users to effortlessly navigate the portal and enjoy the benefits tailored to their specific profiles. By emphasizing optimal functionality and a seamless user experience, we strived to create a relationship portal that exceeded Leroy Merlin's expectations and provided valuable benefits to its users.
 link: 'https://www.leroymerlincom.vc'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
   - 3.png

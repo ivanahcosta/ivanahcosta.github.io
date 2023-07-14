@@ -30,7 +30,8 @@ description: |
 
   I was excited to lead this project and collaborate with the design team and client to create a modern and user-friendly website for Bradescard.
 link: 'https://www.bradescard.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
   - 3.png

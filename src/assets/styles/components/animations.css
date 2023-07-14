@@ -1,0 +1,39 @@
+header .container {
+  overflow: hidden;
+}
+header .container > * {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+#about [data-about='text'] {
+  overflow: hidden;
+}
+
+#about [data-about='text'] p {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+#selected-projects [data-projects] [data-project] {
+  overflow: hidden;
+}
+#selected-projects [data-projects] [data-project] [data-project-heading] {
+  transform: translateY(100%);
+}
+
+h2 {
+  opacity: 0;
+}
+h2 .word {
+  display: flex;
+  overflow: hidden;
+}
+h2 .char {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.underline:hover {
+  text-decoration: none !important;
+}

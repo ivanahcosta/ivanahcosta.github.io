@@ -19,7 +19,8 @@ description: |
 
   This endeavor provided a valuable platform for us to showcase our technical proficiency in web development and API integrations. It was an exciting opportunity for us to demonstrate our expertise in the field and create a rewarding experience for users.
 link: 'https://www.tnc.vc/aquaseed'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
   - 3.png

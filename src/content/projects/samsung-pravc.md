@@ -21,6 +21,6 @@ link: 'https://www.samsung.com/br'
 featured: false
 side: false
 available: false
-archived: true
+archived: false
 emoji: 📱
 ---

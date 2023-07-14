@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: 'Torcida Tóquio'
 type: Landing page
 client:
@@ -19,7 +20,8 @@ description: |
 
   Throughout the project, I worked closely with the client's backend team, fostering a collaborative environment that facilitated a smooth integration process and effective data tracking. By implementing advanced analytics tools, we were able to closely monitor user engagement and measure the campaign's performance. However, despite our efforts and dedication, the promotion unfortunately had to be suspended due to the outbreak of the Covid-19 pandemic. Although this was a setback, I remain proud of the work we accomplished and the seamless landing page we developed. The campaign may be revisited and adapted in the future, and I look forward to the opportunity to continue contributing to impactful projects like this.
 link: 'https://www.branco.bradesco/tokyo'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
 featured: false
 side: false

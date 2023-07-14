@@ -20,12 +20,13 @@ description: |
 
   The seamless integration of these technical components played a pivotal role in effectively promoting the exclusive community. By combining captivating design elements with optimized SEO practices, we emphasized the unique value proposition of the community and delivered an engaging user experience that resonated with visitors. The website's interfaces were thoughtfully designed to encapsulate the desired essence of sophistication and exclusivity, providing a visually appealing platform that reflected the community's ethos. Through our meticulous attention to detail and technical expertise, we successfully created a website that effectively showcased the community's offerings and attracted a wider audience, fostering a sense of belonging and engagement among its members.
 link: 'https://www.signatureclub.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: true
 side: false
 available: true
-archived: true
+archived: false
 emoji: 🤝🏼
 ---

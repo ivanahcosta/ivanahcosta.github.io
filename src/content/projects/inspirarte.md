@@ -21,12 +21,13 @@ description: |
 
   I took great pride in maintaining and improving the project, ensuring that the website remained functional, visually appealing, and up to date. The collaboration with the back-end team was crucial in achieving our goals, and the user-friendly CMS interface we created provided a valuable tool for Faber Castell employees to manage the website's content effectively.
 link: 'https://www.inspirarte.art.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
 featured: false
 side: false
 available: false
-archived: true
+archived: false
 emoji: 🖼️
 ---

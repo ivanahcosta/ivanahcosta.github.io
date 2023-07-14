@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.author + ' — ' + title }}</title>
+    <title>{{ site.title }}</title>
     {% include "common/_meta.njk" %}
     <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url }}"/>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}"/>
   </head>
-  <body class="bg-[#d6d6d6] text-[#fb3f1a] uppercase text-[16px] md:text-[24px] leading-[1]">
-
-    <div hidden>{% svgsprite %}</div>
-    {% include "common/loader.njk" %}
+  <body class="bg-[#d6d6d6] text-[#fb3f1a] uppercase text-[16px] md:text-[18px] lg:text-[24px] leading-[1]">
 
     {{ content | safe }}
 
+    {% include "common/cursor.njk" %}
+    {% include "common/loader.njk" %}
     <svg id="pixelate-filter">
       <defs>
         <filter id="pixelate" x="0" y="0">
@@ -27,6 +26,7 @@
         </filter>
       </defs>
     </svg>
+    <div hidden>{% svgsprite %}</div>
 
     <script data-main="{{ '/assets/scripts/main.js' | url }}" src="{{ '/assets/scripts/vendors/require.js' | url | safe }}"></script>
 

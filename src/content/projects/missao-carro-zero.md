@@ -17,13 +17,14 @@ description: |
 
   During the development process, our team worked diligently to create a visually appealing and engaging website that effectively conveyed the excitement of the promotion. We focused on highlighting the details of the draw, including the eligibility criteria and how realtors could participate. The website was designed to provide a user-friendly experience, ensuring that realtors could easily access the necessary information and register for the chance to win the car. By leveraging our technical expertise and attention to detail, we aimed to create a seamless platform that effectively promoted the initiative and generated excitement among realtors.
 link: 'https://www.missaocarrozero.com.br'
-thumbnail:
+thumbnail: true
+images:
   - 1.png
   - 2.png
   - 3.png
 featured: false
 side: false
 available: false
-archived: true
+archived: false
 emoji: 🚘
 ---

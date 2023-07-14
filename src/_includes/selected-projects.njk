@@ -3,40 +3,57 @@
     <div class="container" style="container-type: inline-size;">
       <h2 class="-ml-[1cqw] mt-[2cqw] uppercase text-[26cqw]">
         <div class="-mt-[11cqw] flex items-center justify-end">
-          <span>Selected</span>
+          <span class="split">Selected</span>
         </div>
         <div class="-mt-[11cqw] flex items-center justify-between">
           <span class="issaemoji text-[0.8em]">💯</span>
-          <span>↘works</span>
+          <span class="split">↘works</span>
         </div>
       </h2>
     </div>
-    <div class="container grid grid-cols-1 divide-y" style="container-type: inline-size;">
+    <div class="container grid grid-cols-1 divide-y" data-projects>
       {% for item in collections['project'] | reverse %}
-        <a href="{{ item.data.link }}" target="_blank" data-project>
-          <div class="py-[5cqw] md:py-[1cqw] grid grid-cols-1 gap-2 md:gap-5">
-            <div class="text-[16cqw] leading-[0.6] truncate">
-              <span>{{ item.data.title }}</span>
-            </div>
-            <div class="flex flex-col md:flex-row gap-2 md:gap-10 items-start md:items-center justify-between">
-              <div class="flex gap-3 md:gap-5 items-center">
-                <div>{{ item.data.date | dateToFormat('yyyy') }}</div>
-                <span>・</span>
-                <div>{{ item.data.client }}</div>
-                <span>・</span>
-                <div>{{ item.data.type }}</div>
+        <div class="py-5 lg:py-0 grid grid-cols-1 gap-5" data-hover-img="{{ '/assets/images/projects/' + item.data.title | slug + '/thumbnail.jpg' }}" data-hover-img-alt="{{ item.data.title }}" data-project>
+          <a class="relative {{ 'lg:hover:underline' if item.data.available else 'disabled lg:hover:line-through' }}" href="{{ item.data.link }}" target="_blank" data-project data-cursor="{{ '↗' if item.data.available else '☹' }}" data-project-heading>
+            <div>
+              <div class="text-[3em] md:text-[5em] lg:text-[10em] -my-[0.2em] lg:-my-[0.1em] truncate">
+                <span>{{ item.data.title }}</span>
               </div>
-              <div class="flex gap-3 md:gap-5 items-center">
-                {% for service in item.data.services %}
-                  <span class="border md:border-[3px] border-current rounded-xl">{{ service }}</span>
-                {% endfor %}
-                {% for tech in item.data.tech %}
-                  <span class="border md:border-[3px] border-current rounded-xl">{{ tech }}</span>
-                {% endfor %}
+              <div class="flex flex-col md:flex-row gap-2 md:gap-10 items-start md:items-center justify-between">
+                <div class="flex gap-3 md:gap-5 items-center">
+                  <div>{{ item.data.date | dateToFormat('yyyy') }}</div>
+                  <span>・</span>
+                  <div>{{ item.data.client }}</div>
+                  <span>・</span>
+                  <div>{{ item.data.type }}</div>
+                </div>
+                <div class="flex gap-3 md:gap-5 w-full md:w-auto justify-end items-center">
+                  {% for service in item.data.services %}
+                    <span class="border border-current rounded-xl">{{ service }}</span>
+                  {% endfor %}
+                  {% for tech in item.data.tech %}
+                    <span class="border border-current rounded-xl">{{ tech }}</span>
+                  {% endfor %}
+                </div>
               </div>
             </div>
+          </a>
+          <div class="hidden" data-project-content>
+            {% if item.data.thumbnail %}
+              <div>
+                {% image 'projects/' + item.data.title | slug + '/thumbnail.jpg',
+                item.data.title,
+                '100vw',
+                'w-full aspect-square' %}
+              </div>
+            {% endif %}
+            <a class="mt-5 text-[#1c1c1c] {{ 'bg-[#fb3f1a]' if item.data.available else 'bg-[#c8c8c8]' }} flex gap-3 items-center justify-center p-5 px-3 rounded-md" href="{{ item.data.link }}" target="_blank">
+              <span>www.</span>
+              <span>{{ item.data.link | cleanLink }}</span>
+              <span>{{ '↗' if item.data.available else '☹' }}</span>
+            </a>
           </div>
-        </a>
+        </div>
       {% endfor %}
     </div>
   </section>
