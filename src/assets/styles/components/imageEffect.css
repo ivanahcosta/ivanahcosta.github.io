@@ -1,4 +1,4 @@
-.hover-image {
+/* .hover-image {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,18 +11,14 @@
   object-fit: cover;
   pointer-events: none;
   opacity: 0;
-}
+} */
 
-img {
+img,
+.emoji {
   filter: url('#pixelate') grayscale(1) contrast(1.3) brightness(0.8);
 }
 
-#pixelate-filter {
-  height: 1px;
-  width: 1px;
-}
-.issaemoji {
+.emoji {
   line-height: 1.1;
-  text-shadow: 1px 1px 1px black;
-  filter: url('#pixelate') grayscale(1) contrast(1.3);
+  text-shadow: 10px 10px 10px rgba(251, 63, 26, 1);
 }

@@ -1,6 +1,6 @@
-<div class="!hidden lg:!block opacity-0 cursor"></div>
-<div class="!hidden lg:!block opacity-0 cursor-follower">
-  <div>
-    <span></span>
+<div class="z-[1] fixed top-1/2 left-1/2 hidden group pointer-events-none" data-cursor>
+  <div class="absolute top-0 left-0 w-2 aspect-square -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#fb3f1a] group-[&.active]:hidden" data-cursor-pointer></div>
+  <div class="absolute top-0 left-0 w-20 aspect-square -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center text-[0em] bg-[#fb3f1a]/10 text-[#d6d6d6] group-[&.active]:text-[3em] group-[&.active]:bg-[#fb3f1a] group-[&.active]:w-[170px]" data-cursor-trail>
+    <span data-cursor-text></span>
   </div>
 </div>

@@ -1,5 +1,3 @@
-const svgsprite = require('./utils/plugins/svgsprite.js');
-
 const filters = require('./utils/filters.js');
 const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
@@ -15,14 +13,14 @@ module.exports = function (config) {
     config.addShortcode(shortcodeName, shortcodes[shortcodeName]);
   });
 
-  config.addNunjucksAsyncShortcode('svgsprite', svgsprite);
-
   config.addLayoutAlias('base', 'base.njk');
 
-  config.addPassthroughCopy('./src/assets/*/**');
+  config.addPassthroughCopy('./src/assets/fonts');
+  config.addPassthroughCopy('./src/assets/images');
+  config.addPassthroughCopy('./src/assets/styles');
 
-  config.addWatchTarget('./src/styles/');
-  config.addWatchTarget('./src/svg/');
+  config.addWatchTarget('./src/assets/styles/');
+  config.addWatchTarget('./src/assets/scripts/');
 
   return {
     dir: {

@@ -1,15 +1,9 @@
-requirejs.config({
-  baseUrl: '/assets/scripts/vendors',
-  paths: {
-    components: '../components',
-  },
-});
+// import smoothScroll from './components/smoothScroll.js';
+// import cursor from './components/cursor.js';
+// import imageEffect from './components/imageEffect.js';
+// import marquee from './components/marquee.js';
 
-define(function (require) {
-  var pageSmoothScroll = require('components/pageSmoothScroll');
-  pageSmoothScroll.init();
-  var imageEffect = require('components/imageEffect');
-  imageEffect.init();
-  var index = require('components/index');
-  index.init();
-});
+// smoothScroll();
+// cursor();
+// imageEffect();
+// marquee();

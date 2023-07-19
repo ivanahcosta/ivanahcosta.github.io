@@ -3,20 +3,21 @@
     <div class="container" style="container-type: inline-size;">
       <h2 class="-ml-[1cqw] mt-[2cqw] uppercase text-[26cqw]">
         <div class="-mt-[11cqw] flex items-center justify-end">
-          <span class="split">Selected</span>
+          <span>Selected</span>
         </div>
         <div class="-mt-[11cqw] flex items-center justify-between">
-          <span class="issaemoji text-[0.8em]">💯</span>
-          <span class="split">↘works</span>
+          <span class="emoji">✌️</span>
+          <span class="inline md:hidden">↘</span>
+          <span>works</span>
         </div>
       </h2>
     </div>
-    <div class="container grid grid-cols-1 divide-y" data-projects>
+    <div class="container grid grid-cols-1 divide-y" data-projects style="container-type: inline-size;">
       {% for item in collections['project'] | reverse %}
-        <div class="py-5 lg:py-0 grid grid-cols-1 gap-5" data-hover-img="{{ '/assets/images/projects/' + item.data.title | slug + '/thumbnail.jpg' }}" data-hover-img-alt="{{ item.data.title }}" data-project>
-          <a class="relative {{ 'lg:hover:underline' if item.data.available else 'disabled lg:hover:line-through' }}" href="{{ item.data.link }}" target="_blank" data-project data-cursor="{{ '↗' if item.data.available else '☹' }}" data-project-heading>
+        <div class="py-5 lg:py-0 grid grid-cols-1 gap-5" data-project>
+          <a class="relative {{ 'lg:hover:underline' if item.data.available else 'disabled lg:hover:line-through' }}" href="{{ item.data.link }}" target="_blank" data-cursor-text="{{ '↗' if item.data.available else '☹' }}" data-project-heading>
             <div>
-              <div class="text-[3em] md:text-[5em] lg:text-[10em] -my-[0.2em] lg:-my-[0.1em] truncate">
+              <div class="text-[16cqw] lg:text-[10em] -my-[0.2em] lg:-my-[0.1em] truncate">
                 <span>{{ item.data.title }}</span>
               </div>
               <div class="flex flex-col md:flex-row gap-2 md:gap-10 items-start md:items-center justify-between">
@@ -38,7 +39,7 @@
               </div>
             </div>
           </a>
-          <div class="hidden" data-project-content>
+          <div class="hidden z-[1] fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[500px] pointer-events-none" data-project-thumbnail>
             {% if item.data.thumbnail %}
               <div>
                 {% image 'projects/' + item.data.title | slug + '/thumbnail.jpg',
@@ -47,6 +48,8 @@
                 'w-full aspect-square' %}
               </div>
             {% endif %}
+          </div>
+          <div class="hidden" data-project-content>
             <a class="mt-5 text-[#1c1c1c] {{ 'bg-[#fb3f1a]' if item.data.available else 'bg-[#c8c8c8]' }} flex gap-3 items-center justify-center p-5 px-3 rounded-md" href="{{ item.data.link }}" target="_blank">
               <span>www.</span>
               <span>{{ item.data.link | cleanLink }}</span>

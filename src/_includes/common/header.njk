@@ -5,7 +5,7 @@
         {% include 'logo.njk' %}
       </div>
       <div>
-        <a class="border border-current rounded-full inline-flex xl:gap-3 items-center" href="{{ '/#contact' | url }}" data-cursor="↓">
+        <a class="border border-current rounded-full inline-flex xl:gap-3 items-center" href="{{ '#contact' | url }}" data-cursor-text="↓">
           <span class="hidden lg:inline">Available from Jul'23</span>
           <span class="hidden lg:inline">・</span>
           <span class="underline">Get in touch</span>
@@ -13,7 +13,7 @@
       </div>
       <div class="hidden lg:flex gap-5 items-center">
         {% for item in professionalLinks %}
-          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-cursor="↗">
+          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-cursor-text="↗">
             <span>{{ item.text }}</span>
           </a>
         {% endfor %}

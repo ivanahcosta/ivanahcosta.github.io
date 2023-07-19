@@ -3,7 +3,7 @@ module.exports = {
   content: ['./src/**/*.{njk,md}', './src/**/*.svg'],
   theme: {
     fontFamily: {
-      sans: 'PPNeueBit, sans-serif',
+      sans: 'PPNeueBit, helvetica, serif',
     },
     container: {
       center: true,
@@ -17,8 +17,7 @@ module.exports = {
     },
     extend: {
       borderColor: {
-        // DEFAULT: 'rgb(0 0 0 / 0.1)',
-        DEFAULT: '#fb3f1a',
+        DEFAULT: 'rgb(0 0 0 / 0.1)',
       },
     },
   },
