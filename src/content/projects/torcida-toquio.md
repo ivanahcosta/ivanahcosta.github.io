@@ -1,6 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: 'Torcida Tóquio'
+shortTitle: 'Torcida Tóqui'
 type: Landing page
 client:
   - Bradesco

@@ -1,6 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: 'Campanha Cartões Débito'
+shortTitle: 'Débito'
 type: Landing page
 client:
   - Bradesco

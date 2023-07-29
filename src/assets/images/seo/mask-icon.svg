@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ddd;
-      }
-    </style>
-  </defs>
-  <path class="cls-1" d="m0,100V0h100v100H0Zm71.39-14.26v-7.13h7.18v-7.18h7.13v-7.13h-7.13v7.13h-7.18v7.18H28.56v-7.18h-7.18v-7.13h-7.13v7.13h7.13v7.18h7.18v7.13h42.82Zm-35.69-42.87V14.31h-7.13v28.56h7.13Zm35.69,0V14.31h-7.13v28.56h7.13Z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_2_00000168808290279457364000000001352698669546735037_"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 180 180"
+	 style="enable-background:new 0 0 180 180;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FF3F00;}
+	.st1{fill:#FFFFFF;}
+	.st2{display:none;fill:#DDDDDD;}
+</style>
+<rect class="st0" width="180" height="180"/>
+<g>
+	<rect x="-11.5" y="-12.2" class="st1" width="207" height="208"/>
+	<path d="M94.4,104.2l0.9,45.5h-6.7l0.9-45.5L73,146.6l-6.2-2.7l18-41.5l-31.3,32.7l-4.8-4.8l32.7-31.4L39.9,117l-2.6-6.2l42.3-16.5
+		l-45.5,0.8v-6.7l45.5,0.9L37.1,72.7l2.7-6.2l41.4,18.2L48.6,53.2l4.8-4.8l31.3,32.8l-18-41.6L73,37l16.5,42.2l-0.9-45.4h6.7
+		l-0.9,45.4L111,36.9l6.2,2.7L99.1,81l31.4-32.7l4.8,4.8l-33,31.6l41.8-18.4l2.6,6.2l-42.4,16.6l45.6-0.9v6.7l-45.6-0.8l42.6,16.5
+		l-2.7,6.2l-41.8-18.3l33,31.6l-4.8,4.8l-31.4-32.5l18.1,41.3l-6.2,2.6L94.4,104.2z"/>
+</g>
+<path class="st2" d="M40,141.1v-100h100v100H40z M111.4,126.9v-7.1h7.2v-7.2h7.1v-7.1h-7.1v7.1h-7.2v7.2H68.6v-7.2h-7.2v-7.1h-7.1
+	v7.1h7.1v7.2h7.2v7.1H111.4z M75.7,84V55.4h-7.1V84H75.7z M111.4,84V55.4h-7.1V84H111.4z"/>
 </svg>

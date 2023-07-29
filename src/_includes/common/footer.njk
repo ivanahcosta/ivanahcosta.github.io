@@ -3,20 +3,60 @@
     <div class="container">
       <div class="border-t"></div>
     </div>
-    <div class="container flex flex-col md:flex-row gap-5 md:gap-10 justify-between">
-      <div class="hidden md:flex gap-5 justify-between">
-        <p>©{{ site.buildTime | dateToFormat('yyyy') }} Ivana Costa. All rights reserved.</p>
+    <div class="container grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="order-2 lg:order-1 flex lg:block justify-center">
+        <a class="flex gap-3 items-center opacity-50 hover:opacity-100 transition-all duration-300" href="{{ '#selected-projects' | url }}">
+          <span class="bg-white text-black rounded-full aspect-square w-[2em] flex items-center justify-center">
+            <span>⤴</span>
+          </span>
+          <span>Go back to top</span>
+        </a>
       </div>
-      <div class="flex flex-col md:flex-row gap-5">
-        <div class="flex gap-5 justify-between md:justify-start">
-          <button class="border rounded-full underline inline-flex gap-3 items-center uppercase" data-cursor-text="❤︎">
-            <span>Credits</span>
-          </button>
-          <a class="border rounded-full underline inline-flex gap-3 items-center" href="{{ '#about' | url }}" data-cursor-text="↑">
-            <span>Go back to top</span>
-          </a>
-        </div>
+      <div class="order-1 lg:order-2 flex items-start justify-between">
+        <p class="flex gap-3 w-1/2 lg:w-auto">
+          <span>©</span>
+          <span>
+            {{ site.buildTime | dateToFormat('yyyy') }}
+            {{ site.author }}.<br class="block lg:hidden"> All rights reserved.
+          </span>
+        </p>
+        <div>/</div>
+        <button class="underline uppercase" data-action="credits-open">
+          <span>Credits</span>
+        </button>
       </div>
     </div>
   </footer>
+
+  <div class="hidden bg-red text-black shadow-2xl rounded-2xl p-5 w-[90%] max-w-[400px] fixed z-[1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" data-modal="credits">
+    <div class="flex justify-end border-b border-black/10 pb-5 mb-5">
+      <button class="uppercase flex gap-3 items-center" data-action="credits-close">
+        <span class="bg-black text-red rounded-full aspect-square w-[2em] flex items-center justify-center">
+          <span>✖</span>
+        </span>
+        <span>Close</span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5">
+      <div>
+        <h3 class="opacity-50">Typography</h3>
+        <p>
+          Neue Montreal by <a class="underline" href="https://pangrampangram.com/products/neue-montreal" target="_blank">Pangram Pangram</a>.
+        </p>
+      </div>
+      <div>
+        <h3 class="opacity-50">Technical</h3>
+        <p>
+          Built using 11ty, nunjucks, tailwind, webpack, gsap & lenis.
+        </p>
+      </div>
+      <div>
+        <h3 class="opacity-50">Colophon</h3>
+        <p>
+          Local Timezone (GMT-3 / UTC) <br>
+          Last Updated (09.06.2023)
+        </p>
+      </div>
+    </div>
+  </div>
 {% endif %}

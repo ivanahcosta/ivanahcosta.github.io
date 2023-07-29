@@ -1,5 +1,6 @@
 ---
 title: 'Aquaseed'
+shortTitle: 'Aquaseed'
 type: Website
 client:
   - TNC

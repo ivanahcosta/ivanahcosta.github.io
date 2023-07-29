@@ -20,12 +20,7 @@ Preferred order of classes:
 
 ### WIP
 
-- [x] Responsive: XS, SM, MD, XL, 2XL
-- [x] Responsive project mobile: XS, SM, MD
-- [x] Animations: cursor, intro, on-scroll, image effect, emoji effect, endless marquee
-- [x] Micro-interactions: hover on links, rotate title on project hover(desk)
-- [ ] SEO
-- [ ] Acessibility
-
-fazer mobile dos projetos, arrumar imagens dos projetos, fazer animações de intro, fazer curriculo
-enviar curriculos 🥳🥳
+- [x] Responsive
+- [x] Animations
+- [x] Micro-interactions
+- [x] SEO

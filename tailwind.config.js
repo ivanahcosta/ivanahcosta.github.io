@@ -3,7 +3,14 @@ module.exports = {
   content: ['./src/**/*.{njk,md}', './src/**/*.svg'],
   theme: {
     fontFamily: {
-      sans: 'PPNeueBit, helvetica, serif',
+      neue: 'PP Neue Montreal, sans-serif',
+      neuebit: 'PP Neue Bit, sans-serif',
+      lausanne: 'Lausanne, sans-serif',
+      druk: 'Druk, sans-serif',
+      circular: 'Circular, sans-serif',
+      sch: 'sch, sans-serif',
+      neopixel: 'Neopixel, sans-serif',
+      mhtirogla: 'MHTIROGLA, sans-serif',
     },
     container: {
       center: true,
@@ -16,8 +23,13 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        black: '#1A1A1A',
+        red: '#FF3F00',
+        white: '#CCCCCC',
+      },
       borderColor: {
-        DEFAULT: 'rgb(0 0 0 / 0.1)',
+        DEFAULT: 'rgb(255 255 255 / 0.2)',
       },
     },
   },

@@ -1,9 +1,6 @@
 @import 'vendors/lenis.css';
-
 @import 'common/fonts.css';
-
-/* @import 'components/animations.css'; */
-@import 'components/imageEffect.css';
+@import 'components/animations.css';
 
 ::-webkit-scrollbar {
   display: none;

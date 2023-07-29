@@ -1,5 +1,6 @@
 ---
 title: 'Leroy Merlin ComVc'
+shortTitle: 'LM ComVc'
 type: Website
 client:
   - Leroy Merlin

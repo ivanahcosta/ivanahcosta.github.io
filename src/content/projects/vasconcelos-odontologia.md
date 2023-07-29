@@ -1,5 +1,6 @@
 ---
 title: 'Vasconcelos Odontologia'
+shortTitle: 'Vasconcelos'
 type: Website
 client:
   - Vasconcelos

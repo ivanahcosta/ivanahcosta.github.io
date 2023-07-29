@@ -1,5 +1,6 @@
 ---
 title: 'Transforme Sua Casa'
+shortTitle: 'Transforme'
 type: Landing page
 client:
   - Bradesco

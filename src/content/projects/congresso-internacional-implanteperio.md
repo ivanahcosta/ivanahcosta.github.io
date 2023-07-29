@@ -1,5 +1,6 @@
 ---
 title: 'Congresso Intl Implanteperio'
+shortTitle: 'Congresso Intl'
 type: Website
 client:
   - Implanteperio

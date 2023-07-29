@@ -1,5 +1,6 @@
 ---
 title: 'Missão Carro Zero'
+shortTitle: 'Carro 0'
 type: Website
 client:
   - ZAP

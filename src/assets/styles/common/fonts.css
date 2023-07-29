@@ -1,5 +1,17 @@
 @font-face {
-  font-family: 'PPNeueBit';
-  src: url('../../fonts/neuebit/PPNeueBit-Bold.otf');
-  font-display: block;
+  font-family: 'PP Neue Montreal';
+  src: local('PP Neue Montreal Medium'), local('PPNeueMontreal-Medium'), url('../../fonts/neue/PPNeueMontreal-Medium.woff2') format('woff2'),
+    url('../../fonts/neue/PPNeueMontreal-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal Book';
+  src: local('PP Neue Montreal Book'), local('PPNeueMontreal-Book'), url('../../fonts/neue/PPNeueMontreal-Book.woff2') format('woff2'),
+    url('../../fonts/neue/PPNeueMontreal-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }

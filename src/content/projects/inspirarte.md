@@ -1,5 +1,6 @@
 ---
 title: 'Inspirarte'
+shortTitle: 'Inspirarte'
 type: Website
 client:
   - Faber Castell

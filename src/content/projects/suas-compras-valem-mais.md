@@ -1,5 +1,6 @@
 ---
 title: 'Suas Compras Valem+'
+shortTitle: 'Valem+'
 type: Landing page
 client:
   - Bradesco

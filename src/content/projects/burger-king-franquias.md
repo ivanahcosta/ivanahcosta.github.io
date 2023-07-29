@@ -1,5 +1,6 @@
 ---
 title: 'Burger King Franquias'
+shortTitle: 'BK Franquias'
 type: Website
 client:
   - Burger King

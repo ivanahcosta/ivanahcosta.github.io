@@ -1,5 +1,6 @@
 ---
 title: 'Signature'
+shortTitle: 'Signature'
 type: Website
 client:
   - Signature

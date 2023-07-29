@@ -1,5 +1,6 @@
 ---
 title: 'Ale App'
+shortTitle: 'Ale App'
 type: Landing page
 client:
   - Ale

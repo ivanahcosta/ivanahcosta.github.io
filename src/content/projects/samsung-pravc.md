@@ -1,6 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: 'Samsung PraVc'
+shortTitle: 'Samsung PraVc'
 type: Website
 client:
   - Samsung

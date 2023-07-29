@@ -1,5 +1,6 @@
 ---
 title: 'Kota Versatil Day'
+shortTitle: 'Versatil Day'
 type: Website
 client:
   - Kota

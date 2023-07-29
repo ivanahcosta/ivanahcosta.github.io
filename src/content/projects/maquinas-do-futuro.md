@@ -1,5 +1,6 @@
 ---
 title: 'Máquinas Do Futuro'
+shortTitle: 'Futuro'
 type: Landing page
 client:
   - Bradesco

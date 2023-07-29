@@ -1,6 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: '100 Prêmios C&A'
+shortTitle: '100 Prêmios'
 type: Landing page
 client:
   - Bradesco

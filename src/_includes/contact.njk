@@ -1,43 +1,43 @@
 {% if contact %}
-  <section class="gap-0" id="ribbons">
-    {% for i in range(0, 2) %}
-      <div class="bg-[#959595] text-[#fb3f1a] text-[1.5em] uppercase relative overflow-x-hidden flex justify-center items-center {{ '!bg-[#fb3f1a] !text-[#d6d6d6]  rotate-3 -translate-y-1/2' if loop.last }}" data-marquee>
-        <div class="py-10 w-[200vw] flex gap-5 items-center justify-center">
-          <p class="shrink-0">Available for work</p>
-        </div>
-      </div>
-    {% endfor %}
-  </section>
-
   <section id="contact">
-    <div class="container" style="container-type: inline-size;">
-      <h2 class="-ml-[1cqw] mt-[2cqw] uppercase text-[26cqw]">
-        <div class="-mt-[11cqw] flex items-center justify-between">
-          <span>Hey,</span>
-          <span>get</span>
-          <span>in</span>
-        </div>
-        <div class="-mt-[11cqw] flex items-center justify-between">
-          <span>touch</span>
-          <span class="emoji">📬</span>
-        </div>
-        <div class="-mt-[11cqw] flex items-center justify-between">
-          <span>✨</span>
-          <span>
-            <a class="underline" href="mailto:ivanahcosta@gmail.com" target="_blank" data-cursor-text="✉">:::mail</a>
-          </span>
-          <span>or</span>
-        </div>
-      </h2>
+    <div class="container">
+      <div class="border-t"data-line></div>
     </div>
-    <div class="container flex justify-between" style="container-type: inline-size;">
-      {% for item in socialLinks %}
-        <div class="border border-current rounded-full text-[7cqw]">
-          <a class="underline inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-cursor-text="↗">
-            <span>{{ item.text }}</span>
-          </a>
+    <div class="container grid grid-cols-1 lg:grid-cols-4 gap-10" data-section-heading>
+      <div class="lg:col-start-2 flex gap-3 items-center text-red">
+        <span>✉</span>
+        <span>Get in touch</span>
+      </div>
+      <div class="col-start-4 hidden lg:flex gap-3 items-center">
+        <span>☺</span>
+        <span>Drop a mail</span>
+      </div>
+    </div>
+    <div class="container relative" style="container-type: inline-size;">
+      <a class="relative block group overflow-hiddena" href="mailto:ivanahco@gmail.com" targe="_blank" data-contact>
+        <div class="z-[1] pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] aspect-square rounded-full flex items-center justify-center text-black bg-white group-hover:bg-red shadow-2xl scale-[0.5] md:scale-[1]" data-contact-badge>
+          <span class="text-[2em] leading-[1]">↗</span>
+          <svg class="text-[35px] tracking-[12px] absolute w-[130px] aspect-square" width="300" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+            <defs>
+              <path id="criclePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+            </defs>
+            <g>
+              <use xlink:href="#criclePath" fill="none"/>
+              <text class="fill-black">
+                <textPath xlink:href="#criclePath">Available from Jul'23 •</textPath>
+              </text>
+            </g>
+          </svg>
         </div>
-      {% endfor %}
+        <div class="grid grid-cols-1 lg:flex underline text-red text-[16cqw] lg:text-[9.5cqw] -tracking-[0.7cqw] leading-[1]" data-contact-mail>
+          <div class="overflow-hidden">
+            <div>ivanahco</div>
+          </div>
+          <div class="overflow-hidden">
+            <div>@gmail.com</div>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 {% endif %}

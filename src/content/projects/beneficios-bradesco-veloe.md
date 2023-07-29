@@ -1,5 +1,6 @@
 ---
 title: 'Beneficios Bradesco+Veloe'
+shortTitle: 'Beneficios B+V'
 type: Landing page
 client:
   - Bradesco

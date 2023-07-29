@@ -1,5 +1,6 @@
 ---
 title: 'Bradescard'
+shortTitle: 'Bradescard'
 type: Website
 client:
   - Bradescard

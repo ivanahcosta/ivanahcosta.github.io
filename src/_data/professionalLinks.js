@@ -1,10 +1,10 @@
 module.exports = [
-  {
-    text: 'Resumé',
-    link: '/assets/pdf/cv.pdf',
-    user: 'resume',
-    icon: 'file',
-  },
+  // {
+  //   text: 'Resumé',
+  //   link: '/assets/pdf/cv.pdf',
+  //   user: 'resume',
+  //   icon: 'file',
+  // },
   {
     text: 'Read.CV',
     link: 'https://read.cv/ivanahcosta',

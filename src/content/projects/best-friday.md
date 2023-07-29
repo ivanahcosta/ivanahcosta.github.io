@@ -1,6 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 title: 'Best Friday'
+shortTitle: 'Best Friday'
 type: Website
 client:
   - Meio & Mensagem

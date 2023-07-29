@@ -1,5 +1,6 @@
 ---
 title: 'Chá MamyPoko'
+shortTitle: 'Chá MamyPoko'
 type: Website
 client:
   - Unicharm
