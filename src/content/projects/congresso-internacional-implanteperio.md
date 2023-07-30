@@ -26,7 +26,7 @@ description: |
   Throughout the development process, our team collaborated closely to ensure that the website effectively showcased the event's components. We paid attention to every detail, from the selection of visual elements to the seamless integration of interactive features. Our goal was to create a website that captured users' attention, provided them with valuable information, and encouraged their active involvement in the event.
 
   We were excited to contribute to the project and create a visually appealing and engaging website that effectively conveyed the message of the event.
-link: 'https://www.implanteperio.com.br'
+link: 'https://implanteperio.com.br'
 thumbnail: true
 images:
   - 1.png

@@ -22,7 +22,7 @@ description: |
   Throughout the development process, we remained dedicated to optimizing the user experience. We conducted rigorous testing and made necessary refinements to ensure that visitors would have a smooth and enjoyable interaction with the hotsite. Our goal was to create an enticing platform that effectively showcased Meio & Mensagem's Black Friday promotions and encouraged both renewals and new subscriptions to the newspaper.
 
   We were excited to contribute to this project and create a website that not only met the objectives of promoting the promotions but also provided a positive and engaging experience for visitors.
-link: 'https://www.meiomensagem.com'
+link: 'https://meiomensagem.com'
 featured: false
 side: false
 available: false

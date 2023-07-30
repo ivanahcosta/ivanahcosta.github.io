@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     text: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ivana-costa/',
+    link: 'https://linkedin.com/in/ivana-costa/',
     user: 'ivana-costa',
   },
 ];

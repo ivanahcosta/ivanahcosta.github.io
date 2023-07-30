@@ -24,7 +24,7 @@ description: |
   Furthermore, by implementing SEO techniques, I aimed to enhance the website's visibility in search engine results. This meant considering relevant keywords and meta descriptions to improve its ranking and attract more potential attendees.
 
   I was excited to contribute to the success of Kota's event by developing a website that effectively showcased its details and facilitated participant engagement. By creating an intuitive interface and implementing SEO optimizations, I strived to improve online visibility and accessibility, making it easier for attendees to find and engage with the event.
-link: 'https://www.kotaversatilday.com.br'
+link: 'https://kotaversatilday.com.br'
 thumbnail: true
 images:
   - 1.png

@@ -21,7 +21,7 @@ description: |
   The successful execution of this project relied on a diverse range of skills, including web development, user experience design, and database management. These areas of expertise played a crucial role in ensuring a seamless and effective user experience throughout the entire acquisition process. By harmoniously integrating these elements, we were able to create a system that provided a streamlined and user-friendly interface. This interface allowed potential franchisees to explore the benefits of joining the Burger King family with ease and confidence.
 
   Our team worked collaboratively to ensure that the system catered to the specific needs of Burger King and its potential franchisees. We leveraged our expertise to develop a cohesive system that simplified the acquisition process and facilitated informed decision-making. It was gratifying to contribute to a project that not only met the objectives of Burger King but also provided a user-friendly platform for potential franchisees to embark on their entrepreneurial journey.
-link: 'https://www.burgerkingfranquias.com.br'
+link: 'https://burgerkingfranquias.com.br'
 thumbnail: true
 images:
   - 1.png

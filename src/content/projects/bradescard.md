@@ -30,7 +30,7 @@ description: |
   Throughout the development process, we prioritized performance optimization to ensure fast loading times and smooth browsing. We also focused on making the website accessible to all users, adhering to accessibility guidelines. Additionally, we implemented a streamlined maintenance process to facilitate future updates and the addition of new features.
 
   I was excited to lead this project and collaborate with the design team and client to create a modern and user-friendly website for Bradescard.
-link: 'https://www.bradescard.com.br'
+link: 'https://bradescard.com.br'
 thumbnail: true
 images:
   - 1.png

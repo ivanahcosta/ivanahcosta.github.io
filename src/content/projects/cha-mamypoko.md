@@ -16,7 +16,7 @@ color: '#F4D86B'
 team: [{ name: Gustavo, link: /, position: 'UX/UI' }]
 description: |
   Lorem
-link: 'https://www.chadebebemamypoko.com.br'
+link: 'https://chadebebemamypoko.com.br'
 thumbnail: true
 images:
   - 1.png

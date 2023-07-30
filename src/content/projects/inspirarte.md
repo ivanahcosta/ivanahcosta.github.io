@@ -21,7 +21,7 @@ description: |
   By working closely with the back-end team, we were able to understand the requirements and needs of the Faber Castell employees. This understanding guided us in creating an intuitive and user-friendly CMS interface that catered specifically to their needs. The interface enabled seamless updates to the website's content, empowering the employees to keep the website fresh and engaging for visitors.
 
   I took great pride in maintaining and improving the project, ensuring that the website remained functional, visually appealing, and up to date. The collaboration with the back-end team was crucial in achieving our goals, and the user-friendly CMS interface we created provided a valuable tool for Faber Castell employees to manage the website's content effectively.
-link: 'https://www.inspirarte.art.br'
+link: 'https://inspirarte.art.br'
 thumbnail: true
 images:
   - 1.png

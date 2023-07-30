@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     text: 'Behance',
-    link: 'https://www.behance.net/ivana-costa',
+    link: 'https://behance.net/ivana-costa',
     username: '@ivana-costa',
   },
   {

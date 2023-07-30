@@ -20,7 +20,7 @@ description: |
   Throughout the project, I collaborated closely with the client's backend team to ensure a smooth integration process and effective data tracking. We implemented analytics tools to monitor user engagement and campaign performance.
 
   Unfortunately, due to the outbreak of the Covid-19 pandemic, the promotion had to be suspended.
-link: 'https://www.banco.bradesco/suacasa'
+link: 'https://banco.bradesco/suacasa'
 thumbnail: true
 images:
   - 1.png

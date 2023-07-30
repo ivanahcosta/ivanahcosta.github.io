@@ -19,7 +19,7 @@ description: |
   The primary objective of our website was to educate users on cultivating the Brazilian tree seeds that were distributed to employees by TNC (The Nature Conservancy). Throughout this project, we tackled intricate integrations, with a notable focus on integrating with the Instagram API. This integration enabled users to share photos of their plants on the social network using designated hashtags.
 
   This endeavor provided a valuable platform for us to showcase our technical proficiency in web development and API integrations. It was an exciting opportunity for us to demonstrate our expertise in the field and create a rewarding experience for users.
-link: 'https://www.tnc.vc/aquaseed'
+link: 'https://tnc.vc/aquaseed'
 thumbnail: true
 images:
   - 1.png

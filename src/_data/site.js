@@ -1,6 +1,6 @@
 module.exports = {
   buildTime: new Date(),
-  baseUrl: 'https://www.ivanahcosta.github.io/',
+  baseUrl: 'https://ivanahcosta.github.io/',
   title: 'Ivana H. Costa ▪ Front—end Developer',
   shortDescription: 'Folio / 2016 — ' + new Date().getFullYear(),
   description: 'Ivana is a Digital Designer and Web Developer specialized in Front-end and based in São Paulo, Brazil.',

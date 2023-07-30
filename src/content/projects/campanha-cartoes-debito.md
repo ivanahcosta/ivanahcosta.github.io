@@ -23,7 +23,7 @@ description: |
   In addition to the design and development aspects, we integrated robust tracking and analytics tools into the landing page. These tools allowed us to monitor user engagement and assess website performance. Metrics such as click-through rates and conversion rates provided valuable insights for optimization strategies. By analyzing the data collected, we could identify areas for improvement and make informed decisions to enhance the overall effectiveness of the campaign.
 
   Our team collaborated closely throughout the project, ensuring that the landing page effectively communicated the benefits of utilizing Bradesco debit cards. We were excited to leverage our technical proficiency and create a compelling and user-friendly experience that encouraged customers to engage in transactions with their cards.
-link: 'https://www.banco.bradesco/debito'
+link: 'https://banco.bradesco/debito'
 featured: false
 side: false
 available: true
