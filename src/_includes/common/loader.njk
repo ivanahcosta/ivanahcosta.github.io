@@ -1,9 +1,11 @@
-<div class="z-[2] absolute top-0 left-0 w-full h-[5px] bg-red" data-loader-progress></div>
+<div class="z-[2] fixed top-0 left-0 w-full h-[5px] bg-red" data-loader-progress></div>
 
-<section class="bg-red text-black w-full h-screen fixed top-0 left-0 z-[2] flex items-center justify-center" id="loader" data-loader>
-  <div class="flex gap-3 items-center overflow-hidden" data-loader-text>
-    <div>Ivana H. Costa</div>
-    <div>|</div>
-    <div>Front—end Developer</div>
+<section class="hidden z-[2] bg-red text-black fixed top-0 left-0 w-full h-screen pointer-events-none" id="loader" data-loader-curtain>
+  <div class="flex items-center justify-center ">
+    <p data-loader-curtain-text>
+      <span>Ivana H. Costa</span>
+      <span>|</span>
+      <span>Front—end Developer</span>
+    </p>
   </div>
 </section>

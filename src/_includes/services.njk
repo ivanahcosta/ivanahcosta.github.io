@@ -1,54 +1,64 @@
 {% if services %}
   <section id="services">
     <div class="container">
-      <div class="border-t" data-line></div>
+      <div class="border-t" data-section-line></div>
     </div>
-    <div class="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 items-start" data-section-heading>
-      <div class="hidden lg:flex gap-3 items-center">
-        <span>ℹ</span>
-        <span>Info</span>
+    <div class="container grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10" data-section-heading>
+      <div class="hidden lg:block">
+        <p class="inline-flex gap-3">
+          <span>ℹ</span>
+          <span>Services</span>
+        </p>
       </div>
       <div>
-        <div class="flex gap-3 items-center text-red">
+        <h2 class="inline-flex gap-3">
           <span>({{ servicesList | length }})</span>
           <span>Capabilities</span>
-        </div>
-        <div class="pt-3 lg:pt-10 grid grid-cols-2 md:grid-cols-1 gap-5 gap-y-1 items-start">
-          {% for item in servicesList %}
-            <div class="flex gap-3 items-start">
-              <span>↳</span>
-              <span>{{ item }}</span>
-            </div>
-          {%endfor %}
-        </div>
+        </h2>
       </div>
       <div>
-        <div class="flex gap-3 items-center text-red">
+        <h2 class="inline-flex gap-3">
           <span>({{ toolsList | length }})</span>
           <span>Tools</span>
-        </div>
-        <div class="pt-3 lg:pt-10 grid grid-cols-2 md:grid-cols-1 gap-5 gap-y-1 items-start">
-          {% for item in toolsList %}
-            <div class="flex gap-3 items-start">
-              <span>↳</span>
-              <span>{{ item }}</span>
-            </div>
-          {%endfor %}
-        </div>
+        </h2>
       </div>
-      <div>
-        <div class="flex gap-3 items-center text-red">
+      <div class="hidden lg:block">
+        <h2 class="inline-flex gap-3">
           <span>({{ interestsList | length }})</span>
           <span>Interests</span>
-        </div>
-        <div class="pt-3 lg:pt-10 grid grid-cols-2 md:grid-cols-1 gap-5 gap-y-1 items-start">
-          {% for item in interestsList %}
-            <div class="flex gap-3 items-start">
+        </h2>
+      </div>
+    </div>
+    <div class="container grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10">
+      <div class="lg:col-start-2">
+        <ul>
+          {% for item in servicesList %}
+            <li class="flex gap-3">
               <span>↳</span>
               <span>{{ item }}</span>
-            </div>
+            </li>
           {%endfor %}
-        </div>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          {% for item in toolsList %}
+            <li class="flex gap-3">
+              <span>↳</span>
+              <span>{{ item }}</span>
+            </li>
+          {%endfor %}
+        </ul>
+      </div>
+      <div class="hidden lg:block">
+        <ul>
+          {% for item in interestsList %}
+            <li class="flex gap-3">
+              <span>↳</span>
+              <span>{{ item }}</span>
+            </li>
+          {%endfor %}
+        </ul>
       </div>
     </div>
   </section>

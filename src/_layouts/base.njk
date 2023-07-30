@@ -6,17 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
     {% include "common/_meta.njk" %}
-    <link rel="stylesheet" href="{{ '/assets/tailwind.css' | url }}"/>
-    <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}"/>
+    <link rel="stylesheet" href="{{ '/assets/styles/tailwind.css' | url }}"/>
   </head>
-  <body class="bg-black text-white text-[12px] md:text-[16px] lg:text-[16px] font-neue uppercase leading-[1.1]">
-    {{ content | safe }}
+  <body class="bg-black text-gray text-[14px] lg:text-[18px] leading-[1] uppercase">
 
-    {% include "common/cursor.njk" %}
-    {% include "common/loader.njk" %}
+    {{ content | safe }}
 
     <script src="{{ '/assets/scripts/vendor.js' | url | safe }}"></script>
     <script src="{{ '/assets/scripts/main.js' | url | safe }}"></script>
-
   </body>
 </html>

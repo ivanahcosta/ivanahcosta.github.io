@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* layout */
+  header,
+  section,
+  footer {
+    @apply py-5 lg:py-10 grid grid-cols-1 gap-5 lg:gap-10;
+  }
+  .container {
+    @apply px-5 lg:px-10;
+  }
+
+  /* common */
+  button {
+    @apply uppercase;
+  }
+
+  /* titles */
+  h2 {
+    @apply text-red;
+  }
+  #credits h3 {
+    @apply opacity-50 pt-5;
+  }
+
+  /* ANIMATIONS */
+  /* link: external  */
+  [data-link-external] {
+    @apply overflow-hidden;
+  }
+  [data-link-external] span {
+    @apply lg:drop-shadow-external lg:transition-transform lg:duration-300 lg:underline;
+  }
+  [data-link-external]:hover span {
+    @apply lg:-translate-y-full lg:no-underline;
+  }
+  /* link: internal */
+  [data-link-internal] {
+    @apply lg:transition-all lg:duration-300;
+  }
+  [data-link-internal] span:first-child {
+    @apply w-[1em] aspect-square flex items-center justify-center rounded-full bg-gray text-black;
+  }
+  /* link: anchor */
+  [data-link-anchor] {
+    @apply overflow-hidden opacity-50 lg:transition-all lg:duration-300;
+  }
+  [data-link-anchor]:hover {
+    @apply opacity-100;
+  }
+  [data-link-anchor] span:first-child {
+    @apply w-[1em] aspect-square flex items-center justify-center rounded-full bg-gray text-black;
+  }
+}
+
+/* fonts */
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: local('PP Neue Montreal Medium'), local('PPNeueMontreal-Medium'), url('../fonts/neue/PPNeueMontreal-Medium.woff2') format('woff2'),
+    url('../fonts/neue/PPNeueMontreal-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Neue Montreal Book';
+  src: local('PP Neue Montreal Book'), local('PPNeueMontreal-Book'), url('../fonts/neue/PPNeueMontreal-Book.woff2') format('woff2'),
+    url('../fonts/neue/PPNeueMontreal-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* resets */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: initial;
+  overflow-x: hidden;
+}
+
+/* common */
+[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}

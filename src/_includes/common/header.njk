@@ -1,23 +1,27 @@
 {% if header %}
-  <header class="relative z-[1] lg:absolute top-0 left-0 w-full" id="header">
-    <div class="container flex items-start justify-between lg:grid lg:grid-cols-4 gap-10">
+  <header class="z-[1] lg:absolute top-0 left-0 w-full" id="header">
+    <div class="container lg:grid grid-cols-4 gap-10">
       <div>
-        {% include 'logo.njk' %}
+        <h1>
+          <a class="inline-flex gap-3" href="{{ '/' | url }}">
+            <span>{{ site.author }}</span>
+          </a>
+        </h1>
       </div>
-      <div class="col-start-4 hidden lg:flex items-start justify-between">
-        <div class="grid grid-cols-1 gap-1">
+      <div class="col-start-4 hidden lg:flex gap-5 items-start justify-between">
+        <div class="grid grid-cols-1">
           {% for item in professionalLinks %}
-            <a class="inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-stagger-link>
+            <a class="inline-flex gap-3" href="{{ item.link }}" target="_blank" data-link-external>
               <span>↗</span>
-              <span class="underline">{{ item.text }}</span>
+              <span>{{ item.text }}</span>
             </a>
           {% endfor %}
         </div>
-        <div class="grid grid-cols-1 gap-1">
+        <div class="grid grid-cols-1">
           {% for item in socialLinks %}
-            <a class="inline-flex gap-3 items-center" href="{{ item.link }}" target="_blank" data-stagger-link>
+            <a class="inline-flex gap-3" href="{{ item.link }}" target="_blank" data-link-external>
               <span>↗</span>
-              <span class="underline">{{ item.text }}</span>
+              <span>{{ item.text }}</span>
             </a>
           {% endfor %}
         </div>

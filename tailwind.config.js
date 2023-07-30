@@ -1,16 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{njk,md}', './src/**/*.svg'],
+  content: ['./src/**/*.njk'],
   theme: {
     fontFamily: {
-      neue: 'PP Neue Montreal, sans-serif',
-      neuebit: 'PP Neue Bit, sans-serif',
-      lausanne: 'Lausanne, sans-serif',
-      druk: 'Druk, sans-serif',
-      circular: 'Circular, sans-serif',
-      sch: 'sch, sans-serif',
-      neopixel: 'Neopixel, sans-serif',
-      mhtirogla: 'MHTIROGLA, sans-serif',
+      sans: 'PP Neue Montreal, sans-serif',
     },
     container: {
       center: true,
@@ -26,10 +19,13 @@ module.exports = {
       colors: {
         black: '#1A1A1A',
         red: '#FF3F00',
-        white: '#CCCCCC',
+        gray: '#CCCCCC',
       },
       borderColor: {
-        DEFAULT: 'rgb(255 255 255 / 0.2)',
+        DEFAULT: '#484848',
+      },
+      dropShadow: {
+        external: '0px 1em 0px #FFFFFF',
       },
     },
   },

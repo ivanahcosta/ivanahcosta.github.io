@@ -1,6 +1,6 @@
 # ivanahcosta.github.io
 
-Ivana is a Digital Designer and Web Developer based in São Paulo, Brasil.
+Ivana is a Front-end Developer based in São Paulo, Brazil.
 
 ## Stack
 
@@ -12,11 +12,13 @@ Preferred order of classes:
 - position
 - width, height
 - padding, margin
+- overflow
 - borders
-- displays: flex, block, etc
-- bg and text colors
-- text (size, transform, line height, indentation, etc.)
+- displays: flex, block, etc.
+- colors: bg, text, etc.
+- text (size, decoration, line height, indentation, etc.)
 - cursor, pointer events, etc.
+- hovers, transitions, etc.
 
 ### WIP
 

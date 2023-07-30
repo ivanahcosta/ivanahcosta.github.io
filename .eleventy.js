@@ -16,8 +16,7 @@ module.exports = function (config) {
   config.addLayoutAlias('base', 'base.njk');
 
   config.addPassthroughCopy('./src/assets/fonts');
-  config.addPassthroughCopy('./src/assets/images');
-  config.addPassthroughCopy('./src/assets/styles');
+  config.addPassthroughCopy('./src/assets/images/seo');
 
   config.addWatchTarget('./src/assets/styles/');
   config.addWatchTarget('./src/assets/scripts/');
