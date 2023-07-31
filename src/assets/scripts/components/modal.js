@@ -8,7 +8,6 @@ const closeModal = () => {
 };
 
 export default () => {
-  console.log('Modal');
   openModal();
   closeModal();
 };

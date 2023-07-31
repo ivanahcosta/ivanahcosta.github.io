@@ -9,4 +9,3 @@ cursor();
 modal();
 animations();
 projects();
-console.log('Javascript loaded.');

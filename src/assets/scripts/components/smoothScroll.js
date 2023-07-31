@@ -4,11 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const lenis = new Lenis();
+
 export default () => {
-  console.log('Smooth scroll');
-
-  const lenis = new Lenis();
-
   lenis.on('scroll', ScrollTrigger.update);
 
   gsap.ticker.add((time) => {

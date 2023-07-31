@@ -46,7 +46,6 @@ const animateMobileProject = (project) => {
 };
 
 export default () => {
-  console.log('Projects');
   if (isDesktop) {
     gsap.utils.toArray('[data-project]').forEach(animateDesktopProject);
   } else {

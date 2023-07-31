@@ -50,8 +50,6 @@ const resetProjectCursorText = function () {
 };
 
 export default () => {
-  console.log('Cursor');
-
   if (isDesktop) {
     $(document).on('mouseenter', () => {
       cursorPointer.fadeIn();

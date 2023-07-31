@@ -2,6 +2,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Splitting from 'splitting';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const splitTexts = () => {
   Splitting({ target: '[data-about-hero-text]', by: 'chars' });
 };
@@ -124,13 +126,10 @@ const contact = () => {
 };
 
 export default () => {
-  console.log('Animations');
-
   splitTexts();
   $('[data-about-hero-text]').clone().appendTo('[data-about-hero]');
 
   loader().then(() => {
-    console.log('Loader finished');
     fadeIn();
     lines();
     hero();
