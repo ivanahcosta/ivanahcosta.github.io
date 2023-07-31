@@ -8,9 +8,12 @@
     {% include "common/_meta.njk" %}
     <link rel="stylesheet" href="{{ '/assets/styles/tailwind.css' | url }}"/>
   </head>
-  <body class="bg-black text-gray text-[14px] lg:text-[18px] leading-[1] uppercase">
+  <body class="bg-black text-gray text-[14px] lg:text-[18px] leading-[1.1] uppercase">
 
     {{ content | safe }}
+
+    {% include "common/loader.njk" %}
+    {% include "common/cursor.njk" %}
 
     <script src="{{ '/assets/scripts/vendor.js' | url | safe }}"></script>
     <script src="{{ '/assets/scripts/main.js' | url | safe }}"></script>

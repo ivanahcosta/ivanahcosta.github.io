@@ -1,7 +1,7 @@
 const Image = require('@11ty/eleventy-img');
 
 module.exports = {
-  image: async function (src, alt, sizes, cls) {
+  image: async (src, alt, sizes, cls) => {
     const srcPath = src.includes('http') ? src : `./src/assets/images/${src}`;
     let metadata = await Image(srcPath, {
       widths: [500],

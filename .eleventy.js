@@ -3,14 +3,14 @@ const transforms = require('./utils/transforms.js');
 const shortcodes = require('./utils/shortcodes.js');
 
 module.exports = function (config) {
-  Object.keys(filters).forEach((filterName) => {
-    config.addFilter(filterName, filters[filterName]);
+  Object.keys(filters).forEach((name) => {
+    config.addFilter(name, filters[name]);
   });
-  Object.keys(transforms).forEach((transformName) => {
-    config.addTransform(transformName, transforms[transformName]);
+  Object.keys(transforms).forEach((name) => {
+    config.addTransform(name, transforms[name]);
   });
-  Object.keys(shortcodes).forEach((shortcodeName) => {
-    config.addShortcode(shortcodeName, shortcodes[shortcodeName]);
+  Object.keys(shortcodes).forEach((name) => {
+    config.addShortcode(name, shortcodes[name]);
   });
 
   config.addLayoutAlias('base', 'base.njk');

@@ -23,36 +23,38 @@
         </p>
       </div>
     </div>
-    <div class="lg:-mt-10 container lg:grid grid-cols-4 gap-10" style="container-type: inline-size;">
+    <div class="lg:-mt-10 container lg:grid grid-cols-4 gap-10">
       <div class="col-start-2 col-span-3 grid grid-cols-1" data-projects>
         {% for item in collections['project'] | reverse %}
-          <div class="py-5 lg:py-10 grid grid-cols-1 gap-5" data-project>
-            <a class="relative block group lg:hover:opacity-50 lg:hover:pl-20 lg:transition-all lg:duration-300" href="{{ item.data.link }}" target="_blank" data-project-heading>
-              <div class="w-[65%]">
-                <h3 class="text-[7.5cqw] lg:text-[5.5cqw] leading-[1] -tracking-[0.3cqw]" data-project-heading-title>{{ item.data.shortTitle }}</h3>
-                <div class="pt-3 flex flex-wrap gap-1 gap-x-2 text-[0.8em] leading-[1]">
-                  {% for tags in[item.data.services, item.data.tech] %}
-                    {% for tag in tags %}
-                      <span class="border border-current rounded-full">{{ tag }}</span>
+          <div class="overflow-hidden grid grid-cols-1 gap-5" data-project>
+            <a class="py-5 lg:py-10 relative block group" href="{{ item.data.link }}" target="_blank" data-project-heading data-cursor-text="{{ '↗' if item.data.available else '🛇' }}" style="container-type: inline-size;">
+              <div class="relative lg:group-hover:opacity-30 lg:group-hover:pl-20 lg:transition-all lg:duration-300">
+                <div class="w-[65%]">
+                  <h3 class="text-[7.5cqw] lg:text-[5.5cqw] leading-[1] -tracking-[0.3cqw]" data-project-heading-title>{{ item.data.shortTitle }}</h3>
+                  <div class="pt-3 flex flex-wrap gap-1 gap-x-2 text-[0.8em] leading-[1]">
+                    {% for tags in[item.data.services, item.data.tech] %}
+                      {% for tag in tags %}
+                        <span class="border border-current rounded-full">{{ tag }}</span>
+                      {% endfor %}
                     {% endfor %}
-                  {% endfor %}
+                  </div>
+                </div>
+                <div class="absolute top-0 right-0 w-[27%] lg:w-[29.5%] text-gray/50 text-[0.8em] leading-[1]">
+                  <p>/{{ item.data.date | dateToFormat('yyyy') }}</p>
+                  <p>{{ item.data.client }}</p>
+                  <p>({{ item.data.type }})</p>
                 </div>
               </div>
-              <div class="absolute top-0 right-0 w-[27%] lg:w-[29.5%] text-gray/50 text-[0.8em] leading-[1]">
-                <p>/{{ item.data.date | dateToFormat('yyyy') }}</p>
-                <p>{{ item.data.client }}</p>
-                <p>({{ item.data.type }})</p>
-              </div>
             </a>
-            <div class="hidden" data-project-thumbnail>
+            <div class="hidden lg:block lg:invisible lg:z-[1] lg:fixed lg:top-0 lg:left-0 lg:w-[490px] aspect-square overflow-hidden bg-red pointer-events-none" data-project-thumbnail>
               {% if item.data.thumbnail %}
                 {% image 'projects/' + item.data.title | slug + '/thumbnail.png',
-                item.data.title,
-                '100vw' %}
+                    item.data.title,
+                    '100vw', 'w-full lg:scale-[0.8] grayscale' %}
               {% endif %}
             </div>
             <div class="hidden" data-project-link>
-              <a href="{{ item.data.link }}" target="_blank">
+              <a class="p-3 flex gap-1 items-center justify-center text-black {{ 'bg-red' if item.data.available else 'bg-gray/50 line-through' }}" href="{{ item.data.link }}" target="_blank">
                 <span>www</span>
                 <span>{{ item.data.link | cleanLink }}</span>
               </a>

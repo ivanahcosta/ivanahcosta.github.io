@@ -31,7 +31,7 @@
     </div>
     <div class="container grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10">
       <div class="lg:col-start-2">
-        <ul>
+        <ul data-list>
           {% for item in servicesList %}
             <li class="flex gap-3">
               <span>↳</span>
@@ -41,7 +41,7 @@
         </ul>
       </div>
       <div>
-        <ul>
+        <ul data-list>
           {% for item in toolsList %}
             <li class="flex gap-3">
               <span>↳</span>
@@ -51,7 +51,7 @@
         </ul>
       </div>
       <div class="hidden lg:block">
-        <ul>
+        <ul data-list>
           {% for item in interestsList %}
             <li class="flex gap-3">
               <span>↳</span>

@@ -1,11 +1,14 @@
-export default () => {
-  console.log('modal');
-
+const openModal = () => {
   $('[data-modal-open]').on('click', function () {
-    const modal = $(this).data('modal-open');
-    $(`[data-modal="${modal}"]`).show();
+    $(`[data-modal="${$(this).data('modal-open')}"]`).show();
   });
-  $('[data-action="modal-close"]').on('click', () => {
-    $('[data-modal').hide();
-  });
+};
+const closeModal = () => {
+  $('[data-action="modal-close"]').on('click', () => $('[data-modal]').hide());
+};
+
+export default () => {
+  console.log('Modal');
+  openModal();
+  closeModal();
 };
