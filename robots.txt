@@ -1,2 +1,2 @@
 
-Sitemap: https://www.ivanahcosta.github.io/sitemap.xml
+Sitemap: https://ivanahcosta.github.io/sitemap.xml
