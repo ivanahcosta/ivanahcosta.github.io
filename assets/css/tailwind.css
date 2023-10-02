@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  body {
+    @apply font-inter;
+  }
+  header,
+  footer,
+  section {
+    @apply grid gap-10 py-10;
+  }
+  .container {
+    @apply px-10;
+  }
+  a,
+  button {
+    @apply transition-all duration-500;
+  }
+}
