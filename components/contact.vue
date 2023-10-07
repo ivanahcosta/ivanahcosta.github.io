@@ -15,24 +15,30 @@
         ressoem.
       </p>
     </div>
-    <div class="container flex flex-wrap items-center gap-1 leading-none">
-      <NuxtLink
-        class="inline-flex items-center justify-start gap-2 rounded-full bg-zinc-200 p-5 dark:bg-zinc-800"
-        href="mailto:ivanahcosta@gmail.com"
-        target="_blank"
-      >
-        <Icon name="mi:email" color="currentColor" />
-        <span>ivanahcosta@gmail.com</span>
-      </NuxtLink>
-      <NuxtLink
-        class="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-100 p-5 dark:bg-zinc-900"
-        :href="item.url"
-        target="_blank"
-        :aria-label="item.text"
-        v-for="item in links"
-      >
-        <Icon :name="item.icon" color="currentColor" />
-      </NuxtLink>
+    <div
+      class="container flex flex-wrap items-center justify-between gap-2 leading-none md:gap-5"
+    >
+      <div class="flex flex-wrap items-center gap-1">
+        <NuxtLink
+          class="inline-flex items-center justify-start gap-2 rounded-full bg-zinc-200 p-5 dark:bg-zinc-800"
+          href="mailto:ivanahcosta@gmail.com"
+          target="_blank"
+        >
+          <Icon name="mi:email" color="currentColor" />
+          <span>ivanahcosta@gmail.com</span>
+        </NuxtLink>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <NuxtLink
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-zinc-100 p-5 dark:bg-zinc-900"
+          :href="item.url"
+          target="_blank"
+          :aria-label="item.text"
+          v-for="item in links"
+        >
+          <Icon :name="item.icon" color="currentColor" />
+        </NuxtLink>
+      </div>
     </div>
   </section>
 </template>

@@ -1,5 +1,9 @@
 <template>
-  <section class="flex min-h-screen flex-col justify-end pt-[100px]" id="about">
+  <section
+    class="flex min-h-screen flex-col justify-end pt-[100px]"
+    id="about"
+    style="min-height: calc(var(--vh, 1vh) * 100)"
+  >
     <div class="container">
       <h1 class="pb-0">Ivana Costa</h1>
       <p class="text-zinc-500 dark:text-zinc-400">Desenvolvedora frontend</p>
@@ -29,6 +33,13 @@
     </div>
   </section>
 </template>
+
+<script>
+if (process.client) {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+</script>
 
 <style scoped>
 [data-status] {
