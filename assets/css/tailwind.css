@@ -4,18 +4,35 @@
 
 @layer {
   body {
-    @apply font-inter;
+    @apply font-ibm bg-zinc-50 text-xs text-zinc-800 dark:bg-zinc-950 dark:text-zinc-300;
   }
   header,
   footer,
   section {
-    @apply grid gap-10 py-10;
+    @apply grid gap-5 px-10 py-10 max-[320px]:px-5;
   }
-  .container {
-    @apply px-10;
+  h1,
+  h3 {
+    @apply pb-5 !font-bold uppercase;
   }
-  a,
-  button {
-    @apply transition-all duration-500;
-  }
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

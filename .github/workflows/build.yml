@@ -23,10 +23,10 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build
+          npm run generate
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: .output/public
           publish_branch: gh-pages
