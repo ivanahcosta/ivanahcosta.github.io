@@ -35,12 +35,12 @@ useHead({
 });
 
 useSeoMeta({
-  title: "Ivana Costa ▪ Desenvolvedora frontend",
-  ogTitle: "Ivana Costa ▪ Desenvolvedora frontend",
+  title: "Ivana Costa — Desenvolvedora frontend",
+  ogTitle: "Ivana Costa — Desenvolvedora frontend",
   description:
-    "Ivana é uma Desenvolvedora Web especializada em Frontend e mais de 7 anos de experiência.",
+    "Ivana é uma desenvolvedora web especializada em frontend com mais de 7 anos de experiência.",
   ogDescription:
-    "Ivana é uma Desenvolvedora Web especializada em Frontend e mais de 7 anos de experiência.",
+    "Ivana é uma desenvolvedora web especializada em frontend com mais de 7 anos de experiência.",
   ogImage: "https://ivanahcosta.github.io/meta.jpg",
   twitterCard: "summary_large_image",
 });

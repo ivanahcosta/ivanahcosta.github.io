@@ -3,13 +3,24 @@
 @tailwind utilities;
 
 @layer {
+  ::-webkit-scrollbar {
+    @apply w-4;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-50 dark:bg-zinc-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    border: 5px solid;
+    @apply rounded-xl border-zinc-50 bg-zinc-300 hover:bg-zinc-500 dark:border-zinc-950 dark:bg-zinc-900 hover:dark:bg-zinc-800;
+  }
+
   body {
-    @apply font-ibm bg-zinc-50 text-xs text-zinc-800 dark:bg-zinc-950 dark:text-zinc-300;
+    @apply bg-zinc-50 font-ibm text-xs text-zinc-800 dark:bg-zinc-950 dark:text-zinc-300;
   }
   header,
   footer,
   section {
-    @apply grid gap-5 px-10 py-10 max-[320px]:px-5;
+    @apply grid gap-5 px-5 py-10 max-[320px]:px-5 md:px-10;
   }
   h1,
   h3 {

@@ -61,10 +61,10 @@ export default {
           icon: "mdi:behance",
         },
         {
-          text: "Discord",
-          url: "https://discordapp.com/channels/@me/ivana#9261/",
-          username: "@ivana#9261",
-          icon: "ic:baseline-discord",
+          text: "LinkedIn",
+          url: "https://www.linkedin.com/in/ivana-costa/",
+          username: "in/ivana-costa",
+          icon: "ci:linkedin",
         },
       ],
     };

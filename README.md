@@ -1,3 +1,3 @@
 # ivanahcosta.github.io
 
-Ivana é uma Desenvolvedora Web especializada em Frontend e mais de 7 anos de experiência.
+Ivana é uma desenvolvedora web especializada em frontend e mais de 7 anos de experiência.
