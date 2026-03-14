@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+body {
+  @apply bg-black text-white text-[18px] leading-[1.3em] font-medium; 
+  font-family: "Inter", monospace;
+} 
+
+main {
+  @apply grid gap-10 
+}
+
+.container {
+  @apply max-w-[1920px] px-10 mx-auto;
+}
+
+section {
+    @apply py-10
+}
