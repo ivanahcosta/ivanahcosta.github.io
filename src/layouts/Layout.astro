@@ -10,11 +10,15 @@
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-D61CZSLM4L"></script>        
 		<script type="application/javascript">
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+		  	const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 
-			gtag('config', 'G-D61CZSLM4L');
+			if (!isLocalhost) {
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-D61CZSLM4L');
+			}
 		</script>
 		
 	</head>

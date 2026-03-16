@@ -3,8 +3,8 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-black text-white text-[18px] leading-[1.3em] font-medium; 
-  font-family: "Inter", monospace;
+  @apply bg-black text-white text-[16px] md:text-[22px] leading-[1.3em] font-medium; 
+  font-family: "Neue", monospace;
 } 
 
 main {
@@ -12,9 +12,76 @@ main {
 }
 
 .container {
-  @apply max-w-[1920px] px-10 mx-auto;
+  @apply max-w-[1920px] px-4 md:px-10 mx-auto;
 }
 
 section {
     @apply py-10
 }
+
+@font-face {
+  font-family: 'Neue';
+  src: url('/fonts/PPNeueMontreal/PPNeueMontreal-Book.otf') format('opentype'); 
+}
+@font-face {
+  font-family: 'Humane';
+  src: url('/fonts/Humane/Humane-VF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Formula';
+  src: url('/fonts/Formula/FormulaCondensed-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse';
+  src: url('/fonts/Suisse/SuisseIntl-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rainer';
+  src: url('/fonts/Rainer/RainerTrial-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Monument';
+  src: url('/fonts/Monument/PPMonumentExtended-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Overused';
+  src: url('/fonts/Overused/OverusedGrotesk-Medium-BF64eeac18163be.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Apparel';
+  src: url('/fonts/Apparel/Fontspring-DEMO-appareldisplay-regularit.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/GeneralSans/GeneralSans-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
+@font-face {
+  font-family: 'NewTitle';
+  src: url('/fonts/NewTitle/NewTitle-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} 
