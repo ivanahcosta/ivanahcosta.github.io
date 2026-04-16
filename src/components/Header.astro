@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets'; 
+import { Icon } from 'astro-icon/components';
+import Hero from './Hero.astro';
+--- 
+
+<header class="pt-10 pb-1 sticky top-0 z-20">
+  <div class="container flex justify-between gap-10 items-center">
+    <div class="flex items-center gap-5 bg-neutral-200 w-90 p-2 rounded-full">
+      <div class="w-[4em] h-[4em] bg-black text-white flex items-center justify-center overflow-hidden rounded-full">
+        <Image src={"https://media.licdn.com/dms/image/v2/D4E03AQG6pHSk17HMgA/profile-displayphoto-crop_800_800/B4EZy6rENSHoAM-/0/1772658379362?e=1776297600&v=beta&t=dmj8mfiHWizb-NDG1yROWrW_h9fT-Rp4TMUOOi9UG5w"} alt="Ivana Costa" width="100" height="100" />
+      </div>
+      <div>
+        <div>Ivana Costa</div>
+        <div class="text-black/50 mt-1">Full-stack Developer <br>& Digital Designer</div>
+      </div>
+    </div>
+    <a href="https://www.linkedin.com/in/ivanahcosta/" target="_blank" class="bg-black text-white flex gap-1 h-[4em] items-center p-6 rounded-full">
+      <span>Contact</span>
+      <Icon name="arrow-up-right" /> 
+    </a>
+  </div>
+</header>
+
+<nav class="sticky top-10 z-30">
+  <div class="container flex justify-between gap-10 items-center">
+    <div class="flex items-center gap-5 bg-neutral-200 w-90 p-2 rounded-full">
+      <div class="w-[2em] h-[2em] bg-black text-white flex items-center justify-center overflow-hidden text-[2em] rounded-full">
+        <Icon name="smile" /> 
+      </div>
+      <a href="/" class="bg-white p-6 rounded-full -ml-3">
+        <span>Works</span>
+      </a>
+      <a href="/profile">
+        <span>Profile</span>
+      </a>
+      <a href="/lab" class="flex items-center gap-1 pointer-events-none opacity-30 ml-2">
+        <span>Lab</span>
+        <Icon name="test-flask" />
+      </a>
+    </div>
+  </div>
+</nav>
+
+<Hero />

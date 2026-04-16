@@ -1,3 +1,8 @@
+--- 
+import Header from '../components/Header.astro'; 
+import Footer from '../components/Footer.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,9 +10,8 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Ivana Costa – Multidisciplinary Developer</title>
-    	<meta name="description" content="Ivana Costa is a multidisciplinary developer specialized in front-end engineering based in São Paulo, Brazil. With over eight years of experience, she creates visually engaging, high-performance websites that connect design, emotion, and technology."/>
-
+		<title>Ivana Costa – Desenvolvedora Full Stack</title> 
+		<meta name="description" content="Ivana Costa é uma desenvolvedora full stack especializada em engenharia front-end baseada em São Paulo, Brasil. Com mais de oito anos de experiência, eu ajudei a construir websites e experiências digitais visualmente atraentes e de alta performance que conectam design, emoção e tecnologia."/> 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-D61CZSLM4L"></script>        
 		<script type="application/javascript">
 		  	const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
@@ -23,6 +27,10 @@
 		
 	</head>
 	<body>
-		<slot />
+		<!-- <Header />
+		<main class="mt-10"> -->
+			<slot />
+		<!-- </main>
+		<Footer /> -->
 	</body>
 </html>
