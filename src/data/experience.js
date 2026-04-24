@@ -1,19 +1,19 @@
 export default [
   {
     icon: "copy",
-    position: "Full-stack Developer",
+    position: "Desenvolvedora Fullstack",
     company: "Veste",
-    time: "2023—currently"
+    time: "2023—presente"
   },
   {
     icon: "copy",
-    position: "Front-end Developer",
+    position: "Tech Lead / Desenvolvedora Frontend",
     company: "One Digital",
     time: "2019—2022"
   },
   {
     icon: "copy",
-    position: "Front-end Developer",
+    position: "Desenvolvedora Frontend",
     company: "Newbacon",
     time: "2017—2019"
   },

@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";   
+
+import Layout from "../layouts/Layout.astro";  
+import { Image } from "astro:assets";
+import avatar from '../assets/avatar.jpg';
+import { Icon } from 'astro-icon/components';
+
+import { getCollection } from "astro:content";
+const works = await getCollection("works");
+works.sort((a: any, b: any) => b.data.date - a.data.date); 
+const recentWorks = works.slice(0, 5);
+ 
+const brandsImages = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>("/src/assets/brands/*.{png,jpg,jpeg}", {
+    eager: true
+  })
+);
+---
+
+<Layout>
+	<main>
+		<div class="container">
+			<div class="flex">
+				<a href="#" target="_blank">
+					<Icon name="linkedin" />
+				</a>
+				<a href="#" target="_blank">
+					<Icon name="github" />
+				</a>
+				<a href="#" target="_blank">
+					<Icon name="codepen" />
+				</a>
+			</div>
+		</div>
+		<div class="container"> 
+			<Image src={avatar} alt="Ivana Costa" fetchpriority="high" height={72} width={72} quality={100} format="webp" />
+			<h2 class="text-[2em] leading-[1em]">Desenvolvedora Full Stack baseada em São Paulo, Brasil.</h2>
+			<p class="py-5">Possuo +8 anos de experiência construindo experiências digitais visualmente atraentes e de alta performance.</p>
+			<div class="flex gap-5">
+				<a href="#" target="_blank">Entre em contato</a>
+				<p class="flex">
+					<span class="animate-pulse">●</span>
+					<span>Disponivel para trabalho freelance</span>
+				</p>
+			</div>
+		</div>
+		<div class="container">
+			<h3 class="pb-5">Projetos Recentes</h3>
+			<div class="grid divide-y">
+				{recentWorks.map((item: any, index: number) => { 
+					return (
+						<div class="py-5">
+							<h2>{item.data.title}</h2>
+						</div>
+					)
+				})}
+			</div>
+			<a href="#">Veja todos os projetos selecionados</a>
+		</div>
+	</main>
+</Layout> 
+ 
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script> 
+</script>

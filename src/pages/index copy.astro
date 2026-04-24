@@ -1,0 +1,154 @@
+---
+import "../styles/global.css";   
+
+import Layout from "../layouts/Layout.astro";  
+import { Image } from "astro:assets";
+import avatar from '../assets/avatar.jpg';
+import { Icon } from 'astro-icon/components';
+
+import { getCollection } from "astro:content";
+const works = await getCollection("works");
+works.sort((a: any, b: any) => b.data.date - a.data.date); 
+ 
+const brandsImages = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>("/src/assets/brands/*.{png,jpg,jpeg}", {
+    eager: true
+  })
+);
+---
+
+<Layout>
+	<header class="pt-10 grid gap-10">
+		<div class="container grid grid-cols-4 gap-10">
+			<div>
+				<h1>Ivana H. Costa</h1>
+				<p>© Portfolio 16-2026</p>
+			</div>
+			<div>
+				<p class="max-w-70">Desenvolvedora full stack & Designer Digital</p>
+			</div>
+			<div class="col-start-4">
+				<p class="flex justify-end">
+					<span>Disponivel para trabalho freelance</span>
+					<span class="animate-pulse">■</span>
+				</p>
+				<a href="mailto:ivanahcosta@gmail.com" target="_blank" class="flex justify-end">
+					<span>Entre em contato</span>
+					<span>↲</span>
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			<div class="border-t border-white/10"></div>
+		</div>
+	</header>
+	<main class="py-10 sticky top-0">
+		<section class="pt-20">
+			<div class="container flex gap-3">
+				<div class="w-15 aspect-square overflow-hidden bg-white/10 border border-white/5 flex items-center justify-center rounded-md">
+					<Image src={avatar} alt="Ivana Costa" fetchpriority="high" class="max-w-full scale-120" height={72} width={72} quality={100} format="webp" />
+				</div>
+				<div class="w-15 aspect-square overflow-hidden bg-white/10 border border-white/5 flex items-center justify-center rounded-md mr-5">
+					<Icon name="smile" />
+				</div>
+				<a href="#" target="_blank" class="w-15 aspect-square overflow-hidden border border-white/30 flex items-center justify-center rounded-md">
+					<Icon name="linkedin" />
+				</a>
+				<a href="#" target="_blank" class="w-15 aspect-square overflow-hidden border border-white/30 flex items-center justify-center rounded-md">
+					<Icon name="github" />
+				</a>
+				<a href="#" target="_blank" class="w-15 aspect-square overflow-hidden border border-white/30 flex items-center justify-center rounded-md">
+					<Icon name="codepen" />
+				</a>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<h2 class="text-[2.6em] leading-[1.2em] max-w-200 mb-3">Desenvolvedora Full Stack formada em design digital baseada em São Paulo, Brasil.</h2>
+				<p class="text-[1.5em] leading-[1.2em] max-w-200">Tenho +8 anos de experiência ajudando a construir experiências digitais visualmente atraentes e de alta performance que conectam design, emoção e tecnologia.</p>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<h3 class="mb-3">Marcas com as quais já trabalhei</h3>
+				<div class="border border-white/10 max-w-130 overflow-hidden rounded-md"> 
+					{brandsImages.length > 0 && (
+						<ul class="flex gap-10 w-250 p-5">
+							{brandsImages.map((img) => (
+								<li>
+									<Image src={img.default} alt="Brand logo" width={img.default.width} height={img.default.height} quality={30} class="invert w-26" />
+								</li>
+							))}
+						</ul>
+					)}
+				</div>
+			</div>
+		</section>
+		<section> 
+			<div class="container">
+				<div class="inline-flex gap-5 items-center bg-white/10 p-2 rounded-md">
+					<a href="#selected-works" class="flex bg-white text-black p-3 rounded-md">
+						<span>Selecionados ({works.length})</span>
+						<Icon name="chevron-up" />
+					</a>
+					<a href="/" target="_blank" class="flex opacity-50 pointer-events-none pr-2">
+						<span>Lab</span>
+						<Icon name="flask" />
+					</a> 
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer >
+		<div class="container flex justify-between">
+			<p>© 2026 Todos os direitos reservados</p>
+			<p class="flex">
+				<span>23°31'19"S 46°40'21"W</span>
+				<span>/</span>
+				<span>14:59</span>
+			</p>
+		</div>
+	</footer>
+	
+	<div id="selected-works" class="hidden relative z-10 -mt-[40vh] pb-30"> 
+		<button data-close class="fixed bottom-10 z-20 left-1/2 -translate-x-1/2 flex bg-white text-black p-3 rounded-md">
+			<span>Voltar</span>
+			<Icon name="close" />
+		</button>
+		<div>
+			<div class="container grid gap-3">
+				{works.map((item: any, index: number) => { 
+					return (
+						<div class="bg-white/5 backdrop-blur-2xl rounded-md p-8 grid items-center grid-cols-4 gap-10 shadow-2xl ">  
+							<div class="col-span-2 flex gap-5 items-center">
+								<div class="w-[1em] aspect-square rounded-full" style={`background-color: ${item.data.color};`}></div>
+								<div class="text-white/50">{item.data.date.getFullYear().toString()}</div> 
+								<div>{item.data.title} {index < 1 ? <span class="bg-green-500 text-white">new</span> : '' }</div>
+							</div> 
+							<div class="text-white/50">{item.data.client}</div>
+							<div class="flex gap-5 items-center justify-between">
+								<div class="text-white/50">{item.data.type}</div>
+								<a href={item.data.link} target="_blank" rel="noopener noreferrer" class={`border border-white/30 rounded-md p-2 ${item.data.available ? '' : 'pointer-events-none opacity-10'}`}>{item.data.available ? <Icon name="link" /> : <Icon name="link-broken" /> }</a>
+							</div>
+						</div>
+					)
+				})}
+			</div> 
+		</div>
+	</div>
+</Layout> 
+ 
+<script is:inline src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<script>
+	$('a[href="#selected-works"]').on('click', function(e: any) {
+		e.preventDefault();
+		$('#selected-works').removeClass('hidden');
+		$('header, main, footer').css('opacity', '0.4')
+	});
+
+	$('button[data-close]').on('click', function() {
+		$('#selected-works').addClass('hidden');
+		$('header, main, footer').css('opacity', '1')
+	}); 
+</script>

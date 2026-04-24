@@ -1,9 +1,9 @@
 export default [
   {
     icon: "copy",
-    course: "Analysis and Development of Systems",
+    course: "Analise e Desenvolvimento de Sistemas",
     school: "FMU",
-    time: "Ongoing"
+    time: "Em andamento"
   },
   {
     icon: "copy",
@@ -13,7 +13,7 @@ export default [
   },
   {
     icon: "copy",
-    course: "Digital Design",
+    course: "Design Digital",
     school: "UAM",
     time: "2015—2019"
   }

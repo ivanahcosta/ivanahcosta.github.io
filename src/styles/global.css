@@ -1,26 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
 body {
-  @apply bg-black text-white text-[16px] leading-[1em] uppercase; 
-  font-family: "DMMono", sans-serif;
+  @apply bg-black text-white text-[16px] leading-[1em]; 
+  font-family: "Funnel Sans", sans-serif;
 }
-
+ 
 main {
-  @apply grid gap-10 
+  @apply grid gap-10 py-10; 
 }
 
 .container {
-  @apply max-w-full px-5 md:px-10 mx-auto;
+  @apply max-w-180 px-5 md:px-10 mx-auto;
 } 
 
 button {
   @apply cursor-pointer
 }
-   
-@font-face {
-  font-family: 'DMMono';
-  src: url('/fonts/DMMono/DMMono-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
+
+  .img-bg {
+    position: relative;
+    width: 200px;
+    height: 300px;
+  }
+
+  .img-box {
+    position: absolute;
+    padding: 10px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 0 0 5px 0 #000;
+    z-index: 200;
+    transition: 0.5s;
+  }
+  .img-bg img:nth-child(2) {
+    transform: rotate(7deg);
+    zoom: 1;
+  } 
+  .img-bg img:nth-child(3) {
+    transform: rotate(-15deg);
+  } 
+
+  
+  .img-bg:hover .box-1 {
+    top: 0;
+    left: 0;
+    width: 200px;
+  }
+  .img-bg:hover .box-2 {
+    top: 0;
+    left: 200px;
+    width: 200px;
+  }
+  
+  .img-bg:hover .box-3 {
+    top: 45px;
+    left: -180px;
+    width: 200px;
+  }
